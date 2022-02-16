@@ -1,0 +1,6 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\IDataAccess\bin\Debug\Infosys.Ainauto.Superbot.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\IDataAccess\bin\Debug\Infosys.Ainauto.Superbot.IDataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\IDataAccess\obj\Debug\IDataAccess.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\IDataAccess\obj\Debug\Infosys.Ainauto.Superbot.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\IDataAccess\obj\Debug\Infosys.Ainauto.Superbot.IDataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\IDataAccess\obj\Debug\IDataAccess.csproj.AssemblyReference.cache
