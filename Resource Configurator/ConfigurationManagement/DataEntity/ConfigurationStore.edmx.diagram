@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d019abb3782543b1902ce4874e9bfd61" Name="Diagram1">
+        <EntityTypeShape EntityType="ConfigurationModel.action" Width="1.5" PointX="3.75" PointY="31.125" />
+        <EntityTypeShape EntityType="ConfigurationModel.action_params" Width="1.5" PointX="8.75" PointY="1" />
+        <EntityTypeShape EntityType="ConfigurationModel.actiontype" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.anomaly_details" Width="1.5" PointX="11.75" PointY="11.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.healthcheck_iteration_tracker" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.healthcheck_iteration_tracker_details" Width="1.5" PointX="13.75" PointY="11.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.notification_configuration" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.observable" Width="1.5" PointX="3.75" PointY="3.125" />
+        <EntityTypeShape EntityType="ConfigurationModel.observable_resource_map" Width="1.5" PointX="3" PointY="8.5" />
+        <EntityTypeShape EntityType="ConfigurationModel.observations" Width="1.5" PointX="8.75" PointY="15.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.operator" Width="1.5" PointX="15.75" PointY="11.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.recipient_configuration" Width="1.5" PointX="16.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.remediation_plan" Width="1.5" PointX="3.75" PointY="19.125" />
+        <EntityTypeShape EntityType="ConfigurationModel.remediation_plan_action_map" Width="1.5" PointX="6" PointY="25.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.remediation_plan_execution_actions" Width="1.5" PointX="14" PointY="6.5" />
+        <EntityTypeShape EntityType="ConfigurationModel.remediation_plan_executions" Width="1.5" PointX="11.75" PointY="6" />
+        <EntityTypeShape EntityType="ConfigurationModel.resource" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.resource_observable_action_map" Width="1.5" PointX="6" PointY="10.375" />
+        <EntityTypeShape EntityType="ConfigurationModel.resource_observable_remediation_plan_map" Width="1.5" PointX="6" PointY="5.625" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype" Width="1.5" PointX="6.75" PointY="0.875" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype_observable_action_map" Width="1.5" PointX="6" PointY="17.375" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype_observable_remediation_plan_map" Width="1.5" PointX="9" PointY="11.125" />
+        <EntityTypeShape EntityType="ConfigurationModel.tenant" Width="1.5" PointX="17.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.remdiation_plan_action_param_map" Width="1.5" PointX="11" PointY="1.375" />
+        <AssociationConnector Association="ConfigurationModel.FK_ActionId" />
+        <AssociationConnector Association="ConfigurationModel.FK_ActionId_1" />
+        <AssociationConnector Association="ConfigurationModel.FK_ActionId_2" />
+        <AssociationConnector Association="ConfigurationModel.FK_ParamID" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableID" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableId_1" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableId_2" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableId_3" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableId_4" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableId_5" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceID" />
+        <AssociationConnector Association="ConfigurationModel.FK_RemediationPlanId" />
+        <AssociationConnector Association="ConfigurationModel.FK_RemediationPlanId_1" />
+        <AssociationConnector Association="ConfigurationModel.FK_RemediationPlanId_2" />
+        <AssociationConnector Association="ConfigurationModel.FK_RemediationPlanExecId" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceId_3" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceId_4" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceTId_1" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceTypeId" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceTypeId_1" />
+        <EntityTypeShape EntityType="ConfigurationModel.Audit_Logs" Width="1.5" PointX="11.375" PointY="18.625" />
+        <EntityTypeShape EntityType="ConfigurationModel.Environment_Scan_Metric" Width="1.5" PointX="18.75" PointY="14.25" />
+        <EntityTypeShape EntityType="ConfigurationModel.Environment_Scan_Metric_Anomaly_Details" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.Environment_Scan_Metric_Details" Width="1.5" PointX="21" PointY="14" />
+        <EntityTypeShape EntityType="ConfigurationModel.errors" Width="1.5" PointX="18.75" PointY="18.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.tickets" Width="1.5" PointX="13.75" PointY="19.75" />
+        <AssociationConnector Association="ConfigurationModel.FK_Audit_Logs_action" />
+        <AssociationConnector Association="ConfigurationModel.FK_Observable_ID" />
+        <AssociationConnector Association="ConfigurationModel.FK_Resource_ID" />
+        <AssociationConnector Association="ConfigurationModel.FK__baseline___Basel__469FD34E1" />
+        <EntityTypeShape EntityType="ConfigurationModel.platforms" Width="1.5" PointX="20.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype_metadata" Width="1.5" PointX="9" PointY="6" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceTypeId_4" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype_observable_map" Width="1.5" PointX="9.875" PointY="0.625" />
+        <AssociationConnector Association="ConfigurationModel.FK_ObservableID3" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceTypeID4" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype_service_details" Width="1.5" PointX="20.375" PointY="8.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.resourcetype_dependency_map" Width="1.5" PointX="16.375" PointY="21.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.healthcheck_details" Width="1.5" PointX="23.625" PointY="15.375" />
+        <EntityTypeShape EntityType="ConfigurationModel.healthcheck_master" Width="1.5" PointX="21.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.healthcheck_tracker" Width="1.5" PointX="23.625" PointY="25" />
+        <AssociationConnector Association="ConfigurationModel.FK__healthche__Confi__055C1FD6" />
+        <AssociationConnector Association="ConfigurationModel.FK__healthche__Resou__0467FB9D" />
+        <AssociationConnector Association="ConfigurationModel.FK__healthche__Confi__08388C81" />
+        <EntityTypeShape EntityType="ConfigurationModel.resource_dependency_map" Width="1.5" PointX="3" PointY="13.75" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceId_1" />
+        <EntityTypeShape EntityType="ConfigurationModel.actionstages" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ConfigurationModel.resource_attributes" Width="1.5" PointX="3" PointY="23.5" />
+        <AssociationConnector Association="ConfigurationModel.FK_ResourceID_2" />
+        <EntityTypeShape EntityType="ConfigurationModel.portfolio_project_map" Width="1.5" PointX="19.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
