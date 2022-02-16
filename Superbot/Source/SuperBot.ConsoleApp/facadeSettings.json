@@ -1,0 +1,109 @@
+{
+  "AdapterBinaryLocation": "D:\\TFS\\ManaExpertServices\\Facade_NET\\Code\\Adapter\\Built-in\\Adapters\\bin\\Debug\\",
+  "Adapters": [
+    {
+      "Type": "AA",
+      "BinaryName": "Infosys.Ainauto.Adapters.dll",
+      "AdapterInterfaces": [
+        {
+          "Name": "Infosys.Ainauto.Adapters.Interfaces.IDBAdapter",
+          "Operations": [
+            {
+              "Name": "Get",
+              "Mappers": [
+                {
+                  "Name": "botdetails",
+                  "Root": "row",
+                  "MapperFields": {
+                    "Application": "Appliaction",
+                    "event_type": "event_type",
+                    "resource_id": "resource_id",
+                    "bot_name": "bot_name",
+                    "ipaddress": "ipaddress",
+                    "metric_name": "metric_name",
+                    "metric_value": "metric_value",
+                    "metric_time": "metric_time",
+                    "description": "description",
+                    "server_ip": "server_ip",
+                    "source": "source"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Name": "Infosys.Ainauto.Adapters.Interfaces.IApiAdapter",
+          "Operations": [
+            {
+              "Name": "Post",
+              "Mappers": [
+                {
+                  "Name": "ActivityList",
+                  "Root": "list",
+                  "MapperFields": {
+                    "idField": "id",
+                    "automationName": "automationName",
+                    "fileName": "fileName",
+                    "filePath": "filePath",
+                    "type": "type",
+                    "startDateTime": "startDateTime",
+                    "endDateTime": "endDateTime",
+                    "command": "command",
+                    "status": "status",
+                    "progress": "progress",
+                    "automationId": "automationId",
+                    "userId": "userId",
+                    "deviceId": "deviceId",
+                    "currentLine": "currentLine",
+                    "totalLines": "totalLines",
+                    "fileId": "fileId",
+                    "modifiedBy": "modifiedBy",
+                    "createdBy": "createdBy",
+                    "modifiedOn": "modifiedOn",
+                    "createdOn": "createdOn",
+                    "deploymentId": "deploymentId",
+                    "queueName": "queueName",
+                    "queueId": "queueId",
+                    "usingRdp": "usingRdp",
+                    "message": "message",
+                    "canManage": "canManage",
+                    "deviceName": "deviceName",
+                    "userName": "userName"
+                  }
+                },
+                {
+                  "Name": "Authenticate",
+                  "Root": "",
+                  "MapperFields": {
+                    "AuthToken": "token"
+                  }
+                }
+              ]
+            },
+            {
+              "Name": "get",
+              "Mappers": [
+                {
+                  "Name": "getList",
+                  "Root": "",
+                  "MapperFields": {
+                    "test": "test,"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "Type": "BP",
+      "BinaryName": "Infosys.Ainauto.Adapter.AutomationAnywhere.dll",
+      "AdapterInterfaces": [
+
+      ]
+    }
+  ]
+}
