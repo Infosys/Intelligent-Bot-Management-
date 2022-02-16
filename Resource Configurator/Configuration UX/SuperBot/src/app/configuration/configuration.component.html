@@ -1,0 +1,959 @@
+<app-loader *ngIf="isLoader"></app-loader>
+
+<div class="container-fluid box-size" style="background-color: #F6F6F6">
+  <div style="background-color: #F6F6F6">
+    <a name="top"></a>
+    <div *ngIf="resourceJosn != undefined" style="width: auto;margin-top: 12px;"> <label class="semi-bold" for="name"
+        style="width: 100px;color: #333333;margin-left: -10px;font-size: 14px;">{{resourceJosn[0].platformtype}}</label>
+
+
+      <button class="add-btn float-right" style="width:auto;margin-top: -3px;font-size: 13px; " data-toggle="tooltip"
+        data-placement="top" title="Create new Resource Model">Create New</button>
+    </div>
+
+    <div style="background-color: white;min-height: 516px;margin-left: -14px;">
+
+      <form #resourceForm="ngForm">
+        <div class="row">
+          <div class="col-12" style="margin-left: -30px;
+        margin-top: -20px;" *ngIf="confJson[0] != undefined">
+            <ul class="nav nav-pills mb3" role="tablist" style="margin-top: 20px;">
+              <li class="nav-item" *ngFor="let resource of confJson[0].resourcetypedetails;let i = index;">
+                <a [ngClass]="(resource.resourcetypeid == resourceTypeId)?'nav-link active':'nav-link '"
+                  (click)="onClickResource(resource.resourcetypeid,resource.resourceid,resource.resourcetypename)"
+                  data-toggle="pill" href="#" role="tab">{{resource.resourcetypename}}</a>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-12">
+            <div style="width:407px;height:270px;float:left">
+              <div style="width:406px;height:60px;margin-left:15px">
+                <div class="form-group float-left" *ngIf="parentCombo != undefined && parentCombo.length >0">
+                  <label for="name" style="width: 120px;">Parent Resource </label><br />
+                  <select id="resouceParentSelect" name="resouceParentSelect" [(ngModel)]="parentComboId"
+                    style="margin-bottom: 10px;min-width: 180px;max-width: 180px" class="selectpicker"
+                    (change)="onChangeParentHTML($event.target.value)">
+
+                    <option *ngFor="let obj of parentCombo" value="{{obj.value}}">{{obj.key}}</option>
+
+                  </select>
+                </div>
+
+                <div class="form-group float-left"
+                  [style.margin-left.px]="(parentCombo != undefined && parentCombo.length >0)?'0':'-23'">
+                  <label for="name"
+                    style="width: 120px; margin-left: 23px;">{{Resourcedetail.resourcetypename}}</label><br />
+                  <select id="resouceComboSelect"
+                    style="margin-bottom: 10px;min-width: 180px;margin-left: 23px ;max-width: 180px; "
+                    class="selectpicker" (change)="onChangeResourceHTML($event.target.value)">
+                    <option *ngFor="let obj of resourceCombo" [selected]="obj.value == resourceIdCombo"
+                      value="{{obj.value}}">{{obj.key}}</option>
+
+                  </select>
+                </div>
+              </div>
+              <div style="width:407px;margin-left:15px">
+                <div class="form-group">
+                  <label for="name">
+
+                    <input type="radio" value="activate" name="donotmoniter"
+                      [checked]="Resourcedetail.dontmonitor == true" (click)="dontIncludeChilds(true)">Activate
+                    <input type="radio" value="deactivate" name="donotmoniter" style="margin-left: 10px;"
+                      [checked]="Resourcedetail.dontmonitor == false" (click)="dontIncludeChilds(false)">Deactivate
+                    <input (click)="cascadeToChild()" name="chk_monitorp_cascade"
+                      id="styled-checkbox-chk_monitorp_cascade" class="styled-checkbox" type="checkbox"
+                      [(ngModel)]="Resourcedetail.cascadetochild" [checked]="Resourcedetail.cascadetochild">
+                    <label style="    margin-left: 51px" for="styled-checkbox-chk_monitorp_cascade"></label>Cascade to
+                    child </label><br />
+
+                </div>
+                <div style="margin-top:-30px">
+                  <div *ngIf="parentDetails != null && parentDetails.length > 0" style="width: 205px;float:left">
+                    <div *ngFor="let attr of parentDetails;">
+                      <label for="name" style="margin-top: 18px;">Parent Resource Name: &nbsp; </label><br />
+                      <label for="name" class="semi-bold">{{ attr.resourcename}}</label>
+                      <br />
+                      <label for="name">Parent Resource Type Name: &nbsp; </label><br /> <label class="semi-bold"
+                        for="name">{{
+                            attr.resourcetypename}}</label>
+                    </div>
+                   
+                  </div>
+
+                  <div style="width:180px;float:left;margin-top:12px"
+                    *ngIf="portfolios != undefined && portfolios.length >0 ">
+                    <div class="form-group">
+                      <label data-toggle="tooltip" data-placement="top" title="Portfolio for RPA Control Center">
+                        Portfolio</label>
+                      <select class="form-control" name="portfolioid" [(ngModel)]="Resourcedetail.portfolioid"
+                        style="width:180px!important;min-width: 180px">
+                        <option value=""></option>
+                        <option value="{{portfolio.portfolioid}}"
+                          [selected]="(portfolio.portfolioid == Resourcedetail.portfolioid)?'true':'false'"
+                          *ngFor="let portfolio of portfolios">{{portfolio.portfolioname}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div [ngClass]="(parentDetails != null && parentDetails.length > 0)?'source-parent':'source-without-parent'">
+                  <div class="form-group">
+                    <label >
+                      Source</label>
+                    <input type="text"  [(ngModel)]="Resourcedetail.source" class="form-control" style="width: 184px;" name="source" >
+                </div>
+              </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div style="width:600px;height:270px;float:right">
+              <div style="height:60px;width:600px">
+                <div class="dtfrom form-group float-left">
+                  <label> Validity Start</label>
+                  <angular2-date-picker [(ngModel)]="Resourcedetail.startdate" name="fromDate" [settings]="settings">
+                  </angular2-date-picker>
+                </div>
+
+                <div class="dtto  form-group float-left">
+                  <label> Validity End</label>
+                  <angular2-date-picker [(ngModel)]="Resourcedetail.enddate" name="toDate" [settings]="settings">
+                  </angular2-date-picker>
+                </div>
+              </div>
+
+              <div class="tbl-border-parent" *ngIf="parentObsRem != undefined ">
+
+
+                <table class="tableBodyScroll table-spec" *ngIf="parentObsRem != undefined ">
+                  <thead>
+                    <tr>
+                      <td>Monitoring Plan</td>
+                      <td>Remediation Plan</td>
+
+                    </tr>
+                  </thead>
+                  <tbody *ngIf="parentObsRem  ==  undefined ||  parentObsRem.length  == 0">
+                    <tr>
+                      <td colspan="2"> <label style="    margin-left: 89px;
+                          margin-top: 10px;">No Plan configured </label></td>
+                    </tr>
+                  </tbody>
+                  <tbody *ngIf="parentObsRem  !=  undefined ||  parentObsRem.length  > 0">
+                    <tr *ngFor="let obs of parentObsRem; let i=index">
+                      <td data-toggle="tooltip" data-placement="top" title="{{ obs.name}} "> <span><input
+                            class="styled-checkbox" type="checkbox" style="cursor: pointer;"
+                            [checked]="obs.isObsSelected" name="{{obs.name}}-{{obs.ObservableActionId}}-{{i}}"
+                            id="styled-checkbox-{{obs.name}}-{{obs.ObservableActionId}}-{{i}}"
+                            [(ngModel)]="obs.isObsSelected" (change)="checkValue(obs)"> <label
+                            for="styled-checkbox-{{obs.name}}-{{obs.ObservableActionId}}-{{i}}"></label></span>{{
+                        (obs.name.length>15)? (obs.name | slice:0:15)+'..':(obs.name)}}
+                      </td>
+                      <td data-toggle="tooltip" data-placement="top" title="{{ obs.RemediationPlanName}} "><span><input
+                            *ngIf="  obs.RemediationPlanId !=null && obs.RemediationPlanId != 0  "
+                            class="styled-checkbox" id="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.ObservableId}}"
+                            type="checkbox" style="cursor: pointer;" [checked]="obs.isRemSelected"
+                            id="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"
+                            name="{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"
+                            [(ngModel)]="obs.isRemSelected" (change)="checkValue(obs)">
+                          <label
+                            for="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"></label></span>
+                        {{ (obs.RemediationPlanName!=null && obs.RemediationPlanName.length>15)?
+                        (obs.RemediationPlanName |
+                        slice:0:15)+'..':(obs.RemediationPlanName)}}<label
+                          *ngIf="obs.RemediationPlanId ==null || obs.RemediationPlanId == 0">No Plan configured </label>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <i data-toggle="modal" (click)="isParentModel(true)" data-tooltip="tooltip"
+                title="Add {{ResourceTypeName}}" style="cursor: pointer; margin-top: 64px;margin-left: 30px;"
+                [attr.data-target]="(ResourceTypeName == 'Platform')?'#AddNodeModal':'#AddNodeModal' "
+                class="img-add "></i>
+
+
+            </div>
+          </div>
+
+          <!-- <div class="col-12"> 
+            <div class="div-box" *ngIf="Resourcedetail != null  " style="    margin-left: 14px;">
+
+              <div class="float-left" style="width:182px;height:60px;" *ngIf="parentCombo != undefined && parentCombo.length >0">
+                <label for="name" style="width: 120px;">Parent Resource </label><br />
+                <select id="resouceParentSelect" style="margin-bottom: 10px;min-width: 180px;max-width: 180px" class="selectpicker"
+                  (change)="onChangeParentHTML($event.target.value)">
+
+                  <option *ngFor="let obj of parentCombo" value="{{obj.value}}">{{obj.key}}</option>
+
+                </select>
+              </div>
+              <div class="float-left" style="width:470px;height:60px;" [style.margin-left.px]="(parentCombo != undefined && parentCombo.length >0)?'0':'-23'">
+                <label for="name" style="width: 120px; margin-left: 23px;">{{Resourcedetail.resourcetypename}}</label><br />
+                <select id="resouceComboSelect" style="margin-bottom: 10px;min-width: 180px;margin-left: 23px ;max-width: 180px; "
+                  class="selectpicker" (change)="onChangeResourceHTML($event.target.value)">
+                  <option *ngFor="let obj of resourceCombo" [selected]="obj.value == resourceIdCombo" value="{{obj.value}}">{{obj.key}}</option>
+
+                </select>
+
+
+              </div>
+             
+              <div style="width: 400px;"  >
+                <label for="name" style="margin-top: 18px;"  >
+
+                  <input type="radio" value="activate" name="donotmoniter"  [checked]="Resourcedetail.dontmonitor == true"
+                    (click)="dontIncludeChilds(true)">Activate
+                  <input type="radio" value="deactivate" name="donotmoniter"  style="margin-left: 10px;" [checked]="Resourcedetail.dontmonitor == false"
+                    (click)="dontIncludeChilds(false)">Deactivate
+                  <input  (click)="cascadeToChild()" name="chk_monitorp_cascade" id="styled-checkbox-chk_monitorp_cascade"
+                            class="styled-checkbox" type="checkbox" [(ngModel)]="Resourcedetail.cascadetochild" [checked]="Resourcedetail.cascadetochild" > <label style="    margin-left: 51px" for="styled-checkbox-chk_monitorp_cascade"></label>Cascade to child  </label><br />
+
+                
+               
+                
+              </div>
+              <div style="width:700px">
+
+                <div *ngIf="parentDetails != null && parentDetails.length > 0" style="width: 205px;float:left">
+                  <div *ngFor="let attr of parentDetails;">
+                    <label for="name" style="margin-top: 18px;">Parent Resource Name: &nbsp; </label><br />
+                    <label for="name" class="semi-bold">{{ attr.resourcename}}</label>
+                    <br />
+                    <label for="name">Parent Resource Type Name: &nbsp; </label><br /> <label class="semi-bold" for="name">{{
+                      attr.resourcetypename}}</label>
+                  </div>
+                </div>
+
+                <div style="width:180px;float:left;margin-top:12px" *ngIf="portfolios != undefined && portfolios.length >0 ">
+                  <div class="form-group">
+                  <label> Portfolio</label>
+                 <select class="form-control" name="portfolioid" [(ngModel)]="Resourcedetail.portfolioid" style="width:180px!important;min-width: 180px">
+                  <option value="{{portfolio.portfolioid}}"  [selected]="(portfolio.portfolioid == Resourcedetail.portfolioid)?'true':'false'" *ngFor="let portfolio of portfolios">{{portfolio.portfolioname}}</option>
+                 </select>
+                </div>
+
+
+                </div>
+              </div>
+
+              <div *ngIf="parentDetails == null || parentDetails.length == 0" style="width: 400px;">
+                <div><label for="name" style="margin-top: 18px;"> &nbsp; </label><br><label class="semi-bold" for="name"></label><br><label
+                    for="name"> </label><br><label class="semi-bold" for="name"></label></div>
+              </div>
+              <div [ngClass]="(ResourceTypeName != 'Platform')?'scrol-tbl':'scrol-tbl-hide-p'" >
+
+                <div class="dtfrom" [style.marginTop.px]="(parentDetails == null || parentDetails.length == 0)?'-65':'-87'">
+                  <label> Validity Start</label>
+                  <angular2-date-picker [(ngModel)]="Resourcedetail.startdate" name="fromDate" [settings]="settings"></angular2-date-picker>
+                </div>
+                <div class="dtto" [style.marginTop.px]="(parentDetails == null || parentDetails.length == 0)?'-65':'-87'">
+
+                  <label> Validity End</label>
+                  <angular2-date-picker [(ngModel)]="Resourcedetail.enddate" name="toDate" [settings]="settings"></angular2-date-picker>
+                </div>
+
+                <div class="tbl-border" style="margin-top:10px" *ngIf="parentObsRem != undefined ">
+
+
+                  <table class="tableBodyScroll table-spec" *ngIf="parentObsRem != undefined ">
+                    <thead>
+                      <tr>
+                        <td>Observable Plan</td>
+                        <td>Remediation Plan</td>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let obs of parentObsRem; let i=index">
+                        <td data-toggle="tooltip" data-placement="top" title="{{ obs.name}} "> <span><input
+                              class="styled-checkbox" type="checkbox" style="cursor: pointer;" [checked]="obs.isObsSelected"
+                              name="{{obs.name}}-{{obs.ObservableActionId}}-{{i}}" id="styled-checkbox-{{obs.name}}-{{obs.ObservableActionId}}-{{i}}" [(ngModel)]="obs.isObsSelected"
+                              (change)="checkValue(obs)"> <label for="styled-checkbox-{{obs.name}}-{{obs.ObservableActionId}}-{{i}}"></label></span>{{
+                          (obs.name.length>15)? (obs.name | slice:0:15)+'..':(obs.name)}}
+                        </td>
+                        <td data-toggle="tooltip" data-placement="top" title="{{ obs.RemediationPlanName}} "><span><input *ngIf="obs.RemediationPlanId != 0"
+                              class="styled-checkbox" id="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.ObservableId}}"
+                              type="checkbox" style="cursor: pointer;" [checked]="obs.isRemSelected"  id="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}" name="{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"
+                              [(ngModel)]="obs.isRemSelected" (change)="checkValue(obs)">
+                            <label for="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"></label></span>
+                          {{ (obs.RemediationPlanName!=null && obs.RemediationPlanName.length>15)? (obs.RemediationPlanName |
+                          slice:0:15)+'..':(obs.RemediationPlanName)}} </td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <i data-toggle="modal" (click)="isParentModel(true)" data-tooltip="tooltip" title="Add {{ResourceTypeName}}"
+                  style="cursor: pointer; margin-top: 31px;margin-left: 30px;"  [attr.data-target]="(ResourceTypeName == 'Platform')?'#AddNodeModal':'#AddNodeModal' " class="img-add "></i>
+              </div>
+
+
+            </div>
+          </div>  -->
+
+          <!-- end -->
+        </div>
+
+        <!-- <div class="row" style=" margin-top: 20px;border-top: 1px solid #ced4da;   " *ngIf="Resourcedetail != null ">
+          <div class="col-12">
+            <div *ngIf="Resourcedetail != null  " class="div-box">
+              <div class="col-4" *ngFor="let attr of Resourcedetail.resourceattribute;let i = index"
+                [ngClass]="(i %3 == 1 || i %3 == 2 )? 'float-left':'float-left'">
+                <div class="form-group" *ngIf="i %3 == 1">
+                  <label for="name" data-toggle="tooltip" data-placement="top" title="{{ attr.description}} ">{{attr.displayname
+                    }} </label>
+                  <input [(ngModel)]="attr.attributevalue" (keyup)="onKeyUp()" name="{{attr.displayname }}_{{i}}"
+                    [type]="( (attr.displayname | lowercase).indexOf('password') !== -1) ? 'password' : 'text'"
+                    value="{{attr.attributevalue}}" class="form-control" required>
+                </div>
+                <div class="form-group" *ngIf="i %3 == 2">
+                  <label for="name" data-toggle="tooltip" data-placement="top" title="{{ attr.description}} ">{{attr.displayname
+                    }}</label>
+                  <input [(ngModel)]="attr.attributevalue" (keyup)="onKeyUp()" name="{{attr.displayname }}_{{i}}"
+                    [type]="( (attr.displayname | lowercase).indexOf('password') !== -1) ? 'password' : 'text'"
+                    value="{{attr.attributevalue}}" class="form-control" required>
+                </div>
+                <div class="form-group" *ngIf="i %3 == 0">
+                  <label for="name" data-toggle="tooltip" data-placement="top" title="{{ attr.description}} ">{{attr.displayname
+                    }}</label>
+                  <input [(ngModel)]="attr.attributevalue" (keyup)="onKeyUp()" name="{{attr.displayname }}_{{i}}"
+                    [type]="( (attr.displayname | lowercase).indexOf('password') !== -1) ? 'password' : 'text'"
+                    value="{{attr.attributevalue}}" class="form-control" required>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+
+        <div class="row" style=" margin-top: 20px;border-top: 1px solid #ced4da;   " *ngIf="Resourcedetail != null ">
+          <div class="col-12">
+            <div *ngIf="Resourcedetail != null  " class="div-box">
+              <table class="table paramTabl">
+                <thead>
+                  <tr>
+                    <td>Parameter Name</td>
+
+                    <td>Description</td>
+
+                    <td> Value</td>
+                    <td style="width:18%">IsSecret</td>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let attr of Resourcedetail.resourceattribute;let i = index">
+                    <td>{{attr.displayname}}</td>
+                    <td>{{attr.description}}</td>
+                    <td><input [(ngModel)]="attr.attributevalue" (keyup)="onKeyUp()" name="{{attr.displayname }}_{{i}}"
+                        [type]="( (attr.displayname | lowercase).indexOf('password') !== -1) ? 'password' : 'text'"
+                        value="{{attr.attributevalue}}" style="width:262px" class="form-control" required></td>
+                    <td style="width:18%">
+
+
+
+                      <select style="width:120px;min-width:120px" [(ngModel)]="attr.IsSecret" name="issecret_{{i}}"
+                        class="form-control">
+                        <option value="true"  >Yes</option>
+                        <option value="false">NO</option>
+
+                      </select>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row"
+          style="margin-top: 20px;border-top: 1px solid #ced4da;padding-top: 10px;    margin-right: 20px">
+          <div class="col-12">
+
+            <div class="div-box" style="    margin-left: 14px;">
+              <div class="float-left" style="width:513px;height:40px;" *ngIf="childDetiils != null  ">
+                <label for="name" style="width: 80px;">{{ childDetailJson.resourcetypename}}</label><br />
+                <select *ngIf="resourceComboChild != undefined && resourceComboChild.length > 0"
+                  style="margin-bottom: 10px;" class="selectpicker"
+                  (change)="onChangeResourceChild($event.target.value)">
+                  <option *ngFor="let obj1 of resourceComboChild" [selected]="obj1.value == resourceIdComboChild"
+                    value="{{obj1.value}}">{{obj1.key}}
+                  </option>
+
+                </select>
+
+              </div>
+              <div style="width:422px" *ngIf="resourceComboChild != undefined && resourceComboChild.length > 0">
+                <div style="float:left" [style.marginTop.px]="30">
+                  <label for="name" style="margin-top: 5px;">
+                    <input type="radio" value="activatec" name="donotmoniterc"
+                      [checked]="childDetailJson.dontmonitor == true" (click)="activateChildResource(true)">Activate
+                    <input type="radio" value="deactivatec" name="donotmoniterc" *ngIf="ResourceTypeName != 'Platform'"
+                      style="margin-left: 10px;" [checked]="childDetailJson.dontmonitor == false"
+                      (click)="activateChildResource(false)">Deactivate
+                  </label>
+                  <!-- <label for="name" style="margin-top: 18px;">
+                          <input name="chk_monitorc" id="styled-checkbox-chk_monitorc"
+                          class="styled-checkbox" type="checkbox" [(ngModel)]="childDetailJson.dontmonitor" [checked]="childDetailJson.dontmonitor" > <label for="styled-checkbox-chk_monitorc"></label>
+                        &nbsp; Don't monitor   </label><br /> -->
+                  <div style="width:380px;margin-top:2px" *ngIf="portfolios != undefined && portfolios.length >0 ">
+                    <div class="form-group float-left">
+                      <label data-toggle="tooltip" data-placement="top" title="Portfolio for RPA Control Center">
+                        Portfolio</label>
+                      <select class="form-control" name="portfolioidc" [(ngModel)]="childDetailJson.portfolioid"
+                        style="width:180px!important;min-width: 180px">
+                        <option value=""></option>
+                        <option value="{{portfolio.portfolioid}}"
+                          [selected]="(portfolio.portfolioid == childDetailJson.portfolioid)?'true':'false'"
+                          *ngFor="let portfolio of portfolios">{{portfolio.portfolioname}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group float-right">
+                      <label >
+                        Source</label>
+                      <input type="text"  [(ngModel)]="childDetailJson.source" class="form-control" style="width: 184px;" name="source" >
+                  </div>
+                  </div>
+                  
+                </div>
+
+                <div style="float: right;margin-top: -37px; margin-right: 5px;">
+                  <div class="dtfrom">
+                    <label> Validity Start</label>
+                    <angular2-date-picker [(ngModel)]="childDetailJson.startdate" name="fromDateChild"
+                      [settings]="settings"></angular2-date-picker>
+
+                  </div>
+                  <div class="dtto">
+
+                    <label> Validity End</label>
+                    <angular2-date-picker [(ngModel)]="childDetailJson.enddate" name="toDateChild"
+                      [settings]="settings"></angular2-date-picker>
+                  </div>
+                </div>
+              </div>
+
+              <div [ngClass]="(childObsRem != undefined )?'scrol-tbl':'scrol-tbl-hide'" style="margin-top: 47px;"
+                *ngIf="ResourceTypeName != 'Platform' && ResourceTypeName != 'BOT' ">
+
+                <div class="tbl-border">
+
+                  <table class="tableBodyScroll table-spec" *ngIf="childObsRem != undefined ">
+
+                    <thead>
+                      <tr>
+                        <td>Monitoring Plan</td>
+                        <td>Remediation Plan</td>
+
+                      </tr>
+                    </thead>
+
+                    <tbody *ngIf="childObsRem  ==  undefined ||  childObsRem.length  == 0">
+                      <tr>
+                        <td colspan="2"> <label style="    margin-left: 89px;
+                          margin-top: 10px;">No Plan configured </label></td>
+                      </tr>
+                    </tbody>
+                    <tbody *ngIf="childObsRem  !=  undefined &&  childObsRem.length  > 0">
+                      <tr *ngFor="let obs of childObsRem ;let i =index">
+                        <td class="shorten-word" data-toggle="tooltip" data-placement="top" title="{{ obs.name}} ">
+                          <span><input type="checkbox"
+                              id="styled-checkbox-{{obs.name}}-{{obs.ObservableActionId}}-{{i}}" class="styled-checkbox"
+                              name="{{obs.name}}-{{obs.ObservableActionId}}-{{i}}" style="cursor: pointer;"
+                              [checked]="obs.isObsSelected"
+                              (change)="checkValueChild(obs.ObservableId,obs.RemediationPlanId,'obs',$event.target.checked)">
+                            <label for="styled-checkbox-{{obs.name}}-{{obs.ObservableActionId}}-{{i}}"></label>
+                          </span>{{
+                          (obs.name.length>15)? (obs.name | slice:0:15)+'..':(obs.name)}}
+                        </td>
+                        <td class="shorten-word" data-toggle="tooltip" data-placement="top"
+                          title="{{ obs.RemediationPlanName}} "><span><input *ngIf="obs.RemediationPlanId !=null && obs.RemediationPlanId != 0"
+                              style="cursor: pointer;" type="checkbox" class="styled-checkbox"
+                              id="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"
+                              name="{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"
+                              [checked]="obs.isRemSelected"
+                              (change)="checkValueChild(obs.ObservableId,obs.RemediationPlanId,'rem',$event.target.checked)">
+                            <label
+                              for="styled-checkbox-{{obs.RemediationPlanId}}-{{obs.name}}-{{obs.ObservableActionId}}"></label>
+                          </span>
+                          {{ (obs.RemediationPlanName.length>15)? (obs.RemediationPlanName |
+                          slice:0:15)+'..':(obs.RemediationPlanName)}} <label
+                            *ngIf="obs.RemediationPlanId ==null ||obs.RemediationPlanId == 0">No Plan configured
+                          </label></td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <i data-toggle="modal" (click)="isParentModel(false)" data-tooltip="tooltip" title="Add Service"
+                  style="cursor: pointer; margin-top: 35px;margin-left: 30px;" data-target="#AddNodeModal"
+                  [attr.data-target]=" (ResourceTypeName == 'Platform' || ResourceTypeName == 'BOT' )?'':'#AddNodeModal'"
+                  class="img-add "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- <div class="row" style=" margin-top: 20px;border-top: 1px solid #ced4da;margin-top: 52px;   "
+          *ngIf="childDetiils != null">
+          <div class="col-12">
+            <div class="div-box">
+            
+
+
+              <div class="col-4" *ngFor="let attr of childDetailJson.resourceattribute;let i = index"
+                [ngClass]="(i %3 == 1 || i %3 == 2 )? 'float-left':'float-left'">
+                <div class="form-group" *ngIf="i %3 == 1">
+                  <label for="name" data-toggle="tooltip" data-placement="top" title="{{ attr.description}} ">{{attr.displayname
+                    }}</label>
+                  <input name="{{attr.displayname }}_{{i}}" (keyup)="onKeyUp()" [(ngModel)]="attr.attributevalue"
+                    type="text" value="{{attr.attributevalue}}" class="form-control" required>
+                </div>
+                <div class="form-group" *ngIf="i %3 == 2">
+                  <label for="name" data-toggle="tooltip" data-placement="top" title="{{ attr.description}} ">{{attr.displayname
+                    }}</label>
+                  <input name="{{attr.displayname }}_{{i}}" (keyup)="onKeyUp()" [(ngModel)]="attr.attributevalue"
+                    type="text" value="{{attr.attributevalue}}" class="form-control" required>
+                </div>
+                <div class="form-group" *ngIf="i %3 == 0">
+                  <label for="name" data-toggle="tooltip" data-placement="top" title="{{ attr.description}} ">{{attr.displayname
+                    }}</label>
+                  <input name="{{attr.displayname }}_{{i}}" (keyup)="onKeyUp()" [(ngModel)]="attr.attributevalue"
+                    type="text" value="{{attr.attributevalue}}" class="form-control" required>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+
+        <div class="row" style=" margin-top: 42px;border-top: 1px solid #ced4da;   "  *ngIf="childDetiils != null">
+          <div class="col-12">
+            <div *ngIf="Resourcedetail != null  " class="div-box">
+              <table class="table paramTabl">
+                <thead>
+                  <tr>
+                    <td>Parameter Name</td>
+
+                    <td>Description</td>
+
+                    <td> Value</td>
+                    <td style="width:18%">IsSecret</td>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let attr of childDetailJson.resourceattribute;let i = index">
+                    <td>{{attr.displayname}}</td>
+                    <td>{{attr.description}}</td>
+                    <td><input [(ngModel)]="attr.attributevalue" (keyup)="onKeyUp()"
+                        name="{{attr.displayname}}_{{i}}_child"
+                        [type]="( (attr.displayname | lowercase).indexOf('password') !== -1) ? 'password' : 'text'"
+                        value="{{attr.attributevalue}}" style="width:262px" class="form-control" required></td>
+                    <td style="width:18%">
+
+
+
+                      <select [(ngModel)]="attr.IsSecret" style="width:120px;min-width:120px"
+                        name="issecret_{{i}}_child" class="form-control">
+                        <option value="true"  [selected]="attr.IsSecret">Yes</option>
+                        <option value="false" [selected]="!attr.IsSecret">NO</option>
+
+                      </select>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom:10px;margin-top: 58px;">
+          <div class="col-12">
+            <button style="width: auto;margin-left: 18px;margin-right: 41px;margin-bottom: 13px;" type="button"
+              class="add-btn float-right">Publish</button><button class="update-btn float-right" (click)="onUpdate()"
+              type="submit">Update</button> <button type="button" class="update-btn float-right"
+              (click)="onReset()">Reset</button>
+
+          </div>
+        </div>
+      </form>
+
+      <div class="row" style="border-top: 1px solid #ced4da; "
+        *ngIf="confJson != undefined &&  confJson[0].resourcetypedetails != undefined">
+        <div class="col-12">
+          <div class="div-box">
+            <label for="name" class="semi-bold" style="font-size:14px">SUMMARY</label>
+            <table style="    height: 85px;width:100%">
+
+              <tr>
+                <td *ngFor="let resource of confJson[0].resourcetypedetails;let i = index;">
+                  {{resource.resourcetypename}}</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td style="height:auto ;" *ngFor="let resource1 of confJson[0].resourcetypedetails;">
+                  <span
+                    (click)="assignValues(resource1.resourcetypeid,resource1.resourceid ,resource1.resourcetypename)"
+                    class="semi-bold" style="cursor: pointer;color: #0090F0;font-size: 13px; " data-toggle="tooltip"
+                    data-placement="top">
+
+                    <!-- <a href="#top" > {{
+                    (res.resourcename.length>15)? (res.resourcename |
+                    slice:0:15)+'..':(res.resourcename)}} </a> -->
+
+                    <a href="#top"> {{resource1.details.length}} </a>
+
+                  </span>
+
+                </td>
+                <td><button (click)="openSummary()" style="margin-top: 10px;" class="update-btn " data-toggle="modal"
+                    data-target="#summaryModel">View</button></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="AddNodeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width:618px">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+
+          <div style="height:50px;float:left">
+            <ul class="nav nav-tabs" id="myTab" role="tablist" style="width: auto;">
+              <li class="nav-item" (click)="isShowTable(true)">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">Add Parameter</a>
+              </li>
+              <li class="nav-item" (click)="isShowTable(true)">
+                <a class="nav-link " id="param-tab" data-toggle="tab" href="#param" role="tab" aria-controls="param"
+                  aria-selected="true">Add Resource </a>
+
+
+              </li>
+
+              <li class="nav-item" (click)="isShowTable(false)">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                  aria-controls="profile" aria-selected="false">Add Monitoring-Remediation Plan </a>
+              </li>
+
+            </ul>
+          </div>
+
+
+
+          <div class="tab-content" id="myTabContent" style="margin-top: 62px;">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="form-group">
+
+                <table style="    width: 502px;">
+                  <tr>
+                    <td colspan="2">
+                      <label style="margin-left: 10px;">Update Existing Resource</label>
+
+                    </td>
+                    <!-- <td>
+                      <label style="margin-left: 35px;">Add New {{ResourceTypeName}}</label>
+                    </td> -->
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <select *ngIf="isParentNode" (click)="onBlurCombo()"
+                        style="min-width:193px;width: 193px !important;    margin-left: 10px;" class="selectpicker"
+                        (change)="onChangeResource($event.target.value)" #nodeSelect>
+                        <option value="0" selected> Choose one </option>
+                        <option *ngFor="let obj of resourceCombo" value="{{obj.value}}">{{obj.key}}</option>
+
+                      </select>
+                      <select *ngIf="!isParentNode" (click)="onBlurCombo()"
+                        style="min-width:193px;width: 193px !important;  margin-left: 10px" class="selectpicker"
+                        (change)="onChangeResourceChild($event.target.value)" #nodeSelect>
+                        <option value="0" selected> Choose one </option>
+                        <option *ngFor="let obj1 of resourceComboChild" value="{{obj1.value}}">{{obj1.key}}
+                        </option>
+
+                      </select>
+                    </td>
+                    <!-- <td>
+                      <span style="margin-left: -20px;margin-right: 20px;">Or &nbsp; </span> <span style="width:100px;margin-left:10px"><input (click)="onBlurCreate()"
+                          name="param" type="text" placeholder="Create New" style="    width: 195px;
+                        height: 30px;"
+                          #node></span>
+                    </td> -->
+
+                  </tr>
+                  <!-- <tr>
+                    <td>
+                      <label></label>
+                    </td>
+                    <td>
+                      <label style="margin-left: 35px;"></label>
+                    </td>
+                  </tr> -->
+
+
+
+                </table>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="model-border">
+
+
+                <table style="height: 62px;
+                width: 360px;margin-left: 55px;" class="tableActiveRem"
+                  *ngIf="activeObsRemediation != undefined &&  activeObsRemediation.observablesandremediations != undefined">
+
+
+                  <tr>
+                    <td style="width: 25px;"></td>
+                    <td style="font-size:13px">Monitoring Plan</td>
+                    <td style="font-size:13px">Remediation Plan</td>
+
+                  </tr>
+
+                  <tr *ngFor="let obs of activeObsRemediation.observablesandremediations;let k=index">
+                    <td style="width: 25px;font-size:13px"> <span><input class="styled-checkbox" name="chk_check_{{k}}"
+                          id="chk_check_{{k}}" style="cursor: pointer;" (change)="selectPlan($event.target.checked,obs)"
+                          type="checkbox"
+                          id="styled-checkbox-{{obs.ObservableId}}-{{obs.ObservableActionId}}-{{obs.RemediationPlanName}}">
+                        <label
+                          for="styled-checkbox-{{obs.ObservableId}}-{{obs.ObservableActionId}}-{{obs.RemediationPlanName}}"></label></span>
+                    </td>
+                    <td style="font-size:13px" class="shorten-word" data-toggle="tooltip" data-placement="top"
+                      title="{{ obs.name}} ">
+                      {{
+                      (obs.name !=  null  &&  obs.name.length>15)? (obs.name | slice:0:15)+'..':(obs.name)}}
+                    </td>
+                    <td *ngIf="obs.RemediationPlanName !=  null" style="font-size:13px" class="shorten-word"
+                      data-toggle="tooltip" data-placement="top" title="{{ obs.RemediationPlanName}} ">
+                      {{ ( obs.RemediationPlanName  !=null  && obs.RemediationPlanName.length>15)? (obs.RemediationPlanName |
+                      slice:0:15)+'..':(obs.RemediationPlanName)}} </td>
+                    <td *ngIf="obs.RemediationPlanName ==  null" style="font-size:13px" class="shorten-word"
+                      data-toggle="tooltip" data-placement="top" title="{{ obs.RemediationPlanName}} ">
+                      No Plan configured </td>
+
+                  </tr>
+
+                </table>
+              </div>
+              <button type="button" class="add-btn float-right" (click)="savePlan()"
+                style="width:auto;margin-left:10px;margin-right:16px">Save
+              </button>
+              <button type="button" class="update-btn float-right" data-dismiss="modal">Cancel</button>
+            </div>
+            <div class="tab-pane fade show " id="param" role="tabpanel" aria-labelledby="param-tab">
+              <div class="form-group">
+
+                <table style="width: 502px;">
+                  <tr>
+
+                    <td>
+                      <label style="margin-left: 10px;">Add New Resource </label>
+                    </td>
+                  </tr>
+                  <tr>
+
+                    <td>
+                      <span style="width:100px;margin-left:10px"><input (click)="onBlurCreate()" name="param"
+                          type="text" style="    width: 195px;
+                            height: 30px;" #node></span>
+                    </td>
+                    <td>
+                      <span style="margin-left: -6px;"> <span style="font-size: 13px;" #includeDefaultDiv>&nbsp;
+
+                          <input name="chk_isdefault" id="styled-checkbox-chk_isdefault" class="styled-checkbox"
+                            type="checkbox" #includeDefault>
+                          <label for="styled-checkbox-chk_isdefault"></label>
+                          Include
+                          default Parameters </span> </span>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <label></label>
+                    </td>
+                    <td>
+                      <label style="margin-left: 35px;"></label>
+                    </td>
+                  </tr>
+                  <!-- <tr>
+                          <td>
+                           Parameter Name
+                          </td>
+                          <td>
+                              Description
+                             </td>
+                        </tr>
+                      <tr style="margin-top: 25px;">
+                        <td colspan="2" >
+                           
+                          <span style="width:200px;margin-left: 10px;"><input placeholder="Attribute name" name="param" type="text" style="    width: 195px;
+                              height: 30px;"
+                              #param></span>
+    
+                              <div style="    float: right;
+                              margin-right: 112px;"><i style="height: 29px;margin-top: 0px;cursor: pointer;margin-left: -80px;" class="img-add " data-toggle="tooltip" data-placement="top" title="Add Attribute" (click)="addParameters(param,node)"></i></div>
+                        </td>
+                        
+                      </tr> -->
+                </table>
+                <!-- <div style="width:450px;height:40px;overflow-x: auto;    margin-top: 20px;" *ngIf="nodeParameters != undefined">
+                      <div class="float-left" *ngFor="let param of nodeParameters" style="width:auto;height:40px;margin-left: 10px;">
+                        <button style="border: NONE;" class="delete-box rounded">{{param}} &nbsp;<span (click)="deleteParams(param)"
+                            class="delete_box_image" title="Click to delete"><img src="assets/images/close.png"></span></button>
+                      </div>
+                    </div>
+    
+                  </div>
+                  <button type="button" (click)="saveNode('node')" class="add-btn float-right" style="width:auto;margin-left:10px">Save
+                  </button>
+                  <button type="button" class="update-btn float-right" data-dismiss="modal">Cancel</button>
+     -->
+
+
+              </div>
+
+            </div>
+
+            <div *ngIf="showTable">
+              <table>
+                <tr>
+                  <td style="width: 244px;">
+                    <label style="margin-left: 10px;"> Parameter Name</label>
+                  </td>
+                  <td>
+                    <label> Description</label>
+                  </td>
+                </tr>
+                <tr style="margin-top: 05px;">
+                  <td colspan="2">
+
+                    <span style="width:200px;margin-left: 10px;"><input name="param" type="text" style="    width: 195px;
+                        height: 30px;" #param></span>
+                    <span style="width:202px;margin-left: 40px;"><input name="desc" type="text" style="    width: 195px;
+                          height: 30px;" #paramdesc></span>
+
+                    <!-- <div style="    float: right;
+                       "><i style="height: 29px;margin-top: 0px;cursor: pointer;margin-left:20px" class="img-add "
+                        data-toggle="tooltip" data-placement="top" title="Add Attribute"
+                        (click)="addParameters(param,node)"></i></div> -->
+                  </td>
+
+                </tr>
+                <tr>
+                  <td style="width: 244px;">
+                    <label style="margin-left: 10px;"> Display Name</label>
+                  </td>
+                  <td>
+                    
+                  </td>
+                </tr>
+                <tr style="margin-top: 05px;">
+                  <td colspan="2">
+
+                    <span style="width:200px;margin-left: 10px;"><input name="paramDisplay" type="text" style="    width: 195px;
+                        height: 30px;" #paramDisplay></span>
+                   
+
+                    <div style="    float: right;margin-right: 216px;
+                       "><i style="height: 29px;margin-top: 0px;cursor: pointer;margin-left:20px" class="img-add "
+                        data-toggle="tooltip" data-placement="top" title="Add Attribute"
+                        (click)="addParameters(param,node)"></i></div>
+                  </td>
+
+                 
+                </tr>
+              </table>
+              <div style="width:450px;height:40px;overflow-x: auto;    margin-top: 20px;"
+                *ngIf="nodeParameters != undefined">
+                <div class="float-left" *ngFor="let param of nodeParameters"
+                  style="width:auto;height:40px;margin-left: 10px;">
+                  <button style="border: NONE;" class="delete-box rounded">{{param.displayname}} &nbsp;<span
+                      (click)="deleteParams(param)" class="delete_box_image" title="Click to delete"><img
+                        src="assets/images/close.png"></span></button>
+                </div>
+              </div>
+              <button type="button" (click)="saveNode('node')" class="add-btn float-right"
+                style="width:auto;margin-left:10px">Save
+              </button>
+              <button type="button" class="update-btn float-right" data-dismiss="modal">Cancel</button>
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="modal fade" id="summaryModel" tabindex="-1" role="dialog" aria-labelledby="summaryModelLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 930px  !important;">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          
+          
+        </div> -->
+        <div class="modal-body">
+          <app-summary [PlatformId]="PlatformIdChild" (messageEvent)="receiveMessage($event)"></app-summary>
+          <!-- <app-activate-resource [PlatformId]="PlatformIdChild"></app-activate-resource> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="update-btn" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" data-keyboard="false" data-backdrop="static" id="summaryActivateModel" tabindex="-1" role="dialog" aria-labelledby="summaryActivateModelLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 640px  !important;">
+      <div class="modal-content">
+
+
+
+        <app-activate-resource [PlatformId]="PlatformIdChild" (messageEvent)="receiveActivateMsg($event)"></app-activate-resource>
+
+
+      </div>
+    </div>
+  </div>

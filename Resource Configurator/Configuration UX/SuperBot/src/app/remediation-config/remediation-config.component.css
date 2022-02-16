@@ -1,0 +1,96 @@
+.img-add {
+    content: url('/superbotapp/assets/images/plus.png');
+  }
+  .img-delete {
+    content: url('/superbotapp/assets/images/delete.png');
+  }
+  .img-delete-table {
+    content: url('/superbotapp/assets/images/delete1.png');
+  }
+
+  .action-td{
+      /* text-decoration:underline;  */
+     color:#007bff; 
+     cursor: pointer;  
+  }
+  .add-btn{
+    margin-top: 30px;
+    margin-left: 66px;
+    background-color:#007cc3;
+    color:white;
+    width:auto;
+    height:30px;
+    border:none;
+    border-radius: 2px; 
+    cursor: pointer;
+    font-size: 13px;
+  }
+  .update-btn{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:#007cc3;
+    width:auto;
+    height:30px;
+    background-color: white;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+  .btn-border{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:white;
+    width:auto;
+    height:30px;
+    background-color: #007cc3;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+  select {
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400;
+    /* min-width: 280px;
+    min-height:35px; */
+    border: 1px solid #ced4da;
+    /* border: #83838E */
+  }
+  .semi-bold{
+    color: #333333 !important;
+      font-size: 14px;
+      font-weight: 600 !important;
+  }
+  label {
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    
+  }
+  :host /deep/ .box-size{
+    background-color: white;
+    width: 102%;
+    height: 570px !important;
+    overflow: auto;
+  }
+  .paramTabl tbody {
+    display: block;
+    max-height: 103px;
+    overflow-y: auto;
+  }
+   .paramTabl thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  } 
+  .paramTabl thead{
+    background-color: #abe1ff;
+  }

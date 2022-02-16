@@ -1,0 +1,87 @@
+.plus-list {
+  content: url('/superbotapp/assets/images/plus-list.png');
+  width: 20px;
+  height: 20px;
+}
+.minus-list {
+  content: url('/superbotapp/assets/images/minus-list.png');
+  width: 20px;
+  height: 20px;
+}
+
+.bold{
+    font-family: 'Open Sans' !important;
+    font-weight: 600;
+  }
+
+  .semi-bold{
+    font-family: 'Open Sans' !important;
+    font-weight: 500;
+  }
+
+  .border-box{
+    width:450px;
+    height:150px;
+    margin-bottom:10px;
+    border: 1px solid black;
+  }
+
+  .inner-box{
+    width:388px;
+    height:107px;
+    overflow-y: auto;
+  }
+
+  .border-div{
+    width:417px;
+    height:120px;
+    margin-bottom:10px;
+    margin-left: 10px;
+    margin-top: 2px;
+    overflow-y: auto;
+  }
+  ::-webkit-scrollbar {
+    height: 4px; 
+      width: 04px;
+      /* color: #33424B; */
+      background-color: #263137 ;
+      border: 0px ;
+     
+  }
+  .border-box-s{
+    width:450px;
+    height:100px;
+    margin-bottom:10px;
+    border: 1px solid black;
+  }
+
+  .border-div-s{
+    width:440px;
+    height:80px;
+    margin-bottom:10px;
+    margin-left: 10px;
+    margin-top: 2px;
+    overflow-y: auto;
+  }
+
+  .run-box{
+    width: 450px;
+    height: 470px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+  
+ .run-inner{
+  width: 440px;
+  height: 434px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 2px;
+  overflow-y: auto;
+}
+
+
+
+
+
+ 

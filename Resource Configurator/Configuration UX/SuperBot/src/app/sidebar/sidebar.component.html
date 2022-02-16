@@ -1,0 +1,125 @@
+<app-header></app-header>
+<div class="container-fluid" style="background-color: #F6F6F6;">
+
+  <div class="row row-style" style="background-color:#F6F6F6;">
+    <div class="col-2">
+      <div class="nav-side-menu  float-left collapse show clearfix side-bar-div ">
+
+
+
+        <div class="menu-list">
+
+          <ul id="menu-content" class="menu-content collapse out">
+
+            <li data-toggle="collapse" data-target="#products" (click)="onSelect('Configuration','Meta Configuration')"
+              [ngClass]="liParent == 'Configuration'? 'collapsed active':'collapsed'">
+              <a><i class="img-bullet"></i>Configuration </a>
+            </li>
+            <ul class="sub-menu collapse  " id="products">
+              <li [ngClass]="lichild == 'Meta Configuration'? 'active':''"
+                (click)="onSelect('Configuration','Meta Configuration')"><a>Meta
+                  Configuration</a></li>
+
+              <li [ngClass]="lichild == 'Action Configuration'? 'active':''"
+                (click)="onSelect('Configuration','Action Configuration')"><a>Action
+                  Configuration</a></li>
+              <li [ngClass]="lichild == 'Observable Configuration'? 'active':''"
+                (click)="onSelect('Configuration','Observable Configuration')"><a data-toggle="tooltip"
+                  data-placement="top" title="Monitoring Configuration">Monitoring Conf...</a></li>
+              <li><a [ngClass]="lichild == 'Observable Plan'? 'active':''"
+                  (click)="onSelect('Configuration','Observable Plan')">Monitoring
+                  Plan</a></li>
+              <li><a [ngClass]="lichild == 'Remediation Plan'? 'active':''"
+                  (click)="onSelect('Configuration','Remediation Plan')">Remediation
+                  Plan</a></li>
+              <li><a [ngClass]="lichild == 'Remediation Configuration'? 'active':''"
+                  (click)="onSelect('Configuration','Remediation Configuration')" data-toggle="tooltip"
+                  data-placement="top" title="Remediation Configuration">Remediation Conf...</a></li>
+              <!-- <li [ngClass]="lichild == 'Resouce Model'? 'active':''"
+                (click)="onSelect('Configuration','Resouce Model')"><a>Resouce
+                  Model</a></li> -->
+              <li><a [ngClass]="lichild == 'Anomaly Configuration'? 'active':''"
+                  (click)="onSelect('Configuration','Anomaly Configuration')" data-toggle="tooltip" data-placement="top"
+                  title="Anomaly Configuration">Anomaly Conf...</a></li>
+              <!-- <li><a>Remediation Plan</a></li> -->
+
+
+
+            </ul>
+
+            <li data-toggle="collapse" data-target="#autos" (click)="onSelect('Discovery','Auto Configuration')"
+              [ngClass]="liParent == 'Discovery'? 'collapsed active':'collapsed'">
+              <a><i class="img-bullet"></i>Discovery </a>
+            </li>
+
+
+
+            <ul class="sub-menu collapse " id="autos">
+              <li [ngClass]="lichild == 'Auto Configuration'? 'active':''"
+                (click)="onSelect('Discovery','Auto Configuration')"><a>Auto
+                  Configuration</a></li>
+            </ul>
+            <li data-toggle="collapse" data-target="#resourceModel" (click)="onSelect('Resource Model','Resource Model')"
+              [ngClass]="liParent == 'Resource Model'? 'collapsed active':'collapsed'">
+              <a><i class="img-bullet"></i>Resource Model </a>
+            </li>
+            <ul class="sub-menu collapse show" id="resourceModel">
+              <li [ngClass]="lichild == 'Resource Model'? 'active':''"
+                (click)="onSelect('Resource Model','Resource Model')"><a>Resource Model
+                  </a></li>
+            </ul>
+            <li data-toggle="collapse" data-target="#service" (click)="onSelect('Mapping','')"
+              [ngClass]="liParent == 'Mapping'? 'collapsed active':'collapsed'">
+              <a><i class="fa  fa-circle fa-lg"></i> Mapping </a>
+            </li>
+
+
+
+            <li data-toggle="collapse" data-target="#new"
+              [ngClass]="liParent == 'Configuration History'? 'collapsed active':'collapsed'"
+              (click)="onSelect('Configuration History','')">
+              <a><i class="fa fa-car fa-lg"></i> Configuration History </a>
+            </li>
+
+            <li data-toggle="collapse" data-target="#new" (click)="onSelect('Reports','')"
+              [ngClass]="liParent == 'Reports'? 'collapsed active':'collapsed'">
+              <a><i class="fa fa-car fa-lg"></i> Reports </a>
+            </li>
+
+
+
+
+          </ul>
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="col-10" style="margin-top: 17px;margin-left: 217px; background-color:#F6F6F6;">
+
+
+      <app-auto-configuration (messageEvent)="platformDetails($event)"
+        *ngIf="lichild == 'Auto Configuration' && showAutoConfig "></app-auto-configuration>
+      <app-platform-details (messageEvent)="receiveMessage($event)" *ngIf="lichild == 'Resource Model' && count == 0">
+      </app-platform-details>
+      <app-configuration [PlatformIdChild]="PlatformId" [ResourceTypeNameChild]="ResourceTypeName"
+        *ngIf="lichild == 'Resource Model' && count == 1">
+      </app-configuration>
+      <app-meta-configuration *ngIf="lichild == 'Meta Configuration'"></app-meta-configuration>
+      <app-observableplan *ngIf="lichild == 'Observable Plan'"></app-observableplan>
+      <app-action-configuration [ActionId]="actionId" *ngIf="lichild == 'Action Configuration'">
+      </app-action-configuration>
+      <app-observable-config *ngIf="lichild == 'Observable Configuration'"></app-observable-config>
+      <app-remediation-config (messageEvent)="loadAction($event)" *ngIf="lichild == 'Remediation Plan'">
+      </app-remediation-config>
+      <app-remediation-plan *ngIf="lichild == 'Remediation Configuration'"></app-remediation-plan>
+      <app-anomaly-config *ngIf="lichild == 'Anomaly Configuration'"> </app-anomaly-config>
+
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

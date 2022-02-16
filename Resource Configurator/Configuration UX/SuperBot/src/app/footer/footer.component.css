@@ -1,0 +1,16 @@
+.footer-style {
+    font-size: 11px;
+    padding-left: 20px;
+    color: #1f1e1e;
+    font-family: 'Roboto',sans-serif !important;
+    font-weight: 300 !important;
+    width: 103.7%;
+    height: 40px;
+    background-color: #F6F6F6!important;
+    position: relative;
+    padding-top: 12px;
+    margin-left: -15px;
+}
+*{
+    font-family: 'Open Sans' !important;
+}

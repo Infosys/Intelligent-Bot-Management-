@@ -1,0 +1,272 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    height: 540px !important;">
+
+  <div class="float-left border-right" style="width: 70%;height:500px;">
+    <form name="form" id="mappingform"  #mappingForm="ngForm">
+      <div class="row">
+        <div class="col-12">
+
+          <div style="margin-top:20px">
+            <label>Platform</label>
+            <div class="form-group">
+              <select class="form-control" style="width: 250px;" (change)="onChangeType($event.target.value)">
+
+                <!-- <option  >Select Platfrom Type</option> -->
+                <option  value="{{obj1.type}}" *ngFor="let obj1 of platfromType">{{obj1.type}} </option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <label>Resource Type</label>
+          <button class="add-newbtn" data-toggle="modal" (click)="openPopup()" data-target="#exampleModal">+ Add New</button>
+
+
+
+          <div style="margin-top:20px ;overflow-y: auto;height:300px;width: 720px" >
+
+
+            <div *ngFor="let details of metaConfigJson.resourcetypedetails" >
+              <div *ngIf="details.isVisible"   style="position: relative" >
+
+                <div class="delete-box" (click)="deleteMapping(details.resourcetypeid)" data-tooltip="tooltip" title="Delete">
+                  <i class="img-delete "></i>
+                </div>
+
+                <div class="form-group float-left">
+                  <label style=" font-weight: 400;">Resource Type </label>
+                  <select class="form-control" name="sttre" style="width: 200px;">
+
+                    <option value="{{details.resourcetypeid}}">{{details.resourcetypename}}</option>
+                  </select>
+                </div>
+                <div class="form-group float-left">
+                  <label style=" font-weight: 400;margin-left:50px ">Parent Element</label>
+                  <select class="form-control" style="width: 200px;margin-left:50px">
+
+                    <option value="{{parentdetails.resourcetypename}}" *ngFor="let parentdetails of details.parentdetails">{{parentdetails.resourcetypename}}</option>
+                  </select>
+                </div>
+
+                <div class="form-group float-left" style="margin-top: 17px;margin-left: 20px;width:200px">
+                  <input type="checkbox" [checked]="details.ismainentry" (change)="onChangeMainMenu(details,$event.target.checked)" id="styled-checkbox-chk_ismainentry-{{details.resourcetypeid}}" class="styled-checkbox"
+                    style="margin-left:10px">
+                  <label for="styled-checkbox-chk_ismainentry-{{details.resourcetypeid}}"></label> <label style=" font-weight: 400">Display as
+                    main menu</label>
+                </div>
+
+
+                <div class="form-group " style="width:200px;height:204px">
+                  <label style=" font-weight: 400;">Child Element</label>
+                  <select class="form-control" id="resourcetypeidparent-{{details.resourcetypeid}}" name="resourcetypeidparent">
+                      <option value="0"> Select Child </option>
+                    <option value="{{types | json}}" *ngFor="let types of resourceTypes ">{{types.value}}</option>
+                  </select>
+                  <div class="add_child" title="Add Child" (click)="addChild(details.resourcetypeid)" data-tooltip="tooltip">
+                    <i class="img-add " style="cursor: pointer; margin-left: 30px;"></i>
+                  </div>
+                  <div class="form-group" style="    margin-left: 255px;margin-top: -73px;">
+                    <label  style=" font-weight: 400;"  > Portfolio</label>
+                    <select  class="form-control" [(ngModel)]="details.portfolioid" name="portfolioid-{{details.resourcetypeid}}"   style="width:180px!important;min-width: 180px">
+                      <option value="null"    [selected]="(details.portfolioid == null)?'true':'false'"></option>
+                      <option *ngFor="let portfolio of portfolios" value="{{portfolio.portfolioid}}" 
+                        >{{portfolio.portfolioname}}</option>
+                    </select>
+                  </div>
+                  <div style="width:600px;height:40px;overflow-y:auto;">
+
+                    <div class="float-left" *ngFor="let childdetails of details.childdetails" style="width:auto;height:40px;margin-left: 10px;">
+                      <button style="border: NONE;cursor: auto;" class=" rounded">{{childdetails.resourcetypename}} </button>
+                    </div>
+
+                  </div>
+                </div>
+
+                
+
+                <!-- <div style="width:600px;height:40px;overflow-y:auto;">
+
+                <div class="float-left" *ngFor="let attr of details.resourcetypemetadata" style="width:auto;height:40px;margin-left: 10px;">
+                  <button style="border: NONE;" class="delete-box rounded">{{attr.displayname}} </button>
+                </div>
+              </div> -->
+                <div style="width:40px;height: 40px;">
+                  <label>Attributes</label>
+                </div>
+                <div style="width: 678px; height: 83px;overflow-y:auto;">
+
+                  <div class="float-left" *ngFor="let attr of details.resourcetypemetadata;let i = index" style="width:auto;height:40px;margin-left: 10px;">
+                    <button style="border: NONE;" (click)="onSelectAttribute(attr,details.resourcetypeid,i)" class="rounded">{{attr.displayname}} </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="form-group">
+            <button class="update-btn float-right" style="margin-right: 10px;"> Cancel</button> <button (click)="updateMapping()" class="btn-border float-right">Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class=" float-left" style="width: 30%">
+    <div class="row">
+      <div class="col-12">
+        <div style="margin-top:05px;margin-left:10px">
+          <form name="form" #attrForm="ngForm">
+            <label>Add/Update/Delete Attributes</label>
+            <div style="height: 465px;
+            overflow-x: auto;
+            width: 325px;">
+
+           
+           
+            <div class="form-group">
+                <label style=" font-weight: 400;">Resource Type </label>
+              <select class="form-control"  id="resourcetypeidsel" ngModel #resourcetypeid name="resourcetypeid" (change)="onChangeResourceType($event.target.value)">
+                <option value=""></option>
+                <option value="{{types.key}}" [selected]="resourcetypeid==types.key?'true':'false'" *ngFor="let types of resourceTypes">{{types.value}}</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-top:-10px">
+              <label style=" font-weight: 400;">Attributes</label>
+              <select id="attrselect" name="attrselect" [(ngModel)]="selectedAttrId" class="form-control" (change)="onChangeAttribute($event.target.value)">
+
+                <option value="" ></option>
+                <option value="{{attr | json }}" *ngFor="let attr of attributes">{{attr.displayname}}</option>
+
+              </select>
+            </div>
+
+            <!-- <div class="form-group">
+             
+              <select required class="form-control" id="attributetype" #attributetype="ngModel" ngModel name="attributetype">
+               
+                <option value="varchar">text box</option>
+              </select>
+            </div> -->
+            <div class="form-group" style="margin-top:-10px">
+               <label style=" font-weight: 400;">Attribute Name</label> 
+              <input required type="text" [disabled]="isUpdateAttr?'true':false" id="attributename" [(ngModel)]="attributename" name="attributename"
+                class="form-control">
+            </div>
+            <div class="form-group" style="margin-top:-10px">
+                <label style=" font-weight: 400;">Attribute  Display Name</label> 
+              <input required type="text" id="displayname"  [disabled]="isUpdateAttr?'true':false" name="displayname" [(ngModel)]="displayname" class="form-control"
+               >
+            </div>
+
+
+            <div class="form-group" style="margin-top:-10px">
+                <label style=" font-weight: 400;">Description</label> 
+              <textarea required id="description" name="description" #description ngModel 
+                rows="1" cols="30" class="form-control"> </textarea>
+            </div>
+            <div class="form-group" style="margin-top:-10px">
+                <label style=" font-weight: 400;">Default value</label> 
+                <input  type="text"  #defaultvalue ngModel 
+                name="defaultvalue" id="defaultvalue" class="form-control" />
+            </div> 
+            <div class="form-group" style="margin-top:-10px">
+              <label style=" font-weight: 400;">IsSecret </label> 
+             <select class="form-control">
+               <option  value="true">Yes</option>
+               <option  value="false">No</option>
+             </select>
+          </div> 
+        </div>
+            <div class="form-group"  style="margin-top:-35px">
+              <button class="update-btn float-right" (click)="resetAttribute(attrForm)"> Cancel</button>
+              <button id="addbtn" type="submit" (click)="addAttribute(attrForm)" class="btn-border float-right">Add
+              </button>
+              <button id="updatebtn" type="submit" (click)="updateAttribute(attrForm)" class="btn-border float-right">Update
+              </button>
+              <button id="deletebtn" type="submit" (click)="deleteAttribute(attrForm)" class="btn-border float-right">Delete</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="    width: 560px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Resource Mapping</h5>
+        <button type="button" #closeModal class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <label>Resource Type</label>
+
+
+            <div style="width:600px;height:50px">
+              <div class="form-group float-left">
+                <label style=" font-weight: 400;">Resource Type </label>
+                <select class="form-control" id="resourcetypeid_popup" name="" (change)="onChangeResPopup()">
+                  <option value="0"> Select Resource Type </option>
+                  <option value="{{types | json }}" *ngFor="let types of resourceTypes ">{{types.value}}</option>
+                </select>
+              </div>
+              <div class="form-group float-left">
+                <label style=" font-weight: 400;">Parent Type </label>
+                <select class="form-control" id="parentresource_popup" name="" style="margin-left:20px">
+                    <option value="0"> Select Parent </option>
+                  <option value="{{types | json }}" *ngFor="let types of resourceTypes ">{{types.value}}</option>
+                </select>
+              </div>
+              <div class="form-group float-left" style="margin-top: 33px;margin-left: 27px;width:200px">
+                  <input type="checkbox"   id="styled-checkbox-chk_ismainentryp" class="styled-checkbox"
+                    style="margin-left:10px">
+                  <label for="styled-checkbox-chk_ismainentryp"></label> <label style=" font-weight: 400">Display as
+                    main menu</label>
+                </div>
+            </div>
+
+            <div class="form-group " style="width:200px;height:250px">
+              <label style="font-weight: 400;">Child Element</label>
+              <select class="form-control" id="childresource_popup" name="">
+                  <option value="0"> Select Child </option>
+                <option value="{{types | json }}" *ngFor="let types of resourceTypes ">{{types.value}}</option>
+              </select>
+              <div class="add_child" title="Add Child" (click)="addNewChildElements()" data-tooltip="tooltip">
+                <i class="img-add " style="cursor: pointer; margin-left: 30px;"></i>
+              </div>
+
+              <div style="width:453px;height:40px;overflow-y:auto;">
+
+                <div class="float-left" *ngFor="let childres of childElements" style="width:auto;height:40px;margin-left: 10px;">
+                  <button style="border: NONE;" class=" rounded">{{childres.resourcetypename}}</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="update-btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn-border" (click)="addMapping()" >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

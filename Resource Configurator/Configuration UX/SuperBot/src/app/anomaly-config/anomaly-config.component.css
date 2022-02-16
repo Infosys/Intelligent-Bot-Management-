@@ -1,0 +1,161 @@
+*{
+    font-family: 'Open Sans' !important;
+}
+.img-add {
+    content: url('/superbotapp/assets/images/plus.png');
+  }
+  .img-delete {
+    content: url('/superbotapp/assets/images/delete.png');
+  }
+  .img-delete-table {
+    content: url('/superbotapp/assets/images/delete1.png');
+  }
+  
+:host /deep/ .wc-date-container > span {
+    color:#495057 !important;
+  }
+  :host /deep/ .box-size{
+    background-color: white;
+    width: 102%;
+    height: 515px !important;
+    overflow: auto;
+    /* margin-top: -17px; */
+  }
+.add-btn{
+    margin-top: 30px;
+    margin-left: 66px;
+    background-color:#007cc3;
+    color:white;
+    width:auto;
+    height:30px;
+    border:none;
+    border-radius: 2px; 
+    cursor: pointer;
+    font-size: 13px;
+  }
+label {
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400px;
+}
+:host /deep/ li > h5 {
+    font-size: 13px;
+}
+:host /deep/ .wc-date-container {
+    float: left;
+    width: 258px !important;
+    height: 36px !important;
+    border: 1px solid #ced4da;
+    margin-bottom: 1px;
+    font-size: 16px;
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+    background: #fff;
+    line-height: 20px;
+}
+.update-btn{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:#007cc3;
+    width:auto;
+    height:30px;
+    background-color: white;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+  .btn-border{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:white;
+    width:auto;
+    height:30px;
+    background-color: #007cc3;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+
+  .paramTabl tbody {
+    display: block;
+    max-height: 103px;
+    overflow-y: auto;
+  }
+   .paramTabl thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  } 
+  .paramTabl thead{
+    background-color: #abe1ff;
+  }
+
+  :host /deep/ .ng2-smart-titles{
+    background-color:#33424B!important;
+    font-size:14px;
+    color: #DDDDDD !important;
+}
+:host /deep/ .view-cell-eventId{
+    cursor:pointer;
+    /* text-decoration:underline; */
+    /* color:#00A8FF; */
+    /* cursor: pointer;  */
+    width:145px !important;
+    /* max-width:145px !important; */
+    /* overflow: hidden;
+    text-overflow:ellipsis;
+     white-space: nowrap; */
+     display:block;
+  } 
+/* Safari style for pegination */
+ng2-smart-table-pager.ng2-smart-pagination {
+    display: -webkit-box;
+}
+/*To reduce height of search field*/
+:host /deep/ ng2-smart-table thead > tr:nth-child(2) > th  { 
+    padding: 0px;
+}  
+:host /deep/ ng2-smart-table tbody > tr > td:nth-child(1) { 
+    width:19% !important;
+    word-wrap: break-word !important;
+ 
+}
+:host /deep/ ng2-smart-table tbody > tr > td:nth-child(2) { 
+    width: 16% !important;
+    word-wrap: break-word !important;
+}
+:host /deep/ ng2-smart-table tbody > tr > td:nth-child(3) { 
+     width: 20% !important;
+    word-wrap: break-word !important;
+}
+:host /deep/ ng2-smart-table tbody > tr > td:nth-child(4) { 
+    width: 13% !important;
+    word-wrap: break-word !important;
+}
+:host /deep/ ng2-smart-table tbody > tr > td:nth-child(5) { 
+    width: 14% !important;
+    word-wrap: break-word !important;
+}
+ :host /deep/ ng2-smart-table tbody > tr > td:nth-child(6) { 
+        width: 15% !important;
+     word-wrap: break-word !important;
+ }
+
+ 
+:host /deep/ .node-content-wrapper {
+  
+    color: red !important;
+    background-color: blue !important;
+}
+
+ :host /deep/.node-content-wrapper-active, .node-content-wrapper.node-content-wrapper-active:hover, .node-content-wrapper-active.node-content-wrapper-focused {
+    background: #beebff !important;
+}
