@@ -1,0 +1,69 @@
+{
+  "AdapterBinaryLocation": "AdapterBinaryLocation\\",
+  "Adapters": [
+    {
+      "Type": "SEE",
+      "BinaryName": "Infosys.Ainauto.Adapters.dll",
+      "AdapterInterfaces": [
+        {
+          "Name": "Infosys.Ainauto.Adapters.Interfaces.IApiAdapter",
+          "Operations": [
+            {
+              "Name": "Get",
+              "Mappers": [
+                {
+                  "Name": "GetAllCategory",
+                  "Root": "",
+                  "MapperFields": {}
+                },
+                {
+                  "Name": "GetAllScript",
+                  "Root": "Scripts",
+                  "MapperFields": {
+                    "CategoryId": "CategoryId",
+                    "Name": "Name",
+                    "ScriptId": "ScriptId",
+                    "Params": "Parameters"
+
+                  }
+                },
+                {
+                  "Name": "Encrypt",
+                  "Root": "",
+                  "MapperFields": {}
+                },
+                {
+                  "Name": "Decrypt",
+                  "Root": "",
+                  "MapperFields": {}
+                }
+              ]
+            },
+
+            {
+              "Name": "Post",
+              "Mappers": [
+                {
+                  "Name": "ActivityList",
+                  "Root": "list",
+                  "MapperFields": {
+                    "botid": "id",
+                    "name": "name"
+                  }
+                },
+                {
+                  "Name": "Authenticate",
+                  "Root": "",
+                  "MapperFields": {
+                    "AuthToken": "token"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
