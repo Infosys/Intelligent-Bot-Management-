@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D08573A7-FB3D-4F8D-9161-92996F8F9296}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infosys.Solutions.Superbot.Resource.Entity</RootNamespace>
+    <AssemblyName>Infosys.Ainauto.Superbot.DataEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="action.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="actionstages.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="actiontype.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="action_params.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anomaly_details.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit_Logs.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityExtension.cs" />
+    <Compile Include="Environment_Scan_Metric.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Environment_Scan_Metric_Anomaly_Details.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Environment_Scan_Metric_Details.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="errors.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetDependencyResources_Result.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetHierarchyResources_Result.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_details.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_iteration_tracker.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_iteration_tracker_details.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_master.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_tracker.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notification_configuration.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observable.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observable_resource_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observations.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operator.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="platforms.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="portfolio_project_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\Anomaly.cs" />
+    <Compile Include="Queue\Metric.cs" />
+    <Compile Include="Queue\Notification.cs" />
+    <Compile Include="recipient_configuration.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remdiation_plan_action_param_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan_action_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan_executions.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan_execution_actions.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_dependency_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_metadata.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_observable_action_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_observable_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_observable_remediation_plan_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_service_details.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_attributes.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_dependency_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_observable_action_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_observable_remediation_plan_map.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuperBotStore.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperBotStore.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuperBotStore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuperBotStore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperBotStore.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="tenant.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tickets.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Unhealthy_report_Remediation.cs">
+      <DependentUpon>SuperBotStore.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="SuperBotStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SuperBotStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="SuperBotStore.edmx.diagram">
+      <DependentUpon>SuperBotStore.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SuperBotStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SuperBotStore.Context.cs</LastGenOutput>
+      <DependentUpon>SuperBotStore.edmx</DependentUpon>
+    </Content>
+    <Content Include="SuperBotStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SuperBotStore.edmx</DependentUpon>
+      <LastGenOutput>SuperBotStore.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
