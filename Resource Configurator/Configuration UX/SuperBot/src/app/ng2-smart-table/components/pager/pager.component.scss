@@ -1,0 +1,42 @@
+.ng2-smart-pagination {
+  display: inline-flex;
+  font-size: .875em;
+  padding: 0;
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
+  .ng2-smart-page-item {
+    display: inline;
+    font-size: 9px;
+  }
+
+  .page-link-next, .page-link-prev {
+    font-size: 9px;
+  }
+}
+
+:host {
+  display: flex;
+  justify-content: space-between;
+
+  select {
+    margin: 1rem 0 1rem 1rem;
+    font-size: .875em;
+    font-weight: normal;
+  }
+  label {
+    margin: 1rem 0 1rem 1rem;
+    line-height: 4.5rem;
+    font-weight: normal;
+    font-size: .875em;
+  }
+}

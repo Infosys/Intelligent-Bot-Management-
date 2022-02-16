@@ -1,0 +1,43 @@
+:host {
+  .ng2-smart-row {
+
+    
+    &.selected {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    &.selected-isNotAllowed {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .ng2-smart-actions {
+      &.ng2-smart-action-multiple-select {
+        text-align: center;
+      }
+     
+    }
+    
+  }
+  td:first-child{
+    width:12.8%;
+  }
+  
+  td:nth-child(2){
+    width: 18.2%;
+    word-wrap: break-word;
+  }
+  td:nth-child(3){
+    width: 25.8%;
+    word-wrap: break-word;
+  }
+  td:nth-child(4){
+    width: 14.2%;
+    word-wrap: break-word;
+  }
+  td:nth-child(5){
+    width: 13%;
+    word-wrap: break-word;
+  }
+  td:last-child{
+    width:7%;
+  } 
+  }
