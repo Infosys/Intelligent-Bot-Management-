@@ -1,0 +1,5 @@
+﻿<CrMoPostCode xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <deliveryOfficeCode >11</deliveryOfficeCode>
+  <mailingCategory >Mail1</mailingCategory>
+  <postCode >123</postCode>
+</CrMoPostCode>
