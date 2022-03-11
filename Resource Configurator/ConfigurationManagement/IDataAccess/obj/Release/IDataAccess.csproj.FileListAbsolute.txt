@@ -1,0 +1,11 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\IDataAccess\bin\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\IDataAccess\bin\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\IDataAccess\obj\Release\IDataAccess.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\IDataAccess\obj\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\IDataAccess\obj\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\IDataAccess\obj\Release\IDataAccess.csproj.AssemblyReference.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\bin\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\bin\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Release\IDataAccess.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Release\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb

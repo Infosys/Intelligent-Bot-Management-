@@ -1,0 +1,137 @@
+:host {
+  
+font-size:13px;
+  // /deep/ {
+  //   * {
+  //     box-sizing: border-box;
+  //   }
+
+  //   button,
+  //   input,
+  //   optgroup,
+  //   select,
+  //   textarea {
+  //     color: inherit;
+  //     font: inherit;
+  //     margin: 0;
+  //   }
+ng2-smart-table table tr td{
+
+overflow-y: scroll;
+word-break: break-all;
+}
+table tr th {
+  font-size: .875em;
+  margin: 0;
+  padding: 0.5em 1em;
+  border:none
+}
+table ,tr td{
+    // border:1px solid red
+    border: none !important; 
+  
+}
+table , tr {
+  border-bottom: 1px solid #253138 !important;
+}
+.table thead th {
+  vertical-align: bottom;
+  border:none !important;
+}
+tbody {
+    display:block;
+    height: 305px;
+    overflow:auto;
+    overflow-x: hidden;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+.ng2-smart-pagination-nav{
+  margin-top: -3px;
+  margin-right: -9px;
+}
+// thead {
+//     width: calc( 100% - 1em )
+// }
+table {
+    width:400px;
+}
+  tr.ng2-smart-filters {
+    background-color: white;
+    color:black;
+}
+.smart-table-container{ height: 120px;overflow-y: scroll; }
+.form-control {
+
+     background-color: #fff!important;  
+     background-image: none!important;  
+     border: none !important; 
+    border-radius: none!important;  
+   box-shadow: none!important; 
+    transition: none!important; 
+}
+.ng2-smart-pagination{
+    float: right;
+    margin-right: 10px;
+}
+
+.search-events{
+    position:absolute;
+    z-index:2;
+    top:24%;
+    left:5%;
+    color:black;
+}
+    table {
+      line-height: 1.5em;
+      // border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
+      display: table;
+      width: 100%;
+      max-width: 100%;
+      height:100px;
+      overflow-y: scroll;
+      word-break: normal;
+      word-break: keep-all;
+      border: 1px solid white;
+      
+
+      tr {
+        th {
+          font-weight: bold;
+          border: 1px solid white;
+          //background-color: #1e6bb8;
+          
+        }
+        section {
+          font-size: .75em;
+          font-weight: bold;
+          
+        }
+        td,
+        th {
+          font-size: .875em;
+          margin: 0;
+          padding: 0.5em 1em;
+          border: 1px solid white;
+          
+        }
+      }
+    }
+.ng2-smart-pagination[_ngcontent-c5] .page-link-next[_ngcontent-c5], .ng2-smart-pagination[_ngcontent-c5] .page-link-prev[_ngcontent-c5] {
+    font-size: 9px;
+    height: 30px;
+}
+    a {
+      color: #1e6bb8;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+// }

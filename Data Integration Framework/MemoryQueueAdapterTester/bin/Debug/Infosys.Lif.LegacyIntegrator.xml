@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infosys.Lif.LegacyIntegrator</name>
+    </assembly>
+    <members>
+        <member name="T:Infosys.Lif.LegacyIntegrator.AdapterManager">
+            <summary>
+            A layer which abstracts transport details from above layers.
+            </summary>
+        </member>
+        <member name="M:Infosys.Lif.LegacyIntegrator.AdapterManager.Initialize">
+            <summary>
+            Config
+            </summary>
+        </member>
+        <member name="M:Infosys.Lif.LegacyIntegrator.AdapterManager.Execute(System.String,System.String)">
+            <summary>
+            sends the message to the host identified by hostRegion parameter.
+            </summary>
+            <param name="message">message that needs to be sent to host</param>
+            <param name="hostRegion">region to which it should connect</param>
+            <returns>Response</returns>
+        </member>
+        <member name="M:Infosys.Lif.LegacyIntegrator.AdapterManager.Receive(System.String)">
+            <summary>
+            To read the message from the target legacy component.
+            </summary>
+            <param name="hostRegion">region to which it should connect</param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyIntegrator.AdapterManager.Delete(System.String)">
+            <summary>
+            To be overwritten in the inheriting class. To explicitly delete the received message. This is to avoid the same message to be available in the 
+            subsequent Receive operation. Mainly useful in case of communication with Queues, e.g. MSMQ, Azure queue, etc.
+            IMP.- To be called after Receive and it needs to be called on the same adapter instance on which the Receive operation is called
+            </summary>        
+            <param name="messageId">the identifier of the message to be deleted</param>
+            <returns>true if the delete is successful otherwise false</returns>
+        </member>
+        <member name="M:Infosys.Lif.LegacyIntegrator.AdapterManager.Delete(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Deletes item using adapter from given region and target details
+            </summary>
+            <param name="hostRegion">Name of region in LiSettings.config file</param>
+            <param name="targetDetails">Dictionary of parameters accepted by the adapter</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

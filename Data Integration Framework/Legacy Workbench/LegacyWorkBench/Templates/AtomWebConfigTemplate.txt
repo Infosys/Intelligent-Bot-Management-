@@ -1,0 +1,99 @@
+$MethodTemplate
+			<service name="##ServiceImplementationNamespace##.##ServiceName##" behaviorConfiguration="SyndicationBehavior">
+				<!-- Atom endpoint listening at relative address atom -->
+				<endpoint address="atom" binding="webHttpBinding" contract="##ServiceContractNamespace##.I##ServiceName##" behaviorConfiguration="atomBehavior"/>
+			</service>
+$NameSpacesImport
+$end<?xml version="1.0"?>
+<configuration>
+	<configSections>
+		<!-- Use Microsoft Enterprise Library Logging block for logging -->
+		<section name="loggingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings, Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+		
+		<!-- Use Microsoft Enterprise Library Caching block for caching -->
+		<section name="cachingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerSettings, Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+		
+		<!-- Use LIF Config handler to read Legacy Settings config file -->
+		<section name="LegacySettings" type="Infosys.Lif.LegacyConfig.ConfigHandler, Infosys.Lif.LegacyConfig"/>
+		
+		<!-- Use LIF Config handler to read LI Settings config file -->
+		<section name="LISettings" type="Infosys.Lif.LegacyIntegratorService.ConfigHandler, Infosys.Lif.LegacyIntegratorService"/>		
+	</configSections>
+	
+  <!-- Caching Configuration details -->			
+  <cachingConfiguration defaultCacheManager="Cache Manager">
+    <cacheManagers>
+      <add expirationPollFrequencyInSeconds="60" maximumElementsInCacheBeforeScavenging="1000"
+			  numberToRemoveWhenScavenging="10" backingStoreName="Null Storage"
+			  name="Cache Manager" />
+    </cacheManagers>
+    
+    <backingStores>
+      <add encryptionProviderName="" type="Microsoft.Practices.EnterpriseLibrary.Caching.BackingStoreImplementations.NullBackingStore, Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+			  name="Null Storage" />
+    </backingStores>
+  </cachingConfiguration>
+  
+	<!-- following two sections are availaible at the specified location-->
+	<LISettings configSource="Configurations\LISettings.config"/>
+	<LegacySettings configSource="Configurations\LegacySettings.config"/>
+	
+	<!-- Logging Configuration details -->
+	<loggingConfiguration name="Logging Application Block" tracingEnabled="true" defaultCategory="" logWarningsWhenNoCategoriesMatch="true">
+		<listeners>
+			<add fileName="D:\trace1.log" header="----------------------------------------" footer="----------------------------------------" formatter="Text Formatter" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" traceOutputOptions="None" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.FlatFileTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" name="FlatFile TraceListener"/>
+		</listeners>
+		
+		<formatters>
+			<add template="Timestamp: {timestamp}&#xA;Message: {message}&#xA;Category: {category}&#xA;Priority: {priority}&#xA;EventId: {eventid}&#xA;Severity: {severity}&#xA;Title:{title}&#xA;Machine: {machine}&#xA;Application Domain: {appDomain}&#xA;Process Id: {processId}&#xA;Process Name: {processName}&#xA;Win32 Thread Id: {win32ThreadId}&#xA;Thread Name: {threadName}&#xA;Extended Properties: {dictionary({key} - {value})}" type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" name="Text Formatter"/>
+		</formatters>
+		
+		<categorySources>
+			<add switchValue="All" name="LegacyIntegrator">
+				<listeners>
+					<add name="FlatFile TraceListener"/>
+				</listeners>
+			</add>
+		</categorySources>
+		
+		<specialSources>
+			<allEvents switchValue="All" name="All Events"/>
+			<notProcessed switchValue="All" name="Unprocessed Category"/>
+			<errors switchValue="All" name="Logging Errors &amp; Warnings">
+				<listeners>
+					<add name="FlatFile TraceListener"/>
+				</listeners>
+			</errors>
+		</specialSources>
+	</loggingConfiguration>
+	
+	<system.serviceModel>
+		<behaviors>
+			<serviceBehaviors>
+				<behavior name="SyndicationBehavior">
+					<serviceMetadata httpGetEnabled="true"/>
+				</behavior>
+			</serviceBehaviors>
+			
+			<endpointBehaviors>
+				<behavior name="atomBehavior">
+					<webHttp/>
+				</behavior>
+			</endpointBehaviors>
+		</behaviors>
+		
+		<services>
+			<!-- apply the noMetadata behavior to each service -->
+			##MethodBodies##
+		</services>
+	</system.serviceModel>
+	
+	<system.web>
+		<compilation debug="true">
+			<assemblies>
+				<add assembly="Microsoft.AnalysisServices, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+			</assemblies>
+		</compilation>
+	</system.web>
+	
+</configuration>

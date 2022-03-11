@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0604C49F-0730-409F-ABA2-E9D78DC46FDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infosys.Lif.LegacyFacade</RootNamespace>
+    <AssemblyName>Infosys.Lif.LegacyFacade</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Release\LegacyFacade\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Infosys.Lif.LegacyFacade.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionItems\LegacyIntegrationInfo.cs">
+      <Link>LegacyIntegrationInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionHandler.cs" />
+    <Compile Include="RequestHandler.cs" />
+    <Compile Include="ServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cache.config" />
+    <None Include="LegacyFacade.cd" />
+    <None Include="LegacyFacade.config" />
+    <None Include="LegacySettings.config" />
+    <None Include="LISettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LegacyCommon\LegacyCommon.csproj">
+      <Project>{A055F48A-A145-498B-8AC7-DA5DB9B11B01}</Project>
+      <Name>LegacyCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LegacyIntegrator\LegacyIntegrator\LegacyIntegrator.csproj">
+      <Project>{63E7AEC3-96CC-4B22-9D6F-74098C5FA808}</Project>
+      <Name>LegacyIntegrator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LegacyIntegrator\LegacyIntegratorService\LegacyIntegratorService.csproj">
+      <Project>{484B73D3-97B3-4480-8C7A-C01A0D2EC72B}</Project>
+      <Name>LegacyIntegratorService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ParserGen\Serializer\Infosys.Lif.Serializer.Framework.csproj">
+      <Project>{0460B6B1-D241-48E4-B0C2-53692865DF20}</Project>
+      <Name>Infosys.Lif.Serializer.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LegacyConfig\LegacyConfig.csproj">
+      <Project>{B8BC9F71-F14E-459C-A953-BE237DB9A9E4}</Project>
+      <Name>LegacyConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LegacyParameters\LegacyParameters.csproj">
+      <Project>{DBAFB38F-15DF-4AC9-945C-A298F0E6736F}</Project>
+      <Name>LegacyParameters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessageWrapper\MessageWrapper.csproj">
+      <Project>{5B0B37F3-84BB-456F-9AD3-0FDB1B986AAC}</Project>
+      <Name>MessageWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WrapperInterface\WrapperInterface.csproj">
+      <Project>{6D3B0DA0-53ED-4AF1-AB1C-A9A90F8006D0}</Project>
+      <Name>WrapperInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

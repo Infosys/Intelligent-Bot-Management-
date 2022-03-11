@@ -1,0 +1,23 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.dll.config
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\EntityFramework.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\EntityFramework.SqlServer.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\EntityFramework.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\bin\Release\EntityFramework.SqlServer.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\obj\Release\DataEntity.csproj.AssemblyReference.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\obj\Release\DataEntity.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\obj\Release\DataEntity.csproj.CopyComplete
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\DataEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.dll.config
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\EntityFramework.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\EntityFramework.SqlServer.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\EntityFramework.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\bin\Release\EntityFramework.SqlServer.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\obj\Release\DataEntity.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\obj\Release\DataEntity.csproj.CopyComplete
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\DataEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.DataEntity.pdb

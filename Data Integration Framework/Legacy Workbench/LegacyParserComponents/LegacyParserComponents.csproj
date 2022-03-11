@@ -1,0 +1,203 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infosys.Lif.LegacyWorkbench</RootNamespace>
+    <AssemblyName>LegacyParserComponents</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LOGGINGENABLED</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infosys.Solutions.CodeGeneration.Framework, Version=1.0.2020.24921, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Code_Client\Framework\Legacy Workbench\LegacyParserComponents\bin\Infosys.Solutions.CodeGeneration.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="LegacyParserComponents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="LegacyParserFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LegacyParserFramework\bin\Debug\LegacyParserFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeProviders\CobolCodeGenerator.cs" />
+    <Compile Include="CodeProviders\CodeGeneratorBase.cs" />
+    <Compile Include="CodeProviders\DataEntities\CobolModelObjectDataEntityCP.cs" />
+    <Compile Include="CodeProviders\HostCallers\WCFAssemblyInfo.cs">
+    </Compile>
+    <Compile Include="CodeProviders\HostCallers\WCFHostCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\WCFDataContractCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\WCFServiceContractandSeviceImplementationCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\WCFSolutionCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\WFActivityProjectCP.cs" />
+    <Compile Include="CodeProviders\Serializers\CobolContractSerializerCP.cs" />
+    <Compile Include="CodeProviders\Serializers\CobolClauseSerializerCP.cs" />
+    <Compile Include="CodeProviders\TINSCodeGenerator.cs" />
+    <Compile Include="CodeProviders\WFActivity\WFActivityCP.cs" />
+    <Compile Include="CompletionStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompletionStatus.Designer.cs">
+      <DependentUpon>CompletionStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Retrievers.cs">
+      <DependentUpon>Retrievers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\RetrieversHandler.cs" />
+    <Compile Include="CodeGenerationConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeGenerationConfirmation.designer.cs">
+      <DependentUpon>CodeGenerationConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerationStatusDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerationStatusDisplay.Designer.cs">
+      <DependentUpon>GenerationStatusDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="ItemStatusDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemStatusDisplay.Designer.cs">
+      <DependentUpon>ItemStatusDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjectsImporter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelObjectsImporter.Designer.cs">
+      <DependentUpon>ModelObjectsImporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CobolConverter\Cobol.cs" />
+    <Compile Include="CobolConverter\CobolFileParser.cs" />
+    <Compile Include="CodeProviders\DataEntities\ClauseDataEntityCP.cs" />
+    <Compile Include="CodeProviders\DataEntities\ContractDataEntityCP.cs" />
+    <Compile Include="CodeProviders\HostCallers\HostCallCp.cs" />
+    <Compile Include="CodeProviders\LegacyFacadeConfigFileCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\ClauseDataEntityProjectCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\ContractDataEntityProjectCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\ContractSerializerProjectCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\ClauseSerializerProjectCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\FileIncludeCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\HostAccessProjectCP.cs" />
+    <Compile Include="CodeProviders\ProjectFiles\SolutionCP.cs" />
+    <Compile Include="CodeProviders\Serializers\ClauseSerializerCP.cs" />
+    <Compile Include="CodeProviders\Serializers\ContractSerializerCP.cs" />
+    <Compile Include="CodeProviders\ServiceConfigCP.cs" />
+    <Compile Include="CodeProviders\XsdObjectGeneratorWrapper.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ContractsImporter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContractsImporter.Designer.cs">
+      <DependentUpon>ContractsImporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsvReader\CsvReader.cs" />
+    <Compile Include="GooseReader\GooseReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SmallTalkConverter\SmallTalkConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CompletionStatus.resx">
+      <DependentUpon>CompletionStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeGenerationConfirmation.resx">
+      <DependentUpon>CodeGenerationConfirmation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerationStatusDisplay.resx">
+      <DependentUpon>GenerationStatusDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemStatusDisplay.resx">
+      <DependentUpon>ItemStatusDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelObjectsImporter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModelObjectsImporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractsImporter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ContractsImporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\Retrievers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Configuration\Retrievers.xsx">
+      <DependentUpon>Retrievers.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Browse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFolder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LegacyWorkbenchReportHandler\LegacyWorkBenchReportHandler.csproj">
+      <Project>{179C3203-ED67-44E9-97DC-862D1587FDE2}</Project>
+      <Name>LegacyWorkBenchReportHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

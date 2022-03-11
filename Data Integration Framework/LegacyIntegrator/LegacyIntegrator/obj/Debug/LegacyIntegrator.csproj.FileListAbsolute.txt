@@ -1,0 +1,8 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\Infosys.Lif.LegacyIntegrator.XML
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\Infosys.Lif.LegacyIntegrator.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\Infosys.Lif.LegacyIntegrator.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LegacyIntegrator\obj\Debug\LegacyIntegrator.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LegacyIntegrator\obj\Debug\LegacyIntegrator.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LegacyIntegrator\obj\Debug\LegacyIntegrator.csproj.CopyComplete
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LegacyIntegrator\obj\Debug\Infosys.Lif.LegacyIntegrator.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LegacyIntegrator\obj\Debug\Infosys.Lif.LegacyIntegrator.pdb

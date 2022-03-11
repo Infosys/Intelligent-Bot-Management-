@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{97A0211D-2295-492D-A08C-7FB0FA5CDCF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{69F3DCFD-DEA6-4949-BE69-858DE0C24AF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BBDC73AD-6F4D-4921-AE76-E4363DC838BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{D4A6AF4F-DAF8-4A9B-BF20-84793F85378A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{89B076AC-D020-4B1D-9737-CB19197095BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{C39E8995-B7E0-48A6-A9C8-3DDE792C9A9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataEntity", "DataEntity\DataEntity.csproj", "{E636F543-231F-4B70-B7F1-C3654A6922AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataAccess", "IDataAccess\IDataAccess.csproj", "{28C9A743-6ED3-4408-AD28-C13B5E04DE18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationManagement.API", "ConfigurationManagement.API\ConfigurationManagement.API.csproj", "{F54370C2-0981-43B5-8471-1A1A43562571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessComponent", "BusinessComponent\BusinessComponent.csproj", "{8F54AA48-9A65-4461-9EB2-B4837A246B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntity", "BusinessEntity\BusinessEntity.csproj", "{1D9B2386-1F0A-4A38-ACF0-DEEF32146ED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericTester", "GenericTester\GenericTester.csproj", "{6290F439-960C-4228-B0EC-D133781282C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89B076AC-D020-4B1D-9737-CB19197095BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B076AC-D020-4B1D-9737-CB19197095BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B076AC-D020-4B1D-9737-CB19197095BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B076AC-D020-4B1D-9737-CB19197095BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39E8995-B7E0-48A6-A9C8-3DDE792C9A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39E8995-B7E0-48A6-A9C8-3DDE792C9A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39E8995-B7E0-48A6-A9C8-3DDE792C9A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39E8995-B7E0-48A6-A9C8-3DDE792C9A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E636F543-231F-4B70-B7F1-C3654A6922AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E636F543-231F-4B70-B7F1-C3654A6922AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E636F543-231F-4B70-B7F1-C3654A6922AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E636F543-231F-4B70-B7F1-C3654A6922AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C9A743-6ED3-4408-AD28-C13B5E04DE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C9A743-6ED3-4408-AD28-C13B5E04DE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C9A743-6ED3-4408-AD28-C13B5E04DE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C9A743-6ED3-4408-AD28-C13B5E04DE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F54370C2-0981-43B5-8471-1A1A43562571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54370C2-0981-43B5-8471-1A1A43562571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F54370C2-0981-43B5-8471-1A1A43562571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F54370C2-0981-43B5-8471-1A1A43562571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F54AA48-9A65-4461-9EB2-B4837A246B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F54AA48-9A65-4461-9EB2-B4837A246B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F54AA48-9A65-4461-9EB2-B4837A246B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F54AA48-9A65-4461-9EB2-B4837A246B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9B2386-1F0A-4A38-ACF0-DEEF32146ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9B2386-1F0A-4A38-ACF0-DEEF32146ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9B2386-1F0A-4A38-ACF0-DEEF32146ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9B2386-1F0A-4A38-ACF0-DEEF32146ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6290F439-960C-4228-B0EC-D133781282C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6290F439-960C-4228-B0EC-D133781282C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6290F439-960C-4228-B0EC-D133781282C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6290F439-960C-4228-B0EC-D133781282C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{89B076AC-D020-4B1D-9737-CB19197095BB} = {BBDC73AD-6F4D-4921-AE76-E4363DC838BC}
+		{C39E8995-B7E0-48A6-A9C8-3DDE792C9A9D} = {97A0211D-2295-492D-A08C-7FB0FA5CDCF6}
+		{E636F543-231F-4B70-B7F1-C3654A6922AB} = {97A0211D-2295-492D-A08C-7FB0FA5CDCF6}
+		{28C9A743-6ED3-4408-AD28-C13B5E04DE18} = {97A0211D-2295-492D-A08C-7FB0FA5CDCF6}
+		{8F54AA48-9A65-4461-9EB2-B4837A246B84} = {D4A6AF4F-DAF8-4A9B-BF20-84793F85378A}
+		{1D9B2386-1F0A-4A38-ACF0-DEEF32146ED8} = {D4A6AF4F-DAF8-4A9B-BF20-84793F85378A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D39B47FD-C456-478E-9078-1F2A4EFD5985}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2018-farm1.ad.infosys.com:8080/tfs/farm01-tpc202
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Common\\Common.csproj
+		SccProjectTopLevelParentUniqueName1 = ConfigurationManagement.sln
+		SccProjectName1 = Common
+		SccLocalPath1 = Common
+		SccProjectUniqueName2 = ConfigurationManagement.API\\ConfigurationManagement.API.csproj
+		SccProjectName2 = ConfigurationManagement.API
+		SccLocalPath2 = ConfigurationManagement.API
+		SccProjectUniqueName3 = DataAccess\\DataAccess.csproj
+		SccProjectTopLevelParentUniqueName3 = ConfigurationManagement.sln
+		SccProjectName3 = DataAccess
+		SccLocalPath3 = DataAccess
+		SccProjectUniqueName4 = DataEntity\\DataEntity.csproj
+		SccProjectTopLevelParentUniqueName4 = ConfigurationManagement.sln
+		SccProjectName4 = DataEntity
+		SccLocalPath4 = DataEntity
+		SccProjectUniqueName5 = IDataAccess\\IDataAccess.csproj
+		SccProjectTopLevelParentUniqueName5 = ConfigurationManagement.sln
+		SccProjectName5 = IDataAccess
+		SccLocalPath5 = IDataAccess
+		SccProjectUniqueName6 = BusinessComponent\\BusinessComponent.csproj
+		SccProjectTopLevelParentUniqueName6 = ConfigurationManagement.sln
+		SccProjectName6 = BusinessComponent
+		SccLocalPath6 = BusinessComponent
+		SccProjectUniqueName7 = BusinessEntity\\BusinessEntity.csproj
+		SccProjectTopLevelParentUniqueName7 = ConfigurationManagement.sln
+		SccProjectName7 = BusinessEntity
+		SccLocalPath7 = BusinessEntity
+		SccProjectUniqueName8 = GenericTester\\GenericTester.csproj
+		SccProjectName8 = GenericTester
+		SccLocalPath8 = GenericTester
+	EndGlobalSection
+EndGlobal

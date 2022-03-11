@@ -1,0 +1,269 @@
+$TemplateForTopLevel
+			//loop through the contract
+			for (int counter = 0; counter <= (##InputModelObjLength## - 1); counter++)
+			{
+				//initialize the counter for number of collections of model object in the contract
+				##CountersForChildElements##
+				while (serializerString.Length > 8)
+				{
+					//first 8 characters of a serializer string represent the model object entity name
+					switch(serializerString.Substring(0, 8).ToUpperInvariant().Trim())
+					{
+						##CaseStatementsFilledForContract##
+						default:
+							serializerString = RemoveUnknownModelObject(serializerString);
+							break;
+					}
+				}
+			}
+
+$TemplateForChildModelObjects
+
+	##CountersForChildElements##	
+	while(!serializerString.StartsWith(ModelObjectSuffix))
+	{
+		//To clip the APCA header	
+		switch(serializerString.Substring(114, 8).ToUpperInvariant() && serializerString != Environment.NewLine)
+		{
+			##CaseStatementsFilledForModelObject##
+			default:
+				//if there are some unrecognized model objects which are not a part of contract 
+                //then remove data related to that from the string
+                serializerString = RemoveUnknownModelObject(serializerString);
+                break;
+		}
+	}
+$TemplateForLoopRepeater
+			#region Serialization of ##ModelObjectName##Collection
+
+			if(##HasMaxLimit## && ##ParentModelObjectName##.##ModelObjectName##Collection.Count > ##MaxCount##)
+			{
+				throw new Exception(@"##ParentModelObjectName##.##ModelObjectName##Collection has too many records");
+			}
+			{
+				for(int counter##ModelObjectName##_##LevelNumber## = 0; counter##ModelObjectName##_##LevelNumber## < ##ParentModelObjectName##.##ModelObjectName##Collection.Count; counter##ModelObjectName##_##LevelNumber##++)
+				{
+					##ModelObjectSerializerNameSpace##.##ClassName## ModelObjectSerializerFor##ModelObjectName##_##LevelNumber## = new ##ModelObjectSerializerNameSpace##.##ClassName##();
+					
+					ModelObjectSerializerFor##ModelObjectName##_##LevelNumber##.Parameters = Parameters;			
+					
+					//Append Data Object Header					
+					//Start by appending the object id.
+					sb.Append(Pad("##ProgramId##", 8, " ", true));
+		            
+					//This is the index and will be utilized to denote the index of the object
+					//Has to be modified according to the number of objects being sent to the host.
+					sb.Append("0000");
+		            
+		            //throw exception if contract operation is not specified
+					if(Parameters == null || Parameters.RequestCollection == null
+					    || Parameters.RequestCollection["OperationType"] == null)
+					{
+					    throw new Exception("Operation type not specified");
+					}
+					
+					//Append the type of operation being performed for this mainframe object.
+					sb.Append(Parameters.RequestCollection["OperationType"]);
+		            
+					//Append the number of items in this object
+					sb.Append(Pad(##ParentModelObjectName##.##ModelObjectName##Collection.Count,
+					    5, "0", false));
+					    
+					//Append the length of the items in this object
+					sb.Append(Pad(LengthOfOneDataString, 5, "0", false));
+
+					//The next 18 characters should be blank, and is utilized 
+					//to retrieve the return value of the mainframe data.
+					sb.Append(Pad(string.Empty, 18, " ", true));
+					
+					//call model object serializer to get the serialized string for model object "##ModelObjectName##"
+                    //append the serialized string for model object data entity
+					sb.Append(ModelObjectSerializerFor##ModelObjectName##_##LevelNumber##.Serialize(
+					##ParentModelObjectName##.##ModelObjectName##Collection[counter##ModelObjectName##_##LevelNumber##]));
+					
+					//append the delimiter to separate the data from each model object data entity
+					sb.Append(delimiter);
+				}		
+			}
+			#endregion Serialization of ##ModelObjectName##
+$ChildModelObjectFiller
+	sb.Append("##ModelObjectName##" + ampersandChar);
+	##ChildModelObjectsFilled##
+$CaseStatement
+						case "##HostName##":			
+							
+							//clip off first 8 characters i.e. the entity name
+							serializerString = serializerString.Substring(8);
+							toBeDeserializedString = serializerString;
+							
+							// create object of the ModelObject Serializer to call deserialize method
+							##ModelObjectSerializerNS##.##ClassName## ##ProgramId##ModelObjectSerializer##LevelNumber## = new ##ModelObjectSerializerNS##.##ClassName##();
+							
+							##ParentIdentifier##Counter = ##ParentModelObjectNameWithoutZero##.Count - 1;
+
+							//create objects of contract and model object data entity to hold deserialized entity
+							ContractEntities.##ModelObjectName## contract##ClassName## = 
+								new ContractEntities.##ModelObjectName##();
+							##ModelObjectDataEntityNS##.##ClassName## modelObject##ClassName## = 
+								new ##ModelObjectDataEntityNS##.##ClassName##();
+							
+							//call deserialize method of ##ClassName## model object
+							modelObject##ClassName## = 
+								(##ModelObjectDataEntityNS##.##ClassName##)
+								##ProgramId##ModelObjectSerializer##LevelNumber##.Deserialize(toBeDeserializedString);
+							
+							//assign model obj data entity items to contract data entity items individually
+							//i.e. a.Item1 = b.Item1;
+							//e.g. for a simple item -
+							//contractClientpolicyinfo.ItemName = modelObjectClientpolicyinfo.ItemName
+							//e.g. for a collection type item -
+							//for (int i=0 ; i<modelObjectClientpolicyinfo.ItemCollection.Count ; i++)
+							//{
+							//    contractClientpolicyinfo.ItemCollection.Add(modelObjectClientpolicyinfo.ItemCollection[i]);
+							//} 
+				            
+							##MappingItems##
+							
+							//Add deserialized object to collection
+							contractObject.##ModelObjectName##Collection.Add(contract##ClassName##);
+							
+							serializerString = serializerString.Substring(##InputModelObjLength##);		
+							
+							break;
+$TemplateForMappingItem
+							contract##ClassName##.##DataItemName## = modelObject##ClassName##.##DataItemName##;
+$TemplateForMappingItemCollection
+							for (int collCount=0 ; collCount<modelObject##ClassName##.##DataItemName##Collection.Count ; collCount++)
+							{
+								contract##ClassName##.##DataItemName##Collection.Add(modelObject##ClassName##.##DataItemName##Collection[collCount]);
+							}
+$end
+/******************************************************************************
+This class was code generated by Legacy Workbench.
+
+This is serializer class for the ClaimContract Contract.
+##ContractDescription## 
+
+Copyright (c) 2003 - 2008 Infosys Technologies Ltd. All Rights Reserved.
+******************************************************************************/
+using System;
+using System.Text;
+
+//Import contract data entity namespace
+using ContractEntities = ##DataEntityNameSpace##;
+
+//Import LIF framework namespaces
+using Infosys.Lif.LegacyParser.Framework;
+using Infosys.Lif.LegacyParameters;
+using Infosys.Lif.LegacyCommon;
+
+namespace ##ContractNameSpace##
+{
+	/// <summary>
+    /// This is a serializer class for contract "##ContractName##"
+    /// This class is used to serialize the data entity to ASCII string and vice versa
+    /// </summary>
+	public partial class ##ContractName##Serializer : SerializerBase
+	{
+		// the delimiter \r\n (carriage return and line feed) to seperate data of model objects in a contract
+		static string delimiter = Convert.ToChar(13).ToString() + Convert.ToChar(10).ToString();        
+		
+		//header length of the string returned from the host
+        const int LengthOfOneDataString = 41;        
+		
+		#region Serialization
+		/// <summary>
+        /// The Serialize method is used to serialize a Data Entity
+        /// The items in the Data Entity will be appended to form an ascii string.
+        /// </summary>
+        /// <param name="dataEntity">The Data Entity of type ##ContractName## which has to be serialized</param>
+        /// <returns>The serialized ASCII string</returns>
+		public override string Serialize(object dataEntity)
+		{
+			//contract data entity which is to be serialized
+			ContractEntities.##ContractName## contractObject 
+				= (ContractEntities.##ContractName##)dataEntity;
+				
+			//initialize string builder to hold serialized string
+			StringBuilder sb = new StringBuilder();
+            
+			##ForLoop##		
+			
+			//return the serialized string for the contract "##ContractName##"
+			return(sb.ToString());
+		}
+		
+		#endregion Serialization
+		
+		
+		#region Deserialization
+		/// <summary>
+        /// The Deserialize method is used to deserialize an ascii string to its Data Entity
+        /// </summary>
+        /// <param name="serializerString">The string which has to be deserialized</param>
+        /// <returns>Deserialized DataEntity i.e. ##ContractName## object containing the values 
+        /// as returned by the host through the input ascii string</returns>
+		public override object Deserialize(string serializerString)
+		{
+			//contract data entity to contain the deserialized data.
+			ContractEntities.##ContractName## contractObject
+				= new ContractEntities.##ContractName##();	
+				
+            string[] serializerStringArray;
+            string toBeDeserializedString;
+            bool shouldExecute  = true;
+
+			##TopLevelFilled##
+			
+			//return deserialized data entity with data returned from the host
+			return contractObject;
+		}
+		#endregion Deserialization
+		
+		/// <summary>
+        /// remove the data of those model object from the to be deserialized string which are
+        /// not defined as part of the contract
+        /// </summary>
+        /// <param name="serializerString">to be deserialized string</param>
+        /// <returns>string after removing data of unknown model objects</returns>
+		private static string RemoveUnknownModelObject(string serializerString)
+        {
+            bool shouldNotRemoveEndChar = true;
+            serializerString = serializerString.Substring(9);
+            
+            //data of each model object is seperated from one another using "\r\n" as a delimiter
+            string endOfModelObjectIndicator = Convert.ToChar(13).ToString() + Convert.ToChar(10).ToString();
+            string ModelObjectPrefix = Convert.ToChar(13).ToString() + Convert.ToChar(10).ToString();
+            string ModelObjectSuffix = Convert.ToChar(13).ToString() + Convert.ToChar(10).ToString();
+
+            int indexOfModelObjectEnd = serializerString.IndexOf(endOfModelObjectIndicator);
+
+			//if no end of model object indicator found return empty string
+			if (indexOfModelObjectEnd == -1)
+            {
+                serializerString = string.Empty;
+            }
+            //take the string starting from the new model object data
+            else
+            {
+				serializerString = serializerString.Substring(indexOfModelObjectEnd);
+				serializerString = serializerString.Substring(endOfModelObjectIndicator.Length);
+            }
+            
+            //if the string contains unknown model object data, remove that
+            if (serializerString.StartsWith(ModelObjectPrefix))
+            {
+                serializerString = serializerString.Substring(ModelObjectPrefix.Length);
+                serializerString = RemoveUnknownModelObject(serializerString);
+                serializerString = serializerString.Substring(ModelObjectSuffix.Length);
+                shouldNotRemoveEndChar = false;
+            }
+
+			//return string after removing data of unknown model objects
+            return serializerString;
+        }
+	}
+}
+
+        
+        

@@ -1,0 +1,11 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\BusinessEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\BusinessEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\BusinessEntity\obj\Release\BusinessEntity.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\BusinessEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\BusinessEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\BusinessEntity\obj\Release\BusinessEntity.csproj.AssemblyReference.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\BusinessEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\BusinessEntity\bin\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\BusinessEntity\obj\Release\BusinessEntity.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\BusinessEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\BusinessEntity\obj\Release\Infosys.Ainauto.ConfigurationManager.BusinessEntity.pdb

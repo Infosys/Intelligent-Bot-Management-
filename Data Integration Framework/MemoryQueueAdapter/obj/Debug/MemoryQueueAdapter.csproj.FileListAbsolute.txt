@@ -1,0 +1,16 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.MemoryQueue.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.MemoryQueue.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.LegacyCommon.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.LegacyIntegratorService.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.LegacyCommon.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.LegacyCommon.xml
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.LegacyIntegratorService.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\bin\Debug\Infosys.Lif.LegacyIntegratorService.xml
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\obj\Debug\MemoryQueueAdapter.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\obj\Debug\MemoryQueueAdapter.csproj.CopyComplete
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\obj\Debug\Infosys.Lif.MemoryQueue.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\obj\Debug\Infosys.Lif.MemoryQueue.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryQueueAdapter\obj\Debug\MemoryQueueAdapter.csproj.AssemblyReference.cache

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Infosys.Lif.LegacyParser.DataItem">
+    <Position X="5.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\DataItem.cs</FileName>
+      <HashCode>ABAEAAAAAABAEAAgAFAIIABAAAAAAAAAAAAiAAEAAgA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Infosys.Lif.LegacyParser.DataItem.DataItemType">
+        <TypeIdentifier>
+          <NewMemberFileName>dotNetEntity\DataItem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.Entity">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\Entity.cs</FileName>
+      <HashCode>QAAAAQAAAAAAAAAAAQAAAAUAAAggAAAJMAAAABAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DataItems" />
+      <Property Name="Enums" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <AssociationLine Name="Enums" Type="Infosys.Lif.LegacyParser.EnumType" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.938" />
+        <Point X="4.75" Y="1.938" />
+        <Point X="4.75" Y="5.094" />
+        <Point X="6" Y="5.094" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.EnumPropertyType">
+    <Position X="0.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\EnumType.cs</FileName>
+      <HashCode>ABAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.EnumType">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\EnumType.cs</FileName>
+      <HashCode>AIAAJAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EnumProperties" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.Project">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\Project.cs</FileName>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEIACQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.GenericCollection&lt;T&gt;">
+    <Position X="2.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\GenericCollection.cs</FileName>
+      <HashCode>AEIAAEAAAAAAABAACAAABAAAIAAAAAAAAAQAAAAQIAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.LegacyParserModule">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>dotNetEntity\LegacyParserModule.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAgAAgAQAAAAEAAAAAIEAAACAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Entities" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Entities" Type="Infosys.Lif.LegacyParser.Entity" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="3.375" />
+        <Point X="2.25" Y="3.22" />
+        <Point X="3.25" Y="3.22" />
+        <Point X="3.25" Y="2.356" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.018" Y="0.433" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+</ClassDiagram>

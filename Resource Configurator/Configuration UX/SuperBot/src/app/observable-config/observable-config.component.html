@@ -1,0 +1,67 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    height: 540px !important; ">
+    <div  style="background-color: white;">
+    <div class="form-group"  >
+        <label style="margin-top: 10px;font-size:14px;font-weight: 600;" >Monitoring Configuration</label>  
+        <button *ngIf="isUpdatePage" class="add-btn" style="float: right;margin-top: 10px;font-size: 13px;
+        margin-right: 10px;" (click)="changePageType()">+ Create New</button>
+      
+    </div>
+</div>
+<form #ObservableForm="ngForm">
+    <div class="row" >
+      <div class="col-7"  >
+        <div class="form-group float-left"  >
+            <label for="name" > Metric Name</label>
+            <select *ngIf="isUpdatePage" class="form-control" #actionNameSelect name="actionNameSelect" (change)="onChangeObservable($event.target.value)" >
+               <option></option>
+               <option value="{{obs.id}}" *ngFor="let obs of observableArr">{{obs.name}}</option>
+            </select>
+            <input *ngIf="!isUpdatePage"  class="form-control" name="actionname" [(ngModel)]="observable.ObservableName"  type="text"> 
+        </div>
+        <div class="form-group float-right"   >
+            <label for="name" >Unit of Measure</label>
+            <input  class="form-control" type="text" name="UnitOfMeasure" [(ngModel)]="observable.unitofmeasure" > 
+        </div>
+      </div>
+      <div class="col-7"  >
+        <div class="form-group float-left"  >
+            <label for="name" >Validity Start</label>
+            <angular2-date-picker [(ngModel)]="observable.ValidityStart"  (onDateSelect)="onDateSelect($event, observable,'start')" name="fromDate" [settings]="settings"></angular2-date-picker>
+        </div>
+        <div class="form-group float-right"   >
+            <label for="name" >Validity End</label>
+            <angular2-date-picker (onDateSelect)="onDateSelect($event, observable,'end')" [(ngModel)]="observable.ValidityEnd" name="toDate"  [settings]="settings"></angular2-date-picker>
+        </div>
+      </div>
+      <div class="col-9"  >
+        <div class="form-group float-left"  >
+            <label for="name" >Data Type</label>
+            <select class="form-control" #actionNameSelect name="actionNameSelect" (change)="onChangeDataType($event.target.value)" >
+                <option></option>
+                <option value="varchar" [selected]="(observable.datatype == 'varchar')?'true':'false'" >varchar</option>
+                <option value="int" [selected]="(observable.datatype == 'int')?'true':'false'" >int</option>
+                <option value="DateTime" [selected]="(observable.datatype == 'DateTime')?'true':'false'" >DateTime</option>
+             </select>
+
+
+            <!-- <input  class="form-control" name="datatype"  [(ngModel)]="observable.datatype" type="text">  -->
+        </div>
+       
+      </div> 
+      <div class="col-12"  >
+        <div class="form-group float-right" style="   margin-top:137px"  >
+
+          <button class="update-btn float-right" (click)="changePageType()" >Cancel </button>
+          <button class="update-btn float-right" (click)="onReset()" >Reset </button>
+          <button class="add-btn float-right" (click)="onUpdate();" style="margin-left: 10px;" *ngIf="!isUpdatePage">Add </button>
+          <button class="add-btn float-right" (click)="onUpdate();" style="margin-left: 10px;" *ngIf="isUpdatePage">Update </button>
+        </div>
+       
+      </div>
+    </div>
+    </form>
+</div>
+
+
+

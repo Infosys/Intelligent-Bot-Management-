@@ -1,0 +1,49 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    ">
+<div class="row"    *ngIf="platformJson != undefined && platformJson.length   >   0" style="margin-top:20px">
+    <div class="col-12">
+        <table class="table paramTabl">
+            <thead>
+                <tr>
+                    <!-- <td>Patform Id</td> -->
+                    <td style="width:30%">Platform Type Name</td>
+                    <td style="width:32%">Platform Instance Name </td>
+                    <td style="width:20%">Resource Type Name</td>
+                    <td style="width:18%"></td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let platform of platformJson">
+                    <td style="width:30%">{{platform.PlatformTypeName}}</td>
+                    <td style="width:32%">{{platform.PlatformInstanceName}}</td>
+                    <td style="width:20%">{{platform.ResourceTypeName}}</td>
+                    <td style="width:18%"><img style="cursor: pointer;" (click)="viewPlatform(platform.PlatformId,platform.ResourceTypeName)" src="/superbotapp/assets/images/edit.png"><button class="update-btn"  data-toggle="modal"    (click)="activateDeactivateResource(platform.PlatformId,platform.ResourceTypeName)" style="margin-top: 0px;"  data-target="#summaryActivateModel">Activate/Deactivate</button></td>
+                    <!-- <td style="width:8%"></td> -->
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<div *ngIf="loadPage &&  ( platformJson == undefined || platformJson.length   ==   0)"   class="row" style="margin-top:20px">
+    <div class="col-12">
+        <label  style="margin-left: 428px;
+        margin-top: 20px;">No Resource Model Configured</label>
+        </div>
+</div>
+</div>
+
+<div class="modal fade" data-keyboard="false" data-backdrop="static" id="summaryActivateModel" tabindex="-1" role="dialog" aria-labelledby="summaryActivateModelLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 640px  !important;">
+      <div class="modal-content">
+
+
+        <!-- (messageEvent)="receiveActivateMsg($event)" -->
+        <app-activate-resource [PlatformId]="PlatformIdChild" ></app-activate-resource>
+
+
+      </div>
+    </div>
+  </div>

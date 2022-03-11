@@ -1,0 +1,105 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    height: 540px !important;">
+        <a name="top"></a>
+    <div style="background-color: white;">
+        <div>
+            <label style="margin-top: 10px;" class="semi-bold">Remediation Configuration</label>
+            <button class="add-btn" style="float: right;margin-top:10px;
+        margin-right: 10px; " *ngIf="isUpdateType"
+                (click)="togglePageType(false)">Create New</button>
+
+        </div>
+    </div>
+    <form #resourceForm="ngForm">
+        <div class="row" style="margin-top:5px">
+            <div class="col-12">
+                
+                <div class="form-group float-left" >
+                    <label for="name">Resource Type </label>
+                    <input disabled type="text" class="form-control" name="resourcetypename" [(ngModel)]="remediationPlan.resourcetypename"
+                        *ngIf="isUpdateType">
+                    <select *ngIf="!isUpdateType"  (change)="onChangeRes($event.target.value)" class="form-control" name="resourcetypename">
+                        <option value=""></option>
+                        <option value="{{res.id}}" *ngFor="let res of restypearr">{{res.resourcetypename}}</option>
+                    </select>
+                </div>
+                <div class="form-group float-left" style="margin-left: 20px">
+                    <label for="name">Monitoring Plan</label>
+                    <input disabled type="text"  class="form-control" name="observablename" [(ngModel)]="remediationPlan.ObservableName"
+                        *ngIf="isUpdateType">
+                    <select *ngIf="!isUpdateType"  (change)="onChangeObs($event.target.value)" class="form-control" name="observablename">
+                        <option value=""></option>
+                        <option value="{{obs.id}}" *ngFor="let obs of obsarray">{{obs.observablename}}</option>
+                    </select>
+                </div>
+                <div class="form-group float-left" style="margin-left: 20px">
+                        <label for="name">Remediation Plan</label>
+                         <input disabled *ngIf="isUpdateType" class="form-control" name="remediationPlanName" [(ngModel)]="remediationPlan.RemediationPlanName"
+                            type="text">
+                        <select *ngIf="!isUpdateType" (change)="onChangePlan($event.target.value)" [(ngModel)]="remediationPlan.RemediationPlanId"
+                            class="form-control"  name="remediationPlanName">
+                            <option value="0"></option>
+                            <option value="{{plan.remediationId }}" *ngFor="let plan of remPlans">{{plan.remediationPlanName}}</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <!-- <div class="row" style="margin-top:5px">
+            <div class="col-4">
+               
+            </div>
+        </div>
+        <div class="row" style="margin-top:5px">
+            <div class="col-4">
+                
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group float-left" style=" font-weight: 400;margin-right:50px">
+                    <label style=" font-weight: 400">Validity Start</label>
+                    <angular2-date-picker  name="fromDate" (onDateSelect)="onDateSelect($event, remediationPlan,'start')"
+                        [(ngModel)]="remediationPlan.ValidityStart" [settings]="settings"></angular2-date-picker>
+
+                </div>
+                <div class="form-group float-left" style="margin-left:-25px">
+                    <label style=" font-weight: 400">Validity End</label>
+                    <angular2-date-picker  name="fromDate1" (onDateSelect)="onDateSelect($event, remediationPlan,'end')"
+                        [(ngModel)]="remediationPlan.ValidityEnd"  [settings]="settings"></angular2-date-picker>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-12">
+               
+            </div>
+        </div> -->
+        <div class="row" style="margin-top:-41px;margin-bottom: 10px;margin-right: 44px;">
+            <div class="col-12">
+                <button *ngIf="this.isUpdateType" (click)="updateRemediationPlan()" class="float-right btn-border">Update</button>
+                <button *ngIf="!this.isUpdateType" (click)="addRemediationPlan()" class="float-right btn-border">Add</button>
+                <button (click)="togglePageType(false)" class="float-right update-btn">Cancel</button>
+                <button (click)="reset()" *ngIf="!isUpdateType" class="float-right update-btn">Reset</button>
+                <button (click)="onDelete()" *ngIf="isUpdateType" class="float-right update-btn">Delete</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-12">
+
+                <div style="height:474px;width:1000px;margin-left: 5px; overflow-y: auto">
+                        <ng2-smart-table [settings]="settings_table" (custom)="onEditRowSelect($event)"  [source]="source"   
+                       ></ng2-smart-table> 
+            
+                      
+                      </div>
+        </div>
+
+    </div>
+
+
+
+</div>

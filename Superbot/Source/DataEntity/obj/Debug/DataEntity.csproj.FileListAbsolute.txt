@@ -1,0 +1,24 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\Infosys.Ainauto.Superbot.DataEntity.dll.config
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\Infosys.Ainauto.Superbot.DataEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\Infosys.Ainauto.Superbot.DataEntity.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\EntityFramework.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\EntityFramework.SqlServer.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\EntityFramework.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\bin\Debug\EntityFramework.SqlServer.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\obj\Debug\DataEntity.csproj.AssemblyReference.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\obj\Debug\DataEntity.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\obj\Debug\DataEntity.csproj.CopyComplete
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\obj\Debug\Infosys.Ainauto.Superbot.DataEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\Superbot - External\DataEntity\obj\Debug\Infosys.Ainauto.Superbot.DataEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\Infosys.Ainauto.Superbot.DataEntity.dll.config
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\Infosys.Ainauto.Superbot.DataEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\Infosys.Ainauto.Superbot.DataEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\EntityFramework.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\EntityFramework.SqlServer.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\EntityFramework.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\bin\Debug\EntityFramework.SqlServer.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\obj\Debug\DataEntity.csproj.AssemblyReference.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\obj\Debug\DataEntity.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\obj\Debug\DataEntity.csproj.CopyComplete
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\obj\Debug\Infosys.Ainauto.Superbot.DataEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Superbot\Source\DataEntity\obj\Debug\Infosys.Ainauto.Superbot.DataEntity.pdb

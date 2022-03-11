@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataLoaderSettings" xmlns="" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DataLoaderSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Entity" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TestData" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence />
+                  <xs:attribute name="Filter" type="xs:string" />
+                  <xs:attribute name="FileName" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="ClassName" type="xs:string" />
+            <xs:attribute name="DefaultSource" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="LoaderClass" type="xs:string" />
+      <xs:attribute name="LoaderType" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

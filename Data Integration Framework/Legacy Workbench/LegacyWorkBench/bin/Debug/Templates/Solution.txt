@@ -1,0 +1,60 @@
+$ProjectTemplate
+Project("{##SolutionGuid##}") = "##HostAccessRootNamespace##", "HostAccess\##HostAccessRootNamespace##.csproj", "{##HostAccessGuid##}"
+	ProjectSection(ProjectDependencies) = postProject
+		{##ContractDataEntityGuid##} = {##ContractDataEntityGuid##}
+	EndProjectSection
+EndProject
+$HostAccessTemplate
+		{##HostAccessGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##HostAccessGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##HostAccessGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##HostAccessGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+$end##HardCodedStringEmpty##Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+##ProjectFilled##
+Project("{##SolutionGuid##}") = "##ContractSerializerRootNamespace##", "Serializers\Contracts\##ContractSerializerRootNamespace##.csproj", "{##ContractSerializerGuid##}"
+	ProjectSection(ProjectDependencies) = postProject
+		{##ModelObjectSerializerGuid##} = {##ModelObjectSerializerGuid##}
+		{##ContractDataEntityGuid##} = {##ContractDataEntityGuid##}
+		{##ModelObjectDataEntityGuid##} = {##ModelObjectDataEntityGuid##}
+	EndProjectSection
+EndProject
+Project("{##SolutionGuid##}") = "##ModelObjectSerializerRootNamespace##", "Serializers\ModelObjects\##ModelObjectSerializerRootNamespace##.csproj", "{##ModelObjectSerializerGuid##}"
+	ProjectSection(ProjectDependencies) = postProject
+		{##ModelObjectDataEntityGuid##} = {##ModelObjectDataEntityGuid##}
+	EndProjectSection
+EndProject
+Project("{##SolutionGuid##}") = "##ContractDataEntityRootNamespace##", "DataEntities\Contracts\Code\##ContractDataEntityRootNamespace##.csproj", "{##ContractDataEntityGuid##}"
+	ProjectSection(ProjectDependencies) = postProject
+		{##ModelObjectDataEntityGuid##} = {##ModelObjectDataEntityGuid##}
+	EndProjectSection
+EndProject
+Project("{##SolutionGuid##}") = "##ModelObjectDataEntityRootNamespace##", "DataEntities\ModelObjects\Code\##ModelObjectDataEntityRootNamespace##.csproj", "{##ModelObjectDataEntityGuid##}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution##HostAccessFilled##{##ContractSerializerGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##ContractSerializerGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##ContractSerializerGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##ContractSerializerGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+		{##ModelObjectSerializerGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##ModelObjectSerializerGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##ModelObjectSerializerGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##ModelObjectSerializerGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+		{##ContractDataEntityGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##ContractDataEntityGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##ContractDataEntityGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##ContractDataEntityGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+		{##ModelObjectDataEntityGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##ModelObjectDataEntityGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##ModelObjectDataEntityGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##ModelObjectDataEntityGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

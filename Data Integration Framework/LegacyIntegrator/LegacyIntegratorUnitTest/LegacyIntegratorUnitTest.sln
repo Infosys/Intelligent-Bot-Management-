@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyIntegratorUnitTest", "LegacyIntegratorUnitTest\LegacyIntegratorUnitTest.csproj", "{544F3D6A-143A-43CC-9654-47974ADF72EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C013E5D-93B8-4B12-82B5-61B39066FCE8}"
+	ProjectSection(SolutionItems) = postProject
+		LegacyIntegratorUnitTest.vsmdi = LegacyIntegratorUnitTest.vsmdi
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = LegacyIntegratorUnitTest.vsmdi
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProviderRegKey = Software\Microsoft\SourceSafe
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LegacyIntegratorUnitTest\\LegacyIntegratorUnitTest.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = LegacyIntegratorUnitTest\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{544F3D6A-143A-43CC-9654-47974ADF72EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544F3D6A-143A-43CC-9654-47974ADF72EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544F3D6A-143A-43CC-9654-47974ADF72EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544F3D6A-143A-43CC-9654-47974ADF72EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

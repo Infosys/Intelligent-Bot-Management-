@@ -1,0 +1,8 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyParser\Infosys.Lif.Serializer.Framework.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyParser\Infosys.Lif.Serializer.Framework.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyParser\Infosys.Lif.Serializer.Framework.XML
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\Serializer\obj\Debug\Infosys.Lif.Serializer.Framework.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\Serializer\obj\Debug\Infosys.Lif.Serializer.Framework.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\Serializer\obj\Debug\Infosys.Lif.Serializer.Framework.csproj.CopyComplete
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\Serializer\obj\Debug\Infosys.Lif.Serializer.Framework.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\Serializer\obj\Debug\Infosys.Lif.Serializer.Framework.pdb

@@ -1,0 +1,10 @@
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\bin\Debug\LegacyWorkBenchReportHandler.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\bin\Debug\LegacyWorkBenchReportHandler.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\obj\Debug\ResolveAssemblyReference.cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\obj\Debug\LegacyWorkBenchReportHandler.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\obj\Debug\LegacyWorkBenchReportHandler.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\bin\Debug\LegacyWorkBenchReportHandler.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\bin\Debug\LegacyWorkBenchReportHandler.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\obj\Debug\LegacyWorkBenchReportHandler.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkbenchReportHandler\obj\Debug\LegacyWorkBenchReportHandler.pdb

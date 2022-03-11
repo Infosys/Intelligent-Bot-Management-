@@ -1,0 +1,47 @@
+$DataItem
+				<xs:element name="##Name##" type="xs:##Type##" maxOccurs="##CollectionLength##">
+					<xs:annotation>
+						<xs:documentation>Documentation for ##Name## which is of item type ##Type##</xs:documentation>
+					</xs:annotation>
+				</xs:element>$end
+$DataItemCollectionTypeDefinition
+	<xs:element name="GeneralInfo">
+		<xs:complexType>
+			<xs:sequence>
+
+$end
+$DataItemCollectionType
+				<xs:element ref="#Name#">
+					<xs:annotation>
+						<xs:documentation>Documentation for ##Name## which is of item type ##Type##</xs:documentation>
+					</xs:annotation>
+				</xs:element>$end
+$DataItemEnumType				
+				<xs:element name="##Name##">
+					<xs:annotation>
+						<xs:documentation>Name of the Enum ##Name##</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType >
+						<xs:restriction base="xs:string">
+						##DataItemProperties##
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+$DataItemProperty
+							<xs:enumeration value="##PropertyName##"/>$DataItemCollection
+							<xs:enumeration value="##PropertyName##"/>
+$end
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="##DataEntityName##">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="##DataEntityName##s" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>##DataItems##
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

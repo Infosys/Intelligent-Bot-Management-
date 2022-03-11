@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ParserConfiguration" elementFormDefault="qualified" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LegacyWorkbenchConfigurations">
+    <xs:sequence>
+      <xs:element name="ContractsImporter" type="ComponentDefinition" />
+      <xs:element name="ModelObjectImporter" type="ComponentDefinition" />
+      <xs:element name="XsdObjectGeneratorPath" type="xs:string" />
+      <xs:element name="CodeGenerator" type="ComponentDefinition">
+      </xs:element>
+      <xs:element name="CodeGeneratedNamespaces" type="CodeGeneratedNamespaceDefinition" />
+      <xs:element name="ReportingConfigurations" type="ReportingConfigurationsType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComponentDefinition">
+    <xs:sequence>
+      <xs:element name="assembly" type="xs:string" />
+      <xs:element name="fullType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModelObjectNamespaceDefinition">
+    <xs:sequence>
+      <xs:element name="DataEntityNamespace" type="xs:string" />
+      <xs:element name="DataEntityRootNamespace" type="xs:string" />
+      <xs:element name="SerializerNamespace" type="xs:string" />
+      <xs:element name="SerializerRootNamespace" type="xs:string" />
+      <!--<xs:element name="HostAccessNamespace" type="xs:string" />
+      <xs:element name="HostAccessRootNamespace" type="xs:string" /> -->
+      <xs:element name="XmlNamespace" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContractNamespaceDefinition">
+    <xs:sequence>
+      <xs:element name="DataEntityNamespace" type="xs:string" />
+      <xs:element name="DataEntityRootNamespace" type="xs:string" />
+      <xs:element name="SerializerNamespace" type="xs:string" />
+      <xs:element name="SerializerRootNamespace" type="xs:string" />
+      <xs:element name="HostAccessNamespace" type="xs:string" />
+      <xs:element name="HostAccessRootNamespace" type="xs:string" />
+      <xs:element name="XmlNamespace" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CodeGeneratedNamespaceDefinition">
+    <xs:sequence>
+      <xs:element name="ModelObjectNamespaces" type="ModelObjectNamespaceDefinition" />
+      <xs:element type="ContractNamespaceDefinition" name="ContractNamespaces" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportType">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="FileLocation" type="xs:string" />
+    <xs:attribute name="Alias" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ReportsType">
+    <xs:sequence>
+      <xs:element name="Report" type="ReportType" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FileTypeDefinition">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="Key" type="xs:string" />
+    <xs:attribute name="Value" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="FileTypeAssociationsType">
+    <xs:sequence>
+      <xs:element name="FileType" type="FileTypeDefinition" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportingConfigurationsType">
+    <xs:sequence>
+      <xs:element name="Reports" type="ReportsType" />
+      <xs:element name="FileTypeAssociations" type="FileTypeAssociationsType">
+      </xs:element>
+      <xs:element name="EffortAnalysis" type="EffortAnalysisType">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EffortAnalysisType">
+    <xs:sequence>
+      <xs:element name="CapersJones" type="EffortAnalysisMethodType" />
+      <xs:element name="Custom" type="EffortAnalysisMethodType" />
+      <xs:element name="EffortSavedUsingLIF" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EffortAnalysisMethodType">
+    <xs:sequence>
+      <xs:element name="ExtensionsToAnalyze" type="ExtensionsToAnalyzeType" />
+      <xs:element name="FunctionPointMapping" type="FunctionPointMappingType">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExtensionsToAnalyzeType">
+    <xs:sequence>
+      <xs:element type="ExtensionMappingType" minOccurs="0" maxOccurs="unbounded" name="ExtensionMapping">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionPointMappingType">
+    <xs:sequence>
+      <xs:element name="Language" type="LanguageType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExtensionMappingType">
+    <xs:sequence />
+    <xs:attribute name="GroupKey" type="xs:string" />
+    <xs:attribute name="ExcludeExtensions" type="xs:string" />
+    <xs:attribute name="CodeLanguage" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="LanguageType">
+    <xs:sequence />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="UnitLOCPerFunctionPoint" type="xs:string" />
+    <xs:attribute name="PersonHrsPerFunctionPoint" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

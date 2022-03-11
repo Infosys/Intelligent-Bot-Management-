@@ -1,0 +1,193 @@
+.img-add {
+  content: url('/superbotapp/assets/images/plus.png');
+}
+.img-delete {
+  content: url('/superbotapp/assets/images/delete.png');
+}
+.img-edit{
+  content:url('/superbotapp/assets/images/edit.png')
+}
+.img-delete-table {
+  content: url('/superbotapp/assets/images/delete1.png');
+}
+:host /deep/  .glyphicon-edit{
+  content:url('/superbotapp/assets/images/edit.png')
+}
+:host /deep/  .glyphicon-trash{
+  content:url('/superbotapp/assets/images/delete1.png')
+}
+:host /deep/  .ng2-smart-action-edit-edit{
+  background-color: white;
+  border-color: white;
+  
+}
+:host /deep/ .box-size{
+  background-color: white;
+  width: 102%;
+  height: 570px !important;
+  overflow: auto;
+}
+
+.add-btn{
+    margin-top: 30px;
+    margin-left: 66px;
+    background-color:#007cc3;
+    color:white;
+    width:auto;
+    height:30px;
+    border:none;
+    border-radius: 2px; 
+    cursor: pointer;
+    font-size: 13px;
+  }
+  .update-btn{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:#007cc3;
+    width:auto;
+    height:30px;
+    background-color: white;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+  .btn-border{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:white;
+    width:auto;
+    height:30px;
+    background-color: #007cc3;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+  :host /deep/ .wc-date-container > span {
+    color:#495057 !important;
+  }
+  :host /deep/ .wc-date-container {
+    float: left;
+    width: 252px !important;
+    height: 36px !important;
+    border: 1px solid #ced4da !important;
+    margin-bottom: 1px;
+    font-size: 16px;
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+    background: #fff;
+    line-height: 20px;
+}
+select {
+  color: #333333;
+  font-size: 13px;
+  font-weight: 400;
+  /* min-width: 280px;
+  min-height:35px; */
+  border: 1px solid #ced4da;
+  /* border: #83838E */
+}
+.semi-bold{
+  color: #333333 !important;
+    font-size: 14px;
+    font-weight: 600 !important;
+}
+label {
+  display: inline-block;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+.ng-invalid.ng-touched:not(form) {
+  border: 1px solid #a94442; 
+}
+.tbl-selectfield{
+  max-width: 240px;
+  float: right;
+  margin-right: -5px;
+  margin-top: -28px;
+}
+:host /deep/ .wc-date-popover{
+  width: 250px;
+  position: absolute;
+  top: 31px;
+  height: 314px;
+  left: 0;
+  transform: translateX(0);
+}
+
+.paramTabl tbody {
+  display: block;
+  max-height: 190px;
+  overflow-y: auto;
+}
+ .paramTabl thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+} 
+.paramTabl thead{
+  background-color: #abe1ff;
+}
+/* :host /deep/  .form-control:focus{
+  outline:none !important;
+} */
+/* input[type=text]:focus {
+ 
+    outline: none;
+  }  */
+  select:focus, input:focus,  button:focus , select:focus{
+    outline: none;
+  }
+.category-list{
+  width: 450px;
+  float: left;
+  position: fixed !important;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  height: 340px;
+  margin-top: 0px;
+  margin-left:7px !important;
+  border-right: 1px solid  #ced4da;
+}
+
+
+.script-select{
+  cursor: pointer;
+  color: #000000;
+  font-family: 'Roboto',sans-serif !important;
+   font-weight: 300;
+   font-size: 15px;
+}
+.script-select:hover{
+  cursor: pointer;
+  color: #0076B3 !important;
+  font-family: 'Roboto',sans-serif !important;
+   font-weight: 300;
+   font-size: 15px;
+}
+
+.search-script-menu{
+  border: 1px solid #ced4da;
+  width: 270px !important;
+  background-color: white;
+  margin-left: 13px;
+  width: 227px  6px !important;
+  padding-left: 8px;
+  padding-top: 0px;
+  /* border-right: none; */
+  color: #33424B;
+  margin-top: 0px;
+  
+  margin-bottom: 10px;
+}
+
+  

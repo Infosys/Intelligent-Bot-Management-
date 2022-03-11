@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Infosys.Lif.DataLoader.ConfigHandler">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ConfigHandler.cs</FileName>
+      <HashCode>AAAABEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.DataLoader.EntityCollection">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoaderSettings.cs</FileName>
+      <HashCode>AAIAAEAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.DataLoader.TestDataCollection">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoaderSettings.cs</FileName>
+      <HashCode>AAIAAEAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.DataLoader.DataLoaderSettings">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoaderSettings.cs</FileName>
+      <HashCode>AAYAAAAAAABAAhAACAQABAQAAAAAAAAAAAAIAABAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.DataLoader.Entity">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoaderSettings.cs</FileName>
+      <HashCode>AAIAAAAAAACAAJQACAggBAQAAAEAAAAAAAAAAABBAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.DataLoader.TestData">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoaderSettings.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAABIAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.DataLoader.DataLoadManager">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoadManager.cs</FileName>
+      <HashCode>AAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAWAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Infosys.Lif.DataLoader.Declarations">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DataLoaderSettings.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Infosys.Lif.DataLoader.IDataLoader">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IDataLoader.cs</FileName>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

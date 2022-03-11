@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Retrievers" targetNamespace="http://infosys.com/mtc/lif/legacyworkbench/configurations/retrievers" elementFormDefault="qualified" xmlns="http://infosys.com/mtc/lif/legacyworkbench/configurations/retrievers" xmlns:mstns="http://infosys.com/mtc/lif/legacyworkbench/configurations/retrievers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Retrievers">
+    <xs:sequence>
+      <xs:element name="Retriever" type="Retriever" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="defaultRetriever" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Retriever">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="type" type="xs:string" />
+    <xs:attribute name="fileExtension" type="xs:string" />
+    <xs:attribute name="assemblyPath" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

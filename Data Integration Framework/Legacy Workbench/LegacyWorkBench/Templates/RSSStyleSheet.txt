@@ -1,0 +1,9 @@
+td.Odd
+{
+	background-color:#f08080;
+}
+
+td.Even
+{
+	background-color:#ffb6c1;
+}

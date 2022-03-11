@@ -1,0 +1,53 @@
+{
+
+  "AdapterBinaryLocation": "D:\\TFS\\ManaExpertServices\\Facade_NET\\Code\\Adapter\\AutomationAnywhereAdapterEx\\AutomationAnywhereAdapterEx\\bin\\Debug\\",
+  "Adapters": [
+    {
+      "Type": "AA",
+      "Interface": "RPAFacade.Common.Interfaces.IAdapterBase",
+      "BinaryName": "Infosys.Ainauto.Adapter.AutomationAnywhere.dll",
+      "Operations": [
+        {
+          "Operation": "Get",
+          "Mappers": {
+            // SuperBotField: DB Field
+            "Application": "Appliaction",
+            "event_type": "event_type",
+            "resource_id": "resource_id",
+            "bot_name": "bot_name",
+            "ipaddress": "ipaddress",
+            "metric_name": "metric_name",
+            "metric_value": "metric_value",
+            "metric_time": "metric_time",
+            "description=": "description",
+            "server_ip": "server_ip",
+            "source": "source"
+          }
+        }
+      ]
+    },
+    {
+      "Type": "BP",
+      "Interface": "BluePrismAdapter.BPAdapter",
+      "BinaryName": "BluePrismAdapter.dll",
+      "Operations": [
+        {
+          "Operation": "get",
+          "Mappers": {
+            "id": "ID",
+            "bot_id": "BotID",
+            "bot_name": "BotName",
+            "activity_status": "ActivityStatus",
+            "error_message": "ErrorMessage",
+            "start_datetime": "StartDatetime",
+            "end_datetime": "EndDatetime",
+            "activity_unique_id": "ActivityUniqueId",
+            "device_name": "DeviceName",
+            "created_on": "CreatedOn",
+            "user_name": "UserName"
+          }
+        }
+      ]
+    }
+  ]
+}

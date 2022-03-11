@@ -1,0 +1,13 @@
+*{
+    font-family: 'Open Sans' !important;
+}
+
+.img-help {
+    content: url('/assets/images/help.png');
+}
+.img-profile {
+    content: url('/assets/images/profile.png');
+}
+.img-notification {
+    content: url('/assets/images/notification.png');
+}

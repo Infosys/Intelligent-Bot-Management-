@@ -1,0 +1,9 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\ParserGenerator UI.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\Infosys.Lif.LegacyParser.UI.Configurations.ConfigurationSettingsDesign.resources
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\Infosys.Lif.LegacyParser.UI.ConfigWindow.resources
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\Infosys.Lif.LegacyParser.UI.EntityEdit.resources
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\Infosys.Lif.LegacyParser.UI.LegacyParserFrontEnd.resources
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\Infosys.Lif.LegacyParser.UI.ModuleEdit.resources
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\Infosys.Lif.LegacyParser.UI.Properties.Resources.resources
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\ParserGenerator UI.csproj.GenerateResource.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator UI\obj\Debug\ParserGenerator UI.csproj.CoreCompileInputs.cache

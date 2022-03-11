@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="File">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="LinesOfCode" type="xs:integer" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CommentsCount" type="xs:integer" />
+            <xs:element minOccurs="0" maxOccurs="1" name="BlankLinesCount" type="xs:integer" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="xs:string" />
+        <xs:attribute name="Project" type="xs:string" />
+        <xs:attribute name="Group" type="xs:string" />
+        <xs:attribute name="Type" type="xs:string" />
+        <xs:attribute name="Location" type="xs:string" />
+        <xs:attribute name="TimeTakenForGeneration" type="xs:string" />
+        <xs:attribute name="CapersJonesConversionFactor" type="xs:decimal" />
+        <xs:attribute name="CustomConversionFactor" type="xs:decimal" />
+    </xs:complexType>
+    <xs:element name="File" type="File" />
+    <xs:element name="ModelObjects" type="ModelObjects" />
+    <xs:complexType name="ModelObjects">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="File" type="File" />
+        </xs:sequence>
+        <xs:attribute name="NumberOfFiles" type="xs:integer" />
+    </xs:complexType>
+    <xs:element name="Serializers" type="Serializers" />
+    <xs:complexType name="Serializers">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="Contracts" type="Contracts" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ModelObjects" type="ModelObjects" />
+        </xs:sequence>
+        <xs:attribute name="NumberOfFiles" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="Contracts">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="File" type="File" />
+        </xs:sequence>
+        <xs:attribute name="NumberOfFiles" type="xs:integer" />
+    </xs:complexType>
+    <xs:element name="DataEntities" type="DataEntities" />
+    <xs:complexType name="DataEntities">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="Contracts" type="Contracts" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ModelObjects" type="ModelObjects" />
+        </xs:sequence>
+        <xs:attribute name="NumberOfFiles" type="xs:integer" />
+    </xs:complexType>
+    <xs:element name="ServiceInterface" type="ServiceInterface" />
+    <xs:complexType name="ServiceInterface">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="File" type="File" />
+        </xs:sequence>
+        <xs:attribute name="NumberOfFiles" type="xs:integer" />
+        <xs:attribute name="type" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="LegacyWorkbenchReport" type="LegacyWorkbenchReport" />
+    <xs:complexType name="LegacyWorkbenchReport">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="File" type="File" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Configurations" type="Configurations" />
+            <xs:element minOccurs="0" maxOccurs="1" name="DataEntities" type="DataEntities" />
+            <xs:element minOccurs="0" maxOccurs="1" name="ServiceInterface" type="ServiceInterface" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Serializers" type="Serializers" />
+        </xs:sequence>
+        <xs:attribute name="TotalTimetaken" type="xs:string" />
+        <xs:attribute name="TotalNoOfFiles" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="Configurations">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="File" type="File" />
+        </xs:sequence>
+        <xs:attribute name="NumberOfFiles" type="xs:integer" />
+    </xs:complexType>
+    <xs:element name="Contracts" type="Contracts" />
+    <xs:element name="Configurations" type="Configurations" />
+</xs:schema>

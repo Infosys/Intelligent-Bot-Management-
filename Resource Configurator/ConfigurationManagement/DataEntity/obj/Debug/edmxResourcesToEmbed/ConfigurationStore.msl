@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="superbotModelStoreContainer" CdmEntityContainer="ConfigurationDB">
+    <EntitySetMapping Name="action">
+      <EntityTypeMapping TypeName="ConfigurationModel.action">
+        <MappingFragment StoreEntitySet="action">
+          <ScalarProperty Name="AutomationEngineName" ColumnName="AutomationEngineName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="AutomationEngineId" ColumnName="AutomationEngineId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ScriptId" ColumnName="ScriptId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="EndpointUri" ColumnName="EndpointUri" />
+          <ScalarProperty Name="ActionTypeId" ColumnName="ActionTypeId" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="action_params">
+      <EntityTypeMapping TypeName="ConfigurationModel.action_params">
+        <MappingFragment StoreEntitySet="action_params">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AutomationEngineParamId" ColumnName="AutomationEngineParamId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="IsMandatory" ColumnName="IsMandatory" />
+          <ScalarProperty Name="FieldToMap" ColumnName="FieldToMap" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParamId" ColumnName="ParamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actiontype">
+      <EntityTypeMapping TypeName="ConfigurationModel.actiontype">
+        <MappingFragment StoreEntitySet="actiontype">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="ActionTypeId" ColumnName="ActionTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="anomaly_details">
+      <EntityTypeMapping TypeName="ConfigurationModel.anomaly_details">
+        <MappingFragment StoreEntitySet="anomaly_details">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="NotifiedTime" ColumnName="NotifiedTime" />
+          <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="RemediationStatus" ColumnName="RemediationStatus" />
+          <ScalarProperty Name="RemediationPlanExecId" ColumnName="RemediationPlanExecId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SourceIp" ColumnName="SourceIp" />
+          <ScalarProperty Name="ObservationTime" ColumnName="ObservationTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ObservationStatus" ColumnName="ObservationStatus" />
+          <ScalarProperty Name="ObservableName" ColumnName="ObservableName" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+          <ScalarProperty Name="AnomalyId" ColumnName="AnomalyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="healthcheck_iteration_tracker">
+      <EntityTypeMapping TypeName="ConfigurationModel.healthcheck_iteration_tracker">
+        <MappingFragment StoreEntitySet="healthcheck_iteration_tracker">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="HealthcheckSource" ColumnName="HealthcheckSource" />
+          <ScalarProperty Name="PlatformModelVersion" ColumnName="PlatformModelVersion" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="healthcheck_iteration_tracker_details">
+      <EntityTypeMapping TypeName="ConfigurationModel.healthcheck_iteration_tracker_details">
+        <MappingFragment StoreEntitySet="healthcheck_iteration_tracker_details">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SeeTransactionId" ColumnName="SeeTransactionId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="HealthcheckSource" ColumnName="HealthcheckSource" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="HealthcheckTrackingId" ColumnName="HealthcheckTrackingId" />
+          <ScalarProperty Name="TrackingDetailsId" ColumnName="TrackingDetailsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notification_configuration">
+      <EntityTypeMapping TypeName="ConfigurationModel.notification_configuration">
+        <MappingFragment StoreEntitySet="notification_configuration">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ReferenceValue" ColumnName="ReferenceValue" />
+          <ScalarProperty Name="ReferenceKey" ColumnName="ReferenceKey" />
+          <ScalarProperty Name="ReferenceType" ColumnName="ReferenceType" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+          <ScalarProperty Name="NotifcationConfigId" ColumnName="NotifcationConfigId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="observable">
+      <EntityTypeMapping TypeName="ConfigurationModel.observable">
+        <MappingFragment StoreEntitySet="observable">
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+          <ScalarProperty Name="ObservableName" ColumnName="ObservableName" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="observable_resource_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.observable_resource_map">
+        <MappingFragment StoreEntitySet="observable_resource_map">
+          <ScalarProperty Name="UpperThreshold" ColumnName="UpperThreshold" />
+          <ScalarProperty Name="LowerThreshold" ColumnName="LowerThreshold" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="observations">
+      <EntityTypeMapping TypeName="ConfigurationModel.observations">
+        <MappingFragment StoreEntitySet="observations">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+          <ScalarProperty Name="ObservationSequence" ColumnName="ObservationSequence" />
+          <ScalarProperty Name="ConfigId" ColumnName="ConfigId" />
+          <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="NotifiedTime" ColumnName="NotifiedTime" />
+          <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="RemediationStatus" ColumnName="RemediationStatus" />
+          <ScalarProperty Name="RemediationPlanExecId" ColumnName="RemediationPlanExecId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SourceIp" ColumnName="SourceIp" />
+          <ScalarProperty Name="ObservationTime" ColumnName="ObservationTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ObservationStatus" ColumnName="ObservationStatus" />
+          <ScalarProperty Name="ObservableName" ColumnName="ObservableName" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+          <ScalarProperty Name="ObservationId" ColumnName="ObservationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operator">
+      <EntityTypeMapping TypeName="ConfigurationModel.operator">
+        <MappingFragment StoreEntitySet="operator">
+          <ScalarProperty Name="Rule" ColumnName="Rule" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Operator1" ColumnName="Operator" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recipient_configuration">
+      <EntityTypeMapping TypeName="ConfigurationModel.recipient_configuration">
+        <MappingFragment StoreEntitySet="recipient_configuration">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ReferenceValue" ColumnName="ReferenceValue" />
+          <ScalarProperty Name="ReferenceKey" ColumnName="ReferenceKey" />
+          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+          <ScalarProperty Name="ReferenceType" ColumnName="ReferenceType" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="RecipientConfigId" ColumnName="RecipientConfigId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remediation_plan">
+      <EntityTypeMapping TypeName="ConfigurationModel.remediation_plan">
+        <MappingFragment StoreEntitySet="remediation_plan">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsUserDefined" ColumnName="IsUserDefined" />
+          <ScalarProperty Name="RemediationPlanDescription" ColumnName="RemediationPlanDescription" />
+          <ScalarProperty Name="RemediationPlanName" ColumnName="RemediationPlanName" />
+          <ScalarProperty Name="RemediationPlanId" ColumnName="RemediationPlanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remediation_plan_action_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.remediation_plan_action_map">
+        <MappingFragment StoreEntitySet="remediation_plan_action_map">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActionSequence" ColumnName="ActionSequence" />
+          <ScalarProperty Name="ActionStageId" ColumnName="ActionStageId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="RemediationPlanId" ColumnName="RemediationPlanId" />
+          <ScalarProperty Name="RemediationPlanActionId" ColumnName="RemediationPlanActionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remediation_plan_execution_actions">
+      <EntityTypeMapping TypeName="ConfigurationModel.remediation_plan_execution_actions">
+        <MappingFragment StoreEntitySet="remediation_plan_execution_actions">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="OrchestratorDetails" ColumnName="OrchestratorDetails" />
+          <ScalarProperty Name="Logdata" ColumnName="Logdata" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CorrelationId" ColumnName="CorrelationId" />
+          <ScalarProperty Name="RemediationPlanActionId" ColumnName="RemediationPlanActionId" />
+          <ScalarProperty Name="RemediationPlanExecId" ColumnName="RemediationPlanExecId" />
+          <ScalarProperty Name="RemediationPlanExecActionId" ColumnName="RemediationPlanExecActionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remediation_plan_executions">
+      <EntityTypeMapping TypeName="ConfigurationModel.remediation_plan_executions">
+        <MappingFragment StoreEntitySet="remediation_plan_executions">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="IsPicked" ColumnName="IsPicked" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExecutionPercentage" ColumnName="ExecutionPercentage" />
+          <ScalarProperty Name="ExecutionEndDateTime" ColumnName="ExecutionEndDateTime" />
+          <ScalarProperty Name="ExecutionStartDateTime" ColumnName="ExecutionStartDateTime" />
+          <ScalarProperty Name="ExecutedBy" ColumnName="ExecutedBy" />
+          <ScalarProperty Name="NodeDetails" ColumnName="NodeDetails" />
+          <ScalarProperty Name="ObservationId" ColumnName="ObservationId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="RemediationPlanId" ColumnName="RemediationPlanId" />
+          <ScalarProperty Name="RemediationPlanExecId" ColumnName="RemediationPlanExecId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resource">
+      <EntityTypeMapping TypeName="ConfigurationModel.resource">
+        <MappingFragment StoreEntitySet="resource">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+          <ScalarProperty Name="ResourceRef" ColumnName="ResourceRef" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+          <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resource_observable_action_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resource_observable_action_map">
+        <MappingFragment StoreEntitySet="resource_observable_action_map">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resource_observable_remediation_plan_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resource_observable_remediation_plan_map">
+        <MappingFragment StoreEntitySet="resource_observable_remediation_plan_map">
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RemediationPlanId" ColumnName="RemediationPlanId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcetype">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype">
+        <MappingFragment StoreEntitySet="resourcetype">
+          <ScalarProperty Name="ResourceTypeDisplayName" ColumnName="ResourceTypeDisplayName" />
+          <ScalarProperty Name="PlatfromType" ColumnName="PlatfromType" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsMainEntiry" ColumnName="IsMainEntiry" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ResourceTypeName" ColumnName="ResourceTypeName" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcetype_observable_action_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype_observable_action_map">
+        <MappingFragment StoreEntitySet="resourcetype_observable_action_map">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcetype_observable_remediation_plan_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype_observable_remediation_plan_map">
+        <MappingFragment StoreEntitySet="resourcetype_observable_remediation_plan_map">
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RemediationPlanId" ColumnName="RemediationPlanId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remdiation_plan_action_param_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.remdiation_plan_action_param_map">
+        <MappingFragment StoreEntitySet="remdiation_plan_action_param_map">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ProvidedValueType" ColumnName="ProvidedValueType" />
+          <ScalarProperty Name="ProvidedValue" ColumnName="ProvidedValue" />
+          <ScalarProperty Name="ParamId" ColumnName="ParamId" />
+          <ScalarProperty Name="RemediationPlanActionId" ColumnName="RemediationPlanActionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit_Logs">
+      <EntityTypeMapping TypeName="ConfigurationModel.Audit_Logs">
+        <MappingFragment StoreEntitySet="Audit_Logs">
+          <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+          <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TenantID" ColumnName="TenantID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="ActionParameters" ColumnName="ActionParameters" />
+          <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+          <ScalarProperty Name="ObservableID" ColumnName="ObservableID" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="AnomalyId" ColumnName="AnomalyId" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Environment_Scan_Metric">
+      <EntityTypeMapping TypeName="ConfigurationModel.Environment_Scan_Metric">
+        <MappingFragment StoreEntitySet="Environment_Scan_Metric">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="GeneratedDate" ColumnName="GeneratedDate" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="TenantID" ColumnName="TenantID" />
+          <ScalarProperty Name="ObservableID" ColumnName="ObservableID" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="EnvironmentScanMetricID" ColumnName="EnvironmentScanMetricID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Environment_Scan_Metric_Anomaly_Details">
+      <EntityTypeMapping TypeName="ConfigurationModel.Environment_Scan_Metric_Anomaly_Details">
+        <MappingFragment StoreEntitySet="Environment_Scan_Metric_Anomaly_Details">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+          <ScalarProperty Name="AttributeStatus" ColumnName="AttributeStatus" />
+          <ScalarProperty Name="AttributeValue" ColumnName="AttributeValue" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="MetricId" ColumnName="MetricId" />
+          <ScalarProperty Name="MetricKey" ColumnName="MetricKey" />
+          <ScalarProperty Name="MetricName" ColumnName="MetricName" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="NewVersion" ColumnName="NewVersion" />
+          <ScalarProperty Name="OldVersion" ColumnName="OldVersion" />
+          <ScalarProperty Name="ObservationId" ColumnName="ObservationId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Environment_Scan_Metric_Details">
+      <EntityTypeMapping TypeName="ConfigurationModel.Environment_Scan_Metric_Details">
+        <MappingFragment StoreEntitySet="Environment_Scan_Metric_Details">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TenantID" ColumnName="TenantID" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="AttributeValue" ColumnName="AttributeValue" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="MetricKey" ColumnName="MetricKey" />
+          <ScalarProperty Name="MetricID" ColumnName="MetricID" />
+          <ScalarProperty Name="MetricName" ColumnName="MetricName" />
+          <ScalarProperty Name="EnvironmentScanMetricID" ColumnName="EnvironmentScanMetricID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errors">
+      <EntityTypeMapping TypeName="ConfigurationModel.errors">
+        <MappingFragment StoreEntitySet="errors">
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="errordesc" ColumnName="errordesc" />
+          <ScalarProperty Name="errorcode" ColumnName="errorcode" />
+          <ScalarProperty Name="parametername" ColumnName="parametername" />
+          <ScalarProperty Name="systemname" ColumnName="systemname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tickets">
+      <EntityTypeMapping TypeName="ConfigurationModel.tickets">
+        <MappingFragment StoreEntitySet="tickets">
+          <ScalarProperty Name="resolutiondate" ColumnName="resolutiondate" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="autoresolutionattempted" ColumnName="autoresolutionattempted" />
+          <ScalarProperty Name="resolvingparty" ColumnName="resolvingparty" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="shortdesc" ColumnName="shortdesc" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+          <ScalarProperty Name="ticketingsystemname" ColumnName="ticketingsystemname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="platforms">
+      <EntityTypeMapping TypeName="ConfigurationModel.platforms">
+        <MappingFragment StoreEntitySet="platforms">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RuntimeDetails" ColumnName="RuntimeDetails" />
+          <ScalarProperty Name="ExecutionMode" ColumnName="ExecutionMode" />
+          <ScalarProperty Name="PlatformType" ColumnName="PlatformType" />
+          <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+          <ScalarProperty Name="PlatformId" ColumnName="PlatformId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcetype_metadata">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype_metadata">
+        <MappingFragment StoreEntitySet="resourcetype_metadata">
+          <ScalarProperty Name="issecret" ColumnName="issecret" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="IsMandatory" ColumnName="IsMandatory" />
+          <ScalarProperty Name="AttributeType" ColumnName="AttributeType" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcetype_observable_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype_observable_map">
+        <MappingFragment StoreEntitySet="resourcetype_observable_map">
+          <ScalarProperty Name="UpperThreshold" ColumnName="UpperThreshold" />
+          <ScalarProperty Name="LowerThreshold" ColumnName="LowerThreshold" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+          <ScalarProperty Name="ObservableId" ColumnName="ObservableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcetype_service_details">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype_service_details">
+        <MappingFragment StoreEntitySet="resourcetype_service_details">
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ResourceTypeId" ColumnName="ResourceTypeId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetHierarchyResources" FunctionName="superbotModel.Store.GetHierarchyResources">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConfigurationModel.GetHierarchyResources_Result">
+          <ScalarProperty Name="Resourceid" ColumnName="Resourceid" />
+          <ScalarProperty Name="DependencyResourceId" ColumnName="DependencyResourceId" />
+          <ScalarProperty Name="DependencyType" ColumnName="DependencyType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="resourcetype_dependency_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resourcetype_dependency_map">
+        <MappingFragment StoreEntitySet="resourcetype_dependency_map">
+          <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="DependencyType" ColumnName="DependencyType" />
+          <ScalarProperty Name="DependencyResourceTypeId" ColumnName="DependencyResourceTypeId" />
+          <ScalarProperty Name="ResourcetypeId" ColumnName="ResourcetypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="healthcheck_details">
+      <EntityTypeMapping TypeName="ConfigurationModel.healthcheck_details">
+        <MappingFragment StoreEntitySet="healthcheck_details">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="validityend" ColumnName="validityend" />
+          <ScalarProperty Name="validitystart" ColumnName="validitystart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="ConfigId" ColumnName="ConfigId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="healthcheck_master">
+      <EntityTypeMapping TypeName="ConfigurationModel.healthcheck_master">
+        <MappingFragment StoreEntitySet="healthcheck_master">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="validityend" ColumnName="validityend" />
+          <ScalarProperty Name="validitystart" ColumnName="validitystart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ConfigurationName" ColumnName="ConfigurationName" />
+          <ScalarProperty Name="ConfigId" ColumnName="ConfigId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="healthcheck_tracker">
+      <EntityTypeMapping TypeName="ConfigurationModel.healthcheck_tracker">
+        <MappingFragment StoreEntitySet="healthcheck_tracker">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+          <ScalarProperty Name="ConfigId" ColumnName="ConfigId" />
+          <ScalarProperty Name="HealthCheckId" ColumnName="HealthCheckId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resource_dependency_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.resource_dependency_map">
+        <MappingFragment StoreEntitySet="resource_dependency_map">
+          <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="DependencyType" ColumnName="DependencyType" />
+          <ScalarProperty Name="DependencyResourceId" ColumnName="DependencyResourceId" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actionstages">
+      <EntityTypeMapping TypeName="ConfigurationModel.actionstages">
+        <MappingFragment StoreEntitySet="actionstages">
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ActionStageName" ColumnName="ActionStageName" />
+          <ScalarProperty Name="ActionStageId" ColumnName="ActionStageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resource_attributes">
+      <EntityTypeMapping TypeName="ConfigurationModel.resource_attributes">
+        <MappingFragment StoreEntitySet="resource_attributes">
+          <ScalarProperty Name="isHiddenInUi" ColumnName="isHiddenInUi" />
+          <ScalarProperty Name="IsSecret" ColumnName="IsSecret" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AttributeCategory" ColumnName="AttributeCategory" />
+          <ScalarProperty Name="AttributeValue" ColumnName="AttributeValue" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tenant">
+      <EntityTypeMapping TypeName="ConfigurationModel.tenant">
+        <MappingFragment StoreEntitySet="tenant">
+          <ScalarProperty Name="TenantConfig" ColumnName="TenantConfig" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="BaseUrl" ColumnName="BaseUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="portfolio_project_map">
+      <EntityTypeMapping TypeName="ConfigurationModel.portfolio_project_map">
+        <MappingFragment StoreEntitySet="portfolio_project_map">
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="modifiedby" ColumnName="modifiedby" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+          <ScalarProperty Name="portfolioid" ColumnName="portfolioid" />
+          <ScalarProperty Name="portfolioprjmapid" ColumnName="portfolioprjmapid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

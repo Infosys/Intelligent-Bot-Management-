@@ -1,0 +1,454 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    height: 540px !important;">
+    <div style="background-color: white;">
+        <div>
+            <label style="margin-top: 10px;" class="semi-bold">Action Configuration</label>
+            <!-- <button (click)="download()"> Download </button> -->
+            <button class="add-btn" style="float: right;margin-top:10px;
+        margin-right: 10px; " *ngIf="isUpdateType"
+                (click)="togglePageType(false)">Create New</button>
+            <button class="add-btn" style="float: right;margin-top:10px;
+                margin-right: -48px; "
+                data-toggle="modal" data-target="#preconfigmodel" *ngIf="isUpdateType">Preconfig</button>
+            <!-- <button class="add-btn" style="float: right;margin-top:10px;
+                margin-right: 112px; " 
+                       *ngIf="!isUpdateType" >Preconfig</button> -->
+
+        </div>
+    </div>
+    <form #resourceForm="ngForm">
+        <div class="row" style="margin-top:5px">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Automation Engine</label>
+                    <select class="form-control" (change)="onChangeAutomationEngine($event.target.value)" name="automationengineid"
+                        [(ngModel)]="actiondetail.automationengineid">
+                        <option value="1">Infosys Script Control Center</option>
+                        <option value="2">Automation Anywhere</option>
+                    </select>
+                    <!-- <input class="form-control"
+                                type="text"> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+
+                    <button *ngIf="(actiondetail.automationengineid  ==  1) && !isUpdateType" (click)="selectCategory()" style="margin-top: 34px;margin-left: 0px;"
+                        class="form-control add-btn" name="selectCategory" type="button">Select
+                        Category</button>
+                    <button (click)="selectBotBtn()" *ngIf="(actiondetail.automationengineid  ==  2) && !isUpdateType" style="margin-top: 34px;margin-left: 0px;"
+                        class="form-control add-btn" name="selectbot" type="button">Select
+                        Bot</button>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row" style="margin-top:5px">
+
+
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Action Name</label>
+                    <input *ngIf="!isUpdateType" disabled class="form-control" name="actionname" [(ngModel)]="actiondetail.actionname"
+                        type="text">
+                    <select *ngIf="isUpdateType" (change)="onChangeAction($event.target.value)" class="form-control"
+                        name="actionnamesel">
+                        <option value="0" [selected]="actiondetail.actionid   ==  '0'"></option>
+                        <option [selected]="actiondetail.actionid   ==  action.actionid" value="{{action.actionid}}"
+                            *ngFor="let action of actionsVisible">{{action.actionname}}</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Action Type</label>
+                    <!-- <input class="form-control" name="actiontype" [(ngModel)]="actiondetail.actiontype" type="text"> -->
+                    <select class="form-control" name="actiontype" [(ngModel)]="actiondetail.actiontypeid">
+
+                        <option value="{{actiontype.ActionTypeId}}" [selected]="(actiondetail.actiontypeid == actiontype.ActionTypeId )"
+                            *ngFor="let actiontype of actionTypes">{{actiontype.ActionType}}</option>
+                    </select>
+
+                </div>
+
+
+            </div>
+            <div class="col-3" *ngIf="(actiondetail.automationengineid  ==  1)">
+                <div class="form-group">
+                    <label for="name">Endpoint Uri</label>
+                    <input class="form-control" name="endpointuri" [(ngModel)]="actiondetail.endpointuri" type="text">
+                </div>
+
+
+            </div>
+            <div class="col-3" *ngIf="(actiondetail.automationengineid  ==  2)">
+                <div class="form-group">
+                    <label for="name">Bot Id</label>
+                    <input disabled class="form-control" name="scriptid" [(ngModel)]="actiondetail.scriptid" type="text">
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row" *ngIf="(actiondetail.automationengineid  ==  1)">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Script Id</label>
+                    <input disabled class="form-control" name="scriptid" [(ngModel)]="actiondetail.scriptid" type="text">
+                </div>
+
+
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Category Id</label>
+                    <input disabled class="form-control" name="categoryid" [(ngModel)]="actiondetail.categoryid" type="text">
+                </div>
+
+
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Category Name</label>
+                    <input disabled class="form-control"    data-placement="top" data-toggle="tooltip" title="{{actiondetail.categoryname}}" name="categoryname" [(ngModel)]="actiondetail.categoryname"
+                        type="text">
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Validity Start</label>
+                    <angular2-date-picker  name="fromDate" (onDateSelect)="onDateSelect($event,actiondetail,'start')"
+                        [(ngModel)]="actiondetail.ValidityStart" [settings]="settings"></angular2-date-picker>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="name">Validity End</label>
+                    <angular2-date-picker  name="todate" (onDateSelect)="onDateSelect($event,actiondetail,'end')"
+                        [(ngModel)]="actiondetail.ValidityEnd" [settings]="settings"></angular2-date-picker>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+            <div class="col-12">
+                <div class="semi-bold"> Action Parameters</div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+            <div class="col-12">
+                <div class="form-group  float-left">
+                    <label for="name">Parameter Name</label>
+                    <input class="form-control" name="name" [(ngModel)]="actionParam.name" type="text">
+                </div>
+                <div class="form-group  float-left" style="margin-left:10px">
+                    <label for="name">Default Value</label>
+                    <input  class="form-control" name="defaultvalue" [(ngModel)]="actionParam.defaultvalue"
+                        type="text">
+                </div>
+                <div class="form-group  float-left" style="margin-left:10px">
+                    <label for="name">Value</label>
+                    <input data-placement="top" data-toggle="tooltip" title="{{actionParam.fieldtomap}}" class="form-control" name="value " [(ngModel)]="actionParam.fieldtomap" type="text">
+                </div>
+                <div class="form-group  float-left" style="margin-left:10px">
+                    <div    style="  margin-top: 35px;">Or</div>
+                </div>
+
+                <!-- <div style="margin-left: 248px;margin-top: -29px; " data-toggle="tooltip" title="Custom Input - Choose">
+                    <label class="switch">
+                            
+                      <input id="switch_p" type="checkbox"  (change)="changeFieldType($event.target.checked,actionParam)">
+                      <span class="slider round"></span>
+                    </label>
+                  </div> -->
+                <div class="form-group    float-left" style="margin-left:10px">
+                    <label for="name">Choose One </label>
+                    <select style="max-width: 250px;" (change)="changeFieldType($event.target.value)" class="form-control" name="fieldtype">
+                       <option  value=""></option>
+                        <option value="resource_attribute.AttributeValue">resource_attribute.AttributeValue</option>
+                       
+                    </select>
+                </div>
+                <div class="form-group    float-left" style="margin-left:10px">
+                        <label for="name">ismandatory</label>
+                        <select  class="form-control" name="ismandatory"    [(ngModel)]="actionParam.ismandatory">
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                        </select>
+                    </div>
+                <div style="    margin-top: 4px;margin-left:8px">
+
+                    <i (click)="addParameter()" style="margin-top: 29px; margin-left: 10px;" class="img-add float-right cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px">
+            <div class="col-12">
+                <!-- <div style="height:474px;width:1000px;margin-left: 5px; overflow-y: auto">
+                            <ng2-smart-table    (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onSaveConfirm($event)" [settings]="settings_table" (custom)="onEditRowSelect($event)"  [source]="source"   
+                           ></ng2-smart-table> 
+                
+                          
+                          </div> -->
+                <table class="table paramTabl">
+                    <thead>
+                        <tr>
+                            <td style="width:18%">Parameter Name</td>
+
+                            <td style="width:18%">Default Value</td>
+
+                            <td style="width:47%"> Value</td>
+                            <td style="width:7%">Mandatory</td>
+                            <td style="width:5%"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let action of actiondetail.actionparams;let i=index">
+
+                            <ng-template [ngIf]="action !=  undefinded  &&  !action.isdeleted">
+                                <td style="width:18%">{{action.name}}</td>
+                                <td style="width:18%">
+                                    
+                                        <input class="form-control"  name="defaultvaluet" [(ngModel)]="action.defaultvalue"
+                                        type="text">
+                                   
+                                    
+                                </td>
+                                <td style="width:47%">
+                                    <div    class="form-group">
+                                    <input  style="max-width: 240px;float:left;margin-right:1px" class="form-control"   [required]="(   action.ismandatory  ==  'false')?'false':'true'"    data-placement="top" data-toggle="tooltip" title="{{action.fieldtomap}}" name="fieldtomaptbl_{{i}}"    [(ngModel)]="action.fieldtomap" type="text">
+                                </div>
+                                    <div    style="width: 4px;margin-left: 243px;margin-top: -11px;">Or</div>
+                                    <select name="fieldtype_{{i}}" (change)="changeFieldTypeTable($event.target.value,action)" class="form-control  tbl-selectfield" name="fieldtype">
+                                            <option  value=""></option>
+                                             <option value="resource_attribute.AttributeValue">resource_attribute.AttributeValue</option>
+                                            
+                                         </select>
+                                </td>
+                                <td style="width:7%">{{action.ismandatory}}</td>
+
+
+                                <td style="width:5%">
+                                    <i (click)="deleteParam(action)" class="img-delete-table float-right cursor-pointer"></i></td>
+                            </ng-template>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="row" style="margin-top:35px;margin-bottom: 20px">
+            <div class="col-12">
+                <button (click)="saveActionDetails(resourceForm.form)" class="float-right btn-border">Save</button>
+                <button (click)="togglePageType(false)" class="float-right update-btn">Cancel</button>
+                <button (click)="reset()" class="float-right update-btn">Reset</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+<div class="modal fade" id="preconfigmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:720px">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Preconfig</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row ">
+                    <div class="col-12">
+                        <div class="form-group float-left">
+                            <label for="name">Select Automation Engine Name</label>
+                            <select (change)="onBlurConfig('AutomationEngineNameDd')" style="width:310px" [(ngModel)]="configDetails.AutomationEngineNameDd"
+                                class="form-control" name="AutomationEngine">
+                                <option value=""></option>
+                                <option value="{{aeobj.key}}" *ngFor="let  aeobj  of  aeJson">{{aeobj.value}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group float-left" style="margin-left:15px">
+                            <div style="margin-top:30px">
+                                <span>or</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group float-left" style="margin-left:20px">
+                            <label for="name">New Automation Engine Name</label>
+                            <input [(ngModel)]="configDetails.AutomationEngineNameTxt" (keypress)="onBlurConfig('AutomationEngineNameTxt')"
+                                style="width:310px" class="form-control" name="txt_AutomationEngine" type="text">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group float-left">
+                            <label for="name"> Base Url </label>
+                            <input [(ngModel)]="configDetails.BaseUrl" style="width:671px" class="form-control" name="BaseUrl"
+                                type="text">
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group float-left">
+                            <label for="name">Select Category Service Name </label>
+                            <select (change)="onBlurConfig('CategoryServiceNameDd')" [(ngModel)]="configDetails.CategoryServiceNameDd"
+                                style="width:310px" class="form-control" name="dd_CategoryServiceName">
+                                <option></option>
+                                <option value="{{csobj.key}}" *ngFor="let csobj   of  csJson">{{csobj.value}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group float-left" style="margin-left:15px">
+                            <div style="margin-top:30px">
+                                <span>or</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group float-left" style="margin-left:20px">
+                            <label for="name">New Category Service Name</label>
+                            <input [(ngModel)]="configDetails.CategoryServiceNameTxt" (keypress)="onBlurConfig('CategoryServiceNameTxt')"
+                                style="width:310px" class="form-control" name="txt_CategoryServiceName" type="text">
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group float-left">
+                            <label for="name">Select Script Detail Service Name </label>
+                            <select (change)="onBlurConfig('ScriptDetailServiceNameDd')" [(ngModel)]="configDetails.ScriptDetailServiceNameDd"
+                                style="width:310px" class="form-control" name="ScriptDetailServiceName">
+                                <option></option>
+                                <option value="{{sdobj.key}}" *ngFor="let sdobj   of  sdJson">{{sdobj.value}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group float-left" style="margin-left:15px">
+                            <div style="margin-top:30px">
+                                <span>or</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group float-left" style="margin-left:20px">
+                            <label for="name">New Script Detail Service Name</label>
+                            <input (keypress)="onBlurConfig('ScriptDetailServiceNameTxt')" [(ngModel)]="configDetails.ScriptDetailServiceNameTxt"
+                                style="width:310px" class="form-control" name="txt_ScriptDetailServiceName" type="text">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <div class="col-12">
+                    <button (click)="ConfigureActions()" class="float-right btn-border">Configure</button>
+                    <button (click)="closeConfigure()" class="float-right update-btn">Cancel</button>
+                    <button (click)="resetConfig()" class="float-right update-btn">Reset</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ActionScriptmodel" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static"
+    aria-labelledby="ActionScriptmodelLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-left: 18%" role="document">
+        <div class="modal-content" style="width:920px">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Script</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row ">
+
+                    <div class="col-12">
+                        <div style="float:left;width:460px">
+                            <div class="category-list">
+
+
+                                <tree-root [nodes]="categories" (activate)="onSelectCategory($event)" [options]="options"></tree-root>
+                            </div>
+                        </div>
+                        <div style="float:right;width:400px">
+                            <input name="searchscript" id="search-script" [(ngModel)]="searchScriptVal" (keyup)="searchScript($event.target.value)"
+                                placeholder="Search Script" type="text" class="search-script-menu">
+                            <div style="width:400px;height:300px;overflow: auto;">
+
+                                <div class="script-select" (click)="onSelectScript(script)" style="margin-left: 14px;"
+                                    *ngFor='let script of actionScriptsVisible.Scripts'>{{script.Name}}</div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <div class="col-12">
+                    <!-- <button class="float-right btn-border">Select</button> -->
+                    <button (click)="cancelScriptModel()" class="float-right update-btn">Cancel</button>
+                    <button class="float-right update-btn">Reset</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ActionBotmodel" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static"
+    aria-labelledby="ActionScriptmodelLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:520px">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ActionBotLabel">Select Bot</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row ">
+
+                    <div class="col-12">
+                        <div style="width:400px">
+                            <input name="searchbot" id="search-bot" [(ngModel)]="searchBotVal" (keyup)="searchBot($event.target.value)"
+                                placeholder="Search Bot" type="text" class="search-script-menu">
+                            <div style="width:400px;height:300px;overflow: auto;">
+
+                                <div class="script-select" (click)="onSelectBot(bot)" style="margin-left: 14px;" *ngFor='let bot of botDetailsVisible'>{{bot.Name}}</div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <div class="col-12">
+                    <!-- <button class="float-right btn-border">Select</button> -->
+                    <button (click)="cancelScriptModel()" class="float-right update-btn">Cancel</button>
+                    <button class="float-right update-btn">Reset</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

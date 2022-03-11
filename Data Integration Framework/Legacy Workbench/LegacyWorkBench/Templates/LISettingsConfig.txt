@@ -1,0 +1,92 @@
+$ServiceTemplate
+$end<?xml version="1.0" encoding="utf-8" ?>
+  <LISettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Provide region details of the host -->
+	<HostRegion>
+	  <Region>
+		<Name>TEST</Name>
+		<!-- use the transport medium and name from the below mentioned transport types -->
+		<TransportMedium>IBMMQ</TransportMedium>
+		<TransportName>ibmmq1</TransportName>
+		<!--Communication Type can be "Sync" or "Async" for synchronous and asynchronous respectively -->
+		<CommunicationType>Sync</CommunicationType>
+	  </Region>
+	</HostRegion>
+
+	<!-- Provide all details required for IBMMQ transport -->
+    <IBMMQ>
+	  <!-- provide dll path and full type of transport adapter to be used -->
+      <DllPath>##RelativePath##\References\Adapter\Infosys.Lif.IBMMQ.dll</DllPath>
+      <TypeName>Infosys.Lif.IBMMQ.MQAdapter</TypeName>
+      <ActiveTimeForConnection>30000</ActiveTimeForConnection>
+      <PoolScanFrequency>20000</PoolScanFrequency>
+      <EnablePerformanceCounters>OFF</EnablePerformanceCounters>
+      <IBMMQDetails>
+        <TransportName>ibmmq1</TransportName>
+        <!-- provide connection details for IBMMQ -->
+        <Connection>
+          <ConnectionModel>ConnectionPool</ConnectionModel>
+          <Pooling>
+            <MinSize>2</MinSize>
+            <MaxSize>4</MaxSize>
+          </Pooling>
+          <ConnectionTimeOut>10000</ConnectionTimeOut>
+        </Connection>
+        <!-- IBMMQ channel name -->
+        <ChannelName>MTC_SERVER_CONN</ChannelName>
+        <!-- IP address and port of host -->
+        <ConnectionName>192.168.100.74</ConnectionName>
+        <Port>1414</Port>
+        <!-- Queue details for managing MQ request/response -->
+        <QueueManager>CSQ1</QueueManager>
+        <RequestQueue>INFOSYS.LIF.RECEIVER</RequestQueue>
+        <ResponseQueue>MTC.LIF.TRIALQ.RESPONSE</ResponseQueue>
+        <QueueType>Static</QueueType>
+        <ModelQueueName>INFOSYS.LIF.DYNAMICREC</ModelQueueName>
+        <ExpiryTime>60000</ExpiryTime>
+        <Persistence>NonPersistent</Persistence>
+        <TimeOut>60000</TimeOut>
+        <EnableTrace>ON</EnableTrace>
+      </IBMMQDetails>
+    </IBMMQ>
+    
+    <!-- Provide all details required for TCPIP transport -->
+    <TCPIP>
+	  <!-- provide dll path and full type of transport adapter to be used -->	
+      <DllPath>##RelativePath##\References\Adapter\TCPIPAdapter.dll</DllPath>
+      <TypeName>Infosys.Lif.TCPIP.TCPIPAdapter</TypeName>
+      <TCPIPDetails>
+		<TransportName>tcpip1</TransportName>
+        <Mode>Standard</Mode>
+        <!-- IP address and port of host -->
+        <IPAddress>192.168.100.74</IPAddress>
+        <Port>3010</Port>
+        <TimeOut>2000</TimeOut>
+        <TransactionID>MSCS</TransactionID>
+        <!-- The listener program to call on host -->
+        <HostProgID>LEARNPRG</HostProgID>
+        <EnableTrace>ON</EnableTrace>
+        <EnablePerformanceCounters>OFF</EnablePerformanceCounters>
+        <!-- provide all connection details -->
+        <Connection>
+          <ConnectionModel>None</ConnectionModel>
+          <Pooling>
+            <MinSize>0</MinSize>
+            <MaxSize>1</MaxSize>
+          </Pooling>
+          <ConnectionTimeOut>1000</ConnectionTimeOut>
+        </Connection>
+      </TCPIPDetails>
+    </TCPIP>
+
+	<!-- Provide details for using HIS to communicate with the host -->
+    <HIS>
+	  <!-- provide dll path and full type of transport adapter to be used -->	
+      <DllPath></DllPath>
+      <TypeName></TypeName>
+      <EnableTrace></EnableTrace>
+    </HIS>
+
+</LISettings>
+
+  

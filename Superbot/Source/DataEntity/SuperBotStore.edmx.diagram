@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="113772aec3c944f5a38e84e0cc8f12a5" Name="Diagram1" ZoomLevel="89" >
+        <EntityTypeShape EntityType="superbotModel.action" Width="1.5" PointX="3.75" PointY="27" />
+        <EntityTypeShape EntityType="superbotModel.action_params" Width="1.5" PointX="5.75" PointY="2" />
+        <EntityTypeShape EntityType="superbotModel.actionstages" Width="1.5" PointX="0.75" PointY="1.75" />
+        <EntityTypeShape EntityType="superbotModel.actiontype" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="superbotModel.anomaly_details" Width="1.5" PointX="11.75" PointY="12.75" />
+        <EntityTypeShape EntityType="superbotModel.Audit_Logs" Width="1.5" PointX="6" PointY="16.625" />
+        <EntityTypeShape EntityType="superbotModel.Environment_Scan_Metric" Width="1.5" PointX="10.75" PointY="2.25" />
+        <EntityTypeShape EntityType="superbotModel.Environment_Scan_Metric_Anomaly_Details" Width="1.5" PointX="13.75" PointY="6.75" />
+        <EntityTypeShape EntityType="superbotModel.Environment_Scan_Metric_Details" Width="1.5" PointX="13" PointY="2" />
+        <EntityTypeShape EntityType="superbotModel.errors" Width="1.5" PointX="13.75" PointY="12.75" />
+        <EntityTypeShape EntityType="superbotModel.healthcheck_details" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="superbotModel.healthcheck_iteration_tracker" Width="1.5" PointX="13.75" PointY="15.75" />
+        <EntityTypeShape EntityType="superbotModel.healthcheck_iteration_tracker_details" Width="1.5" PointX="15.75" PointY="1.75" />
+        <EntityTypeShape EntityType="superbotModel.healthcheck_master" Width="1.5" PointX="0.75" PointY="11.125" />
+        <EntityTypeShape EntityType="superbotModel.healthcheck_tracker" Width="1.5" PointX="3" PointY="33.375" />
+        <EntityTypeShape EntityType="superbotModel.notification_configuration" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="superbotModel.observable" Width="1.5" PointX="3.75" PointY="6.5" />
+        <EntityTypeShape EntityType="superbotModel.observable_resource_map" Width="1.5" PointX="3" PointY="22" />
+        <EntityTypeShape EntityType="superbotModel.observations" Width="1.5" PointX="15.75" PointY="10.75" />
+        <EntityTypeShape EntityType="superbotModel.operator" Width="1.5" PointX="17.75" PointY="1.75" />
+        <EntityTypeShape EntityType="superbotModel.platforms" Width="1.5" PointX="17.75" PointY="5.75" />
+        <EntityTypeShape EntityType="superbotModel.portfolio_project_map" Width="1.5" PointX="17.75" PointY="9.75" />
+        <EntityTypeShape EntityType="superbotModel.recipient_configuration" Width="1.5" PointX="17.75" PointY="13.75" />
+        <EntityTypeShape EntityType="superbotModel.remediation_plan" Width="1.5" PointX="0.75" PointY="23" />
+        <EntityTypeShape EntityType="superbotModel.remediation_plan_action_map" Width="1.5" PointX="6" PointY="25.75" />
+        <EntityTypeShape EntityType="superbotModel.remediation_plan_execution_actions" Width="1.5" PointX="11" PointY="7.5" />
+        <EntityTypeShape EntityType="superbotModel.remediation_plan_executions" Width="1.5" PointX="8.75" PointY="7" />
+        <EntityTypeShape EntityType="superbotModel.resource" Width="1.5" PointX="0.75" PointY="16" />
+        <EntityTypeShape EntityType="superbotModel.resource_attributes" Width="1.5" PointX="3" PointY="37.125" />
+        <EntityTypeShape EntityType="superbotModel.resource_dependency_map" Width="1.5" PointX="3" PointY="42" />
+        <EntityTypeShape EntityType="superbotModel.resource_observable_action_map" Width="1.5" PointX="6" PointY="11.75" />
+        <EntityTypeShape EntityType="superbotModel.resource_observable_remediation_plan_map" Width="1.5" PointX="3" PointY="17" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype_dependency_map" Width="1.5" PointX="15.75" PointY="18.75" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype_metadata" Width="1.5" PointX="6" PointY="30.5" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype_observable_action_map" Width="1.5" PointX="9" PointY="19.25" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype_observable_map" Width="1.5" PointX="6" PointY="7" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype_observable_remediation_plan_map" Width="1.5" PointX="9" PointY="14.875" />
+        <EntityTypeShape EntityType="superbotModel.resourcetype_service_details" Width="1.5" PointX="17.75" PointY="18.75" />
+        <EntityTypeShape EntityType="superbotModel.tenant" Width="1.5" PointX="19.75" PointY="1.75" />
+        <EntityTypeShape EntityType="superbotModel.tickets" Width="1.5" PointX="19.75" PointY="5.75" />
+        <EntityTypeShape EntityType="superbotModel.remdiation_plan_action_param_map" Width="1.5" PointX="8" PointY="2.375" />
+        <EntityTypeShape EntityType="superbotModel.Unhealthy_report_Remediation" Width="1.5" PointX="19.75" PointY="9.75" />
+        <AssociationConnector Association="superbotModel.FK_ActionId" />
+        <AssociationConnector Association="superbotModel.FK_ActionId_1" />
+        <AssociationConnector Association="superbotModel.FK_ActionId_2" />
+        <AssociationConnector Association="superbotModel.FK_Audit_Logs_action" />
+        <AssociationConnector Association="superbotModel.FK_ParamID" />
+        <AssociationConnector Association="superbotModel.FK_Observable_ID" />
+        <AssociationConnector Association="superbotModel.FK_Resource_ID" />
+        <AssociationConnector Association="superbotModel.FK__baseline___Basel__469FD34E1" />
+        <AssociationConnector Association="superbotModel.FK__healthche__Confi__055C1FD6" />
+        <AssociationConnector Association="superbotModel.FK__healthche__Resou__0467FB9D" />
+        <AssociationConnector Association="superbotModel.FK__healthche__Confi__08388C81" />
+        <AssociationConnector Association="superbotModel.FK_ObservableID" />
+        <AssociationConnector Association="superbotModel.FK_ObservableId_1" />
+        <AssociationConnector Association="superbotModel.FK_ObservableId_2" />
+        <AssociationConnector Association="superbotModel.FK_ObservableId_3" />
+        <AssociationConnector Association="superbotModel.FK_ObservableId_4" />
+        <AssociationConnector Association="superbotModel.FK_ObservableId_5" />
+        <AssociationConnector Association="superbotModel.FK_ObservableID3" />
+        <AssociationConnector Association="superbotModel.FK_ResourceID" />
+        <AssociationConnector Association="superbotModel.FK_RemediationPlanId" />
+        <AssociationConnector Association="superbotModel.FK_RemediationPlanId_1" />
+        <AssociationConnector Association="superbotModel.FK_RemediationPlanId_2" />
+        <AssociationConnector Association="superbotModel.FK_RemediationPlanExecId" />
+        <AssociationConnector Association="superbotModel.FK_ResourceId_1" />
+        <AssociationConnector Association="superbotModel.FK_ResourceID_2" />
+        <AssociationConnector Association="superbotModel.FK_ResourceId_3" />
+        <AssociationConnector Association="superbotModel.FK_ResourceId_4" />
+        <AssociationConnector Association="superbotModel.FK_ResourceTId_1" />
+        <AssociationConnector Association="superbotModel.FK_ResourceTypeId" />
+        <AssociationConnector Association="superbotModel.FK_ResourceTypeId_1" />
+        <AssociationConnector Association="superbotModel.FK_ResourceTypeId_4" />
+        <AssociationConnector Association="superbotModel.FK_ResourceTypeID4" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

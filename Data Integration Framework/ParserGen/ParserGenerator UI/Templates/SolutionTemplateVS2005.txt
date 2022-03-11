@@ -1,0 +1,40 @@
+$ServiceComponentProjectData
+Project("{##SolutionGuid##}") = "##ServiceComponentRootNameSpace##", "ServiceComponents\##ServiceComponentRootNameSpace##.csproj", "{##ServiceComponentGuid##}"
+EndProject
+Project("{##SolutionGuid##}") = "##UnitTestCasesRootNameSpace##", "UnitTestCases\##UnitTestCasesRootNameSpace##.csproj", "{##UnitTestCasesGuid##}"
+EndProject$ServiceComponentProjectSectionData
+		{##ServiceComponentGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##ServiceComponentGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##ServiceComponentGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##ServiceComponentGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+		{##UnitTestCasesGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##UnitTestCasesGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##UnitTestCasesGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##UnitTestCasesGuid##}.Release|Any CPU.Build.0 = Release|Any CPU$end
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{##SolutionGuid##}") = "##DataEntityRootNamespace##", "DataEntities\Code\##DataEntityRootNamespace##.csproj", "{##DataEntityGuid##}"
+EndProject
+Project("{##SolutionGuid##}") = "##SerializerRootNamespace##", "Serializers\##SerializerRootNamespace##.csproj", "{##SerializerGuid##}"
+EndProject##ServiceComponentProject##
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{##DataEntityGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##DataEntityGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##DataEntityGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##DataEntityGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+		{##SerializerGuid##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##SerializerGuid##}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{##SerializerGuid##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##SerializerGuid##}.Release|Any CPU.Build.0 = Release|Any CPU
+		##ServiceComponentProjectSection##
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+D:\TFS\ManaExpertServices\Solutions\ConfigurationManagement\components\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\ManaExpertServices\Solutions\ConfigurationManagement\components\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\ManaExpertServices\Solutions\ConfigurationManagement\components\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Solutions\ConfigurationManagement\components\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\ManaExpertServices\Solutions\ConfigurationManagement\components\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components new\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components new\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components new\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components new\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components new\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csprojAssemblyReference.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.AssemblyReference.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\bin\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.AssemblyReference.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Debug\IDataAccess.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\IDataAccess\obj\Debug\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb

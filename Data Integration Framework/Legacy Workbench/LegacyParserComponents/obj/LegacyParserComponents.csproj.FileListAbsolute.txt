@@ -1,0 +1,38 @@
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyParserComponents.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\Infosys.Solutions.CodeGeneration.Framework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyParserFramework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyWorkBenchReportHandler.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyWorkBenchReportHandler.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyParserFramework.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\ResolveAssemblyReference.cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.CompletionStatus.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.CodeProviders.CodeGenerationConfirmation.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.GenerationStatusDisplay.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.ItemStatusDisplay.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.ModelObjectsImporter.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.ContractsImporter.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.Properties.Resources.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\LegacyParserComponents.csproj.GenerateResource.Cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\LegacyParserComponents.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\LegacyParserComponents.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyParserComponents.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\Infosys.Solutions.CodeGeneration.Framework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyParserFramework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyWorkBenchReportHandler.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyWorkBenchReportHandler.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\bin\Debug\LegacyParserFramework.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.CompletionStatus.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.CodeProviders.CodeGenerationConfirmation.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.GenerationStatusDisplay.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.ItemStatusDisplay.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.ModelObjectsImporter.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.ContractsImporter.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\Infosys.Lif.LegacyWorkbench.Properties.Resources.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\LegacyParserComponents.csproj.GenerateResource.Cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\LegacyParserComponents.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserComponents\obj\Debug\LegacyParserComponents.pdb

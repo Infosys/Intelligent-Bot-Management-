@@ -1,0 +1,201 @@
+$MethodTemplate
+		public RequestParameters requestParameters = new RequestParameters();
+		
+		/// <summary>
+		/// It holds the Mainframe user ID.
+		/// </summary>
+        private string userID;
+
+        public string UserID
+        {
+            get { return userID; }
+            set { userID = value; }
+        }
+
+		/// <summary>
+        /// It holds the Mainframe password.
+        /// </summary>
+        private string password;
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
+		/// <summary>
+        /// This class holds the response coming from the host after calling an operation. 
+        /// </summary>
+		public class ##ContractEntityName##ResponseEventArgs : EventArgs
+        {
+            ContractEntity.##ContractEntityName## receivedResponse;
+            
+            public ContractEntity.##ContractEntityName## ReceivedResponse
+            {
+                get { return receivedResponse; }
+                set { receivedResponse = value; }
+            }
+        }
+        
+        public delegate void ##ContractEntityName##Response(object sender, ##ContractEntityName##ResponseEventArgs e);
+
+        public event ##ContractEntityName##Response ##ContractEntityName##ResponseReceived;
+
+        private ContractEntity.##ContractEntityName## receivedResponse##ContractEntityName##;
+        
+        /// <summary>
+        /// This method calls the transaction synchronously on the host for the method associated with the contract.
+        /// </summary>
+        /// <param name="contractEntity">request contract data entity</param>
+        /// <param name="userID">Mainframe user ID</param>
+        /// <param name="password">Mainframe password</param>
+        /// <returns>response contract data entity</returns>
+        public ContractEntity.##ContractEntityName## ##MethodName##(ContractEntity.##ContractEntityName## contractEntity, 
+			string userID, string password)
+        {
+            LegacyEvent legacyEvent##ContractEntityName## = new LegacyEvent();
+            legacyEvent##ContractEntityName##.ResponseReceived += 
+				new RequestDelegate(legacyEvent##ContractEntityName##_ResponseReceivedSync);                      
+            
+            //initialize request parameters with proper format
+            string transactionID = CheckFormat("##TransacID##", 4);            
+            string checkedUsedId = CheckFormat(userID, 10);
+            string checkedPassword = CheckFormat(password, 8);
+            string operationType = "##OperType##";
+            
+            //add request parameters to the request collection
+            requestParameters.RequestCollection.Add("ServiceName", "##ServiceName##");
+            requestParameters.RequestCollection.Add("TransactionID", transactionID);
+            requestParameters.RequestCollection.Add("UserID", checkedUsedId);
+            requestParameters.RequestCollection.Add("Password", checkedPassword);
+            requestParameters.RequestCollection.Add("OperationType", operationType);			
+            
+			try
+			{
+				//call method to execute the specified transaction on the host
+				ServiceManager.Execute(legacyEvent##ContractEntityName##, ServiceManager.ProcessMode.WaitForAll,
+					"##ServiceName##", contractEntity, requestParameters);
+			}
+			catch(Exception exc)
+			{
+				//Handle the exception
+				throw exc;
+			}
+			
+			//return the response data
+            return receivedResponse##ContractEntityName##;
+        }
+
+		/// <summary>
+        /// This method calls the transaction asynchronously on the host for the method associated with the contract.
+        /// </summary>
+        /// <param name="contractEntity"></param>
+        public void ##MethodName##Async(ContractEntity.##ContractEntityName## contractEntity)
+        {
+            LegacyEvent legacyEvent##ContractEntityName## = new LegacyEvent();
+            legacyEvent##ContractEntityName##.ResponseReceived += new RequestDelegate(legacyEvent##ContractEntityName##_ResponseReceivedASync);
+                        
+            //initialize request parameters with proper format
+            string transactionID = CheckFormat("##TransacID##", 4);            
+            string checkedUsedId = CheckFormat(userID, 10);
+            string checkedPassword = CheckFormat(password, 8);
+            string operationType = "##OperType##";
+            
+            //add request parameters to the request collection
+            requestParameters.RequestCollection.Add("ServiceName", "##ServiceName##");
+            requestParameters.RequestCollection.Add("TransactionID", transactionID);
+            requestParameters.RequestCollection.Add("UserID", checkedUsedId);
+            requestParameters.RequestCollection.Add("Password", checkedPassword);
+            requestParameters.RequestCollection.Add("OperationType", operationType);
+            
+			try
+			{
+				//call method to execute the specified transaction on the host
+				ServiceManager.Execute(legacyEvent##ContractEntityName##, ServiceManager.ProcessMode.WaitForNone,
+					"##ServiceName##", contractEntity, requestParameters);
+			}
+			catch(Exception exc)
+			{
+				// Handle the exception
+				throw exc;
+			}
+        }
+        
+        
+        /// <summary>
+        /// check if the length of input string is as per specified length and correct it if not.
+        /// </summary>
+        /// <param name="strInput"></param>
+        /// <param name="strLength"></param>
+        /// <returns>correct formatted string</returns>
+        private string CheckFormat(string strInput, int strLength)
+        {
+			//if string length is more than the specified, truncate the string for required length
+            if (strInput.Length > strLength)
+            {
+                strInput = strInput.Substring(0, strLength);
+            }
+            
+			//if string length is less than the specified, append spaces to make it required length
+            if (strInput.Length < strLength)
+            {
+                strInput = strInput.PadRight(strLength, ' ');
+            }
+            return strInput;
+        }
+        
+        /// <summary>
+        /// call the "##ServiceName##" service synchronously
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="responses"></param>
+        private void legacyEvent##ContractEntityName##_ResponseReceivedSync(object sender, Infosys.Lif.LegacyFacade.RequestDelegateArgs responses)
+        {
+            receivedResponse##ContractEntityName## = (ContractEntity.##ContractEntityName##)responses.Response["##ServiceName##"];
+        }
+
+		/// <summary>
+        /// call the "##ServiceName##" service asynchronously
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="responses"></param>
+        private void legacyEvent##ContractEntityName##_ResponseReceivedASync(object sender, Infosys.Lif.LegacyFacade.RequestDelegateArgs responses)
+        {
+            if (##ContractEntityName##ResponseReceived != null)
+            {
+                ##ContractEntityName##ResponseEventArgs eventArgs = new ##ContractEntityName##ResponseEventArgs();
+                eventArgs.ReceivedResponse = (ContractEntity.##ContractEntityName##)responses.Response["##ServiceName##"];
+                ##ContractEntityName##ResponseReceived(this, eventArgs);
+            }
+        }
+$NameSpacesImport
+//Import contract data entity namespace
+using ContractEntity = ##ContractEntityNamespace##;
+$end
+/******************************************************************************
+This class was code generated by Legacy Workbench.
+
+This class provides the way for a client to access the host system.
+
+Copyright (c) 2003 - 2008 Infosys Technologies Ltd. All Rights Reserved.
+******************************************************************************/
+
+using System;
+
+//Import LIF framework namespaces
+using Infosys.Lif.LegacyFacade;
+using Infosys.Lif.LegacyParameters;
+
+##ImportsFilled##
+
+
+namespace ##HostAccessNameSpace##
+{
+	/// <summary>
+	/// This class provides the method definition to call the operations on host using the LIF components.
+	/// </summary>
+    public partial class ##ContractName## 
+    {
+        ##MethodBodies##
+    }
+}

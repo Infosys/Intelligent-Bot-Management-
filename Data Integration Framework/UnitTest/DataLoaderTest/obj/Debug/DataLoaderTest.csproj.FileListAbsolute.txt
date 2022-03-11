@@ -1,0 +1,11 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\bin\Debug\DataLoaderTest.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\bin\Debug\DataLoaderTest.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\bin\Debug\DataLoader.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\bin\Debug\DataLoader.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\bin\Debug\DataLoader.dll.config
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\obj\Debug\DataLoaderTest.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\obj\Debug\DataLoaderTest.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\obj\Debug\DataLoaderTest.csproj.CopyComplete
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\obj\Debug\DataLoaderTest.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\UnitTest\DataLoaderTest\obj\Debug\DataLoaderTest.pdb

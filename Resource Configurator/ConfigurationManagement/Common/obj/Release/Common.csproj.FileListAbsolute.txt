@@ -1,0 +1,39 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Infosys.Ainauto.ConfigurationManager.Common.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Infosys.Ainauto.ConfigurationManager.Common.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.Unity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Infosys.Solutions.ConfigurationManager.Infrastructure.Common.ErrorMessages.resources
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Infosys.Solutions.ConfigurationManager.Infrastructure.Common.InfoMessages.resources
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Common.csproj.GenerateResource.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Common.csproj.CopyComplete
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Infosys.Ainauto.ConfigurationManager.Common.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Infosys.Ainauto.ConfigurationManager.Common.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\Common\obj\Release\Common.csproj.AssemblyReference.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Infosys.Ainauto.ConfigurationManager.Common.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Infosys.Ainauto.ConfigurationManager.Common.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.Unity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Infosys.Solutions.ConfigurationManager.Infrastructure.Common.ErrorMessages.resources
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Infosys.Solutions.ConfigurationManager.Infrastructure.Common.InfoMessages.resources
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Common.csproj.GenerateResource.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Common.csproj.CopyComplete
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Infosys.Ainauto.ConfigurationManager.Common.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\Common\obj\Release\Infosys.Ainauto.ConfigurationManager.Common.pdb

@@ -1,0 +1,120 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    height: 540px !important;">
+    <div style="background-color: white;">
+        <div>
+            <label style="margin-top: 10px;" class="semi-bold">Remediation Plan</label>
+            <button class="add-btn" style="float: right;margin-top:10px;
+        margin-right: 10px; " *ngIf="isUpdateType"
+                (click)="togglePageType(false)">Create New</button>
+
+        </div>
+    </div>
+    <form #resourceForm="ngForm">
+        <div class="row" style="margin-top:5px">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="name">Remediation Plan</label>
+                    <input *ngIf="!isUpdateType" class="form-control" name="remediationPlanName" [(ngModel)]="remediationDetails.remediationPlanName"
+                        type="text">
+                    <select  *ngIf="isUpdateType" (change)="onChangePlan($event.target.value)" class="form-control" 
+                        name="remediationPlanName">
+                        <option value=""></option>
+                        <option value="{{plan.remediationId}}" *ngFor="let plan of plans">{{plan.remediationPlanName}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:5px">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="name">Description</label>
+                  
+                    <textarea class="form-control" name="RemediationPlanDescription" [(ngModel)]="remediationDetails.RemediationPlanDescription">
+
+                      </textarea>
+                </div>
+            </div>
+        </div>
+            <div class="row" style="margin-top:5px">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="name">User Defined</label>
+                        <select class="form-control" [(ngModel)]="remediationDetails.IsUserDefined" name="IsUserDefined">
+                            <option value=""></option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+          
+    <div class="row" style="margin-top:10px">
+        <div class="col-12">
+            <div class="semi-bold"> Action Details</div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-4">
+            <label for="name">Action Name</label>
+            <select  style="width:320px" (change)="onChangeAction($event.target.value)"  class="form-control"
+                        name="actionname">
+                        <option value=""></option>
+                        <option value="{{action | json}}" *ngFor="let action of actions">{{action.actionname}}</option>
+                    </select>
+          
+        </div>
+        <div class="col-2">
+            <label for="name">Action Sequence</label>
+            <input class="form-control" name="Sequence" [(ngModel)]="actionDetail.ActionSequence" type="text">
+        </div>
+        <div class="col-2">
+            <label for="name">Action Stage Id</label>
+            <input class="form-control" name="Stageid" [(ngModel)]="actionDetail.ActionStageId" type="text">
+        </div>
+        <div class="col-2">
+            <div style="    margin-top: 31px;margin-left:50px">
+                <i (click)="addAction()" class="img-add "></i>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px">
+        <div class="col-12">
+            <table class="table paramTabl">
+                <thead>
+                    <tr>
+                        <td style="width:350px">Action Name</td>
+                        <td style="width:150px">Action Sequence </td>
+                        <td style="width:350px">Action Stage Id</td>
+                        
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let action of remediationDetails.ActionDetails">
+
+                        <ng-template [ngIf]="!action.isDeleted">
+                            <td class="action-td" style="width:380px !important" (click)="navigateToAction(action.ActionId)"><a href="#">{{action.ActionName}}</a></td>
+                   
+                            <td style="width:150px">{{action.ActionSequence}}</td>
+                            <td style="width:350px">{{action.ActionStageId}}</td>
+                            <td ><i (click)="deleteParam(action)" class="img-delete-table float-right cursor-pointer"></i></td>
+                        </ng-template>
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;margin-bottom: 20px">
+        <div class="col-12">
+                
+            <button (click)="saveRemediationConfig()" class="float-right btn-border">Save</button>
+            <button (click)="togglePageType(false)" class="float-right update-btn">Cancel</button>
+            <button (click)="reset()"  *ngIf="!isUpdateType" class="float-right update-btn">Reset</button>
+            <button (click)="onDelete()" *ngIf="isUpdateType" class="float-right update-btn">Delete</button>
+        </div>
+    </div>
+</form>
+    </div>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Infosys.Lif.LegacyParser.CcisController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CicsSpecific\CicsController.cs</FileName>
+      <HashCode>AQAAAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Infosys.Lif.LegacyParser.ObjectListParser">
+    <Position X="2.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>CicsSpecific\ObjectListParser.cs</FileName>
+      <HashCode>AABiAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Infosys.Lif.LegacyParser.ObjectListParser.ObjectElement">
+        <TypeIdentifier>
+          <NewMemberFileName>CicsSpecific\ObjectListParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+</ClassDiagram>

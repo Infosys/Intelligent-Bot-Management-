@@ -1,0 +1,104 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;    height: 540px !important;">
+  <div style="width: 100%;height:500px;">
+    <form name="form" #attrForm="ngForm">
+      <div class="row">
+        <div class="col-12">
+            <label style="margin-top: 10px;font-size:14px;font-weight: 600;" >Monitoring Plan</label>  
+          <button class="add-newbtn" style="margin-top:20px" data-toggle="modal" (click)="onCancel()" data-target="#exampleModal"
+            *ngIf="isUpdate">+ Create New</button>
+          <div style="margin-top:20px">
+            <label style=" font-weight: 400; "  >Plan Name</label>
+            <div class="form-group">
+              <select id="attrselect" class="form-control" style="width: 250px;" (change)="OnChangesObs($event.target.value)"
+                *ngIf="isUpdate">
+
+                <option>Select Monitoring Plan</option>
+                <option  value="{{obj.name}}" *ngFor="let obj of this.obsPlansArr">{{obj.name}} </option>
+              </select>
+              <!-- <label   *ngIf="!isUpdate"> Plan Name</label> -->
+              <input type="text"  *ngIf="!isUpdate" name="name"
+              [(ngModel)]="observableresourcetypeaction.name" class="obs-input">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group float-left" style=" font-weight: 400; ">
+            <label style=" font-weight: 400; ">Metric Name</label>
+            <select id="attrselect3" name="Observable" (change)="OnChangesObservable($event.target.value,observableresourcetypeaction)" class="form-control" *ngIf="!isUpdate" [(ngModel)]="observableresourcetypeaction.observableid" style="width: 250px;" >
+
+              <option>Select Observable </option>
+              <option value="{{obj.id}}" *ngFor="let obj of obsarray">{{obj.observablename}} </option>
+            </select>
+            <input disabled type="text" name="Observable" class="form-control" *ngIf="isUpdate" [(ngModel)]="observableresourcetypeaction.observablename"
+              style="font-weight: 400;width:258px" id="observablename">
+          </div>
+          <div class="form-group float-left" style="margin-left:50px">
+            <label style=" font-weight: 400;;">Resource Type </label>
+
+            <select style=" font-weight: 400; " (change)=OnChangesRes($event.target.value,observableresourcetypeaction) [(ngModel)]="observableresourcetypeaction.resourcetypeid" id="attrselect1" class="form-control" style="width: 250px;" 
+              *ngIf="!isUpdate" name="resourcetypename">
+
+              <option>Select Resource Type</option>
+              <option value="{{obj.id}}" *ngFor="let obj of restypearr">{{obj.resourcetypename}} </option>
+            </select>
+            <input disabled type="text" class="form-control" value="" *ngIf="isUpdate" value="{{observableresourcetypeaction.resourcetypename}}"
+              style=" font-weight: 400;margin-right:50px;     " id="resourcetype" name="resourcetypename">
+          </div>
+
+
+
+          <div class="form-group float-left" style="margin-left: 56px;">
+            <label style=" font-weight: 400; ">Action Name</label>
+            <select style=" font-weight: 400;margin-left:50px;" (change)=OnChangesAction($event.target.value,observableresourcetypeaction) [(ngModel)]="observableresourcetypeaction.actionid" id="attrselect2" class="form-control" style="width: 250px;"
+               *ngIf="!isUpdate" name="actionname">
+
+              <option>Select Action Name</option>
+              <option value="{{obj.id}}" *ngFor="let obj of actArray">{{obj.name}} </option>
+            </select>
+            <input disabled type="text" class="form-control" *ngIf="isUpdate" value="{{observableresourcetypeaction.actionname}}"
+              style="font-weight: 400;width: 250px;" id="actionname" name="actionname">
+          </div>
+
+         
+        </div>
+
+
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group float-left" style=" font-weight: 400;margin-right:50px">
+            <label style=" font-weight: 400">Validity Start</label>
+            <angular2-date-picker  name="fromDate" (onDateSelect)="onDateSelect($event, observableresourcetypeaction,'start')"  [(ngModel)]="observableresourcetypeaction.ValidityStart" [settings]="settings"></angular2-date-picker>
+
+          </div>
+
+          <div class="form-group float-left">
+            <label style=" font-weight: 400">Validity End</label>
+            <angular2-date-picker  name="fromDate1" (onDateSelect)="onDateSelect($event, observableresourcetypeaction,'end')" [(ngModel)]="observableresourcetypeaction.ValidityEnd"  [settings]="settings"></angular2-date-picker>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="form-group" style="margin-top:137px">
+        <button class="update-btn float-right" (click)="reset()">Reset</button>
+        <button class="update-btn float-right" (click)="onCancel()"> Cancel</button>
+
+        <button id="updatebtn" *ngIf="isUpdate" type="submit" (click)="updateAttribute(attrForm)" class="btn-border float-right">Update
+        </button>
+        <button id="Add" *ngIf="!isUpdate" type="submit" (click)="createNew(mappingForm)" class="btn-border float-right">Add
+        </button>
+
+
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,228 @@
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkbench.exe.config
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\CobolContractSerializer.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractSerializer.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectDataEntity.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectSerializer.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractDataEntity.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\EntityProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectDataEntityProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\SerializerProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\Solution.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\HostAccessProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\HostCall.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractEntityProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractSerializerProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ConfigFile.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\TransactionId.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AppConfig.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AtomServiceImplementationTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AtomServiceInterfaceTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AtomWebConfigTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\CobolSerializer.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\CobolModelObjectDataEntity.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\LISettingsConfig.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSAssemblyInfo.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSContractEntityProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSContractSerializerProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSDataContractLegacyContextData.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSDataContractProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSModelObjectEntityProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSModelObjectSerializerProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSService.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceContractInterface.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceContractProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceImplementation.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceImplementationProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSSolution.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSStyleSheet.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSWebConfig.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ServiceImplementation.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ServiceInterface.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\LegacyContextData.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RequestMessageType.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ResponseMessageType.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFAssemblyInfo.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFDataContractProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFLegacyContextData.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFMessageRequest.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFMessageResponse.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFSercviceImplementation.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFService.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFServiceContractProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFServiceImplementationProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFServiceInterface.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFSolution.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFWebConfig.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebConfig.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceAsmx.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceAssemblyInfo.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceContractProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceDataContractProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceImplementationProject.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceSolution.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WFActivityDesigner.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WFActivityProjectTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WFActivityTemplate.txt
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Reports\CodeGenerationReport.rdlc
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Reports\EffortSavingReport.rdlc
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractBase.xsd
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyCommon.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyConfig.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyFacade.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyIntegrator.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyIntegratorService.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyParameters.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.MessageWrapper.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.Serializer.Framework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.WrapperInterface.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectBase.xsd
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\Adapter\Infosys.Lif.HIS.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\Adapter\Infosys.Lif.IBMMQ.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\Adapter\TCPIPAdapter.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkbench.exe
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkbench.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Infosys.Solutions.CodeGeneration.Framework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserComponents.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserFramework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkBenchReportHandler.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\PresentationCore.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\System.Printing.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserComponents.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserFramework.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkBenchReportHandler.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\ResolveAssemblyReference.cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Reports.CodeGenerationReport.rdlc
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Reports.EffortSavingReport.rdlc
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Reports.CommentsByLOCRatioReport.rdlc
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.ConfigurationWindow.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.Editor.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ModelObjectEditor.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ContractEditor.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ModuleEditor.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ProjectEditor.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.TestDataEditor.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.LegacyParser.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Properties.Resources.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.StatusDisplay.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.WsdlLoadForm.resources
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\LegacyWorkBench.csproj.GenerateResource.Cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\RdlCompile.cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\RdlCompile.compiled
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\LegacyWorkbench.exe
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\LegacyWorkbench.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkbench.exe.config
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\LegacyWorkbench.exe
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\LegacyWorkbench.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\CobolContractSerializer.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractSerializer.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectDataEntity.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectSerializer.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractDataEntity.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\EntityProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectDataEntityProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\SerializerProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\Solution.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\HostAccessProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\HostCall.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractEntityProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractSerializerProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ConfigFile.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\TransactionId.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AppConfig.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AtomServiceImplementationTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AtomServiceInterfaceTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\AtomWebConfigTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\CobolSerializer.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\CobolModelObjectDataEntity.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\LISettingsConfig.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSAssemblyInfo.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSContractEntityProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSContractSerializerProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSDataContractLegacyContextData.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSDataContractProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSModelObjectEntityProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSModelObjectSerializerProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSService.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceContractInterface.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceContractProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceImplementation.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSServiceImplementationProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSSolution.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSStyleSheet.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RSSWebConfig.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ServiceImplementation.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ServiceInterface.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\LegacyContextData.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\RequestMessageType.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ResponseMessageType.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFAssemblyInfo.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFDataContractProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFLegacyContextData.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFMessageRequest.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFMessageResponse.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFSercviceImplementation.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFService.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFServiceContractProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFServiceImplementationProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFServiceInterface.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFSolution.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WCFWebConfig.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebConfig.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceAsmx.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceAssemblyInfo.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceContractProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceDataContractProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceImplementationProject.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WebServiceSolution.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WFActivityDesigner.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WFActivityProjectTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\WFActivityTemplate.txt
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Reports\CodeGenerationReport.rdlc
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Reports\EffortSavingReport.rdlc
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ContractBase.xsd
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyCommon.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyConfig.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyFacade.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyIntegrator.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyIntegratorService.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.LegacyParameters.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.MessageWrapper.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.Serializer.Framework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\LegacyFacade\Infosys.Lif.WrapperInterface.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Templates\ModelObjectBase.xsd
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\Adapter\Infosys.Lif.HIS.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\Adapter\Infosys.Lif.IBMMQ.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LifReferences\Adapter\TCPIPAdapter.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkbench.exe
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkbench.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Infosys.Solutions.CodeGeneration.Framework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserComponents.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserFramework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkBenchReportHandler.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\PresentationCore.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\System.Printing.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserComponents.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyParserFramework.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\bin\Debug\LegacyWorkBenchReportHandler.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Reports.CodeGenerationReport.rdlc
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Reports.EffortSavingReport.rdlc
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Reports.CommentsByLOCRatioReport.rdlc
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.ConfigurationWindow.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.Editor.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ModelObjectEditor.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ContractEditor.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ModuleEditor.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.ProjectEditor.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Editors.TestDataEditor.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.LegacyParser.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.Properties.Resources.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.StatusDisplay.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\Infosys.Lif.LegacyWorkbench.WsdlLoadForm.resources
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\LegacyWorkBench.csproj.GenerateResource.Cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\RdlCompile.cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyWorkBench\obj\Debug\RdlCompile.compiled

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContractBase" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sse.com/entities/host/contracts/common" xmlns="http://sse.com/entities/host/contracts/common">
+  <xs:complexType name="ContractBase">
+    <xs:attribute name="ErrorFlag" type="ErrorFlag" />
+    <xs:attribute name="MegadataLimitType" type="MegadataLimitType" />
+    <xs:attribute name="SearcherReturnType" type="SearcherReturnType" />
+    <xs:attribute name="StableTableVersion" type="xs:integer" />
+    <xs:attribute name="WorkFlowHandle" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="ErrorFlag">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes" />
+      <xs:enumeration value="No" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MegadataLimitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="I" />
+      <xs:enumeration value="A" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SearcherReturnType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="List" />
+      <xs:enumeration value="Tree" />
+      <xs:enumeration value="Details" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

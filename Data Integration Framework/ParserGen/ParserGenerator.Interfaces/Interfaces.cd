@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Interface Name="Infosys.Lif.LegacyParser.Interfaces.IHostSpecificController">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IHostSpecificController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Infosys.Lif.LegacyParser.Interfaces.ILanguageConverter">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ILanguageConverter.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Infosys.Lif.LegacyParser.Interfaces.IStorageImplementation">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IStorageImplementation.cs</FileName>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

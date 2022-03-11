@@ -1,0 +1,148 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{##Solution##}") = "##LegacyDataContractNamespace##", "HostAccess\LegacyDataContract\##LegacyDataContractNamespace##.csproj", "{##GuidProjectDataContract##}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{##Solution##}") = "##ServiceContractNamespace##", "HostAccess\ServiceContract\##ServiceContractNamespace##.csproj", "{##GuidProjectServiceContract##}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{##GuidProjectDataContract##} = {##GuidProjectDataContract##}
+		{##GuidContractDataEntityAssembly##} = {##GuidContractDataEntityAssembly##}
+	EndProjectSection
+EndProject
+Project("{##Solution##}") = "##ServiceImplementationNamespace##", "HostAccess\ServiceImplementation\##ServiceImplementationNamespace##.csproj", "{##GuidProjectServiceImplementation##}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCFHost\", "HostAccess\WCFHost\", "{##GuidHost##}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{##GuidProjectServiceImplementation##}|##ServiceImplementationNamespace##.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/WCFHost"
+		Debug.AspNetCompiler.PhysicalPath = "HostAccess\WCFHost\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WCFHost\"
+		Debug.AspNetCompiler.Updateable = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WCFHost"
+		Release.AspNetCompiler.PhysicalPath = "HostAccess\WCFHost\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WCFHost\"
+		Release.AspNetCompiler.Updateable = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51785"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{##Solution##}") = "##ContractsEntityRootNameSpace##", "DataEntities\Contracts\code\##ContractsEntityRootNameSpace##.csproj", "{##GuidContractDataEntityAssembly##}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{##GuidModelObjectDataEntityAssembly##} = {##GuidModelObjectDataEntityAssembly##}
+	EndProjectSection
+EndProject
+Project("{##Solution##}") = "##ContractsSerializerRootNameSpace##", "Serializers\Contracts\##ContractsSerializerRootNameSpace##.csproj", "{##GuidContractSerializerAssembly##}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{##GuidModelObjectSerializerAssembly##} = {##GuidModelObjectSerializerAssembly##}
+		{##GuidContractDataEntityAssembly##} = {##GuidContractDataEntityAssembly##}
+		{##GuidModelObjectDataEntityAssembly##} = {##GuidModelObjectDataEntityAssembly##}
+	EndProjectSection
+EndProject
+Project("{##Solution##}") = "##ModelObjectsEntityRootNameSpace##", "DataEntities\ModelObjects\code\##ModelObjectsEntityRootNameSpace##.csproj", "{##GuidModelObjectDataEntityAssembly##}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{##Solution##}") = "##ModelObjectsSerializerRootNameSpace##", "Serializers\ModelObjects\##ModelObjectsSerializerRootNameSpace##.csproj", "{##GuidModelObjectSerializerAssembly##}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{##GuidModelObjectDataEntityAssembly##} = {##GuidModelObjectDataEntityAssembly##}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{##GuidProjectDataContract##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidProjectDataContract##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU		
+		{##GuidProjectDataContract##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU		
+		{##GuidProjectDataContract##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidProjectDataContract##}.Release|Any CPU.ActiveCfg = Release|Any CPU		
+		{##GuidProjectDataContract##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidProjectDataContract##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{##GuidProjectServiceContract##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidProjectServiceContract##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##GuidProjectServiceContract##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{##GuidProjectServiceContract##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidProjectServiceContract##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##GuidProjectServiceContract##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidProjectServiceContract##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{##GuidProjectServiceImplementation##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidProjectServiceImplementation##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##GuidProjectServiceImplementation##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{##GuidProjectServiceImplementation##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidProjectServiceImplementation##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##GuidProjectServiceImplementation##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidProjectServiceImplementation##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{##GuidHost##}.Debug|.NET.ActiveCfg = Debug|.NET
+		{##GuidHost##}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{##GuidHost##}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{##GuidHost##}.Release|.NET.ActiveCfg = Debug|.NET
+		{##GuidHost##}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{##GuidHost##}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{##GuidHost##}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{##GuidContractDataEntityAssembly##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidContractDataEntityAssembly##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##GuidContractDataEntityAssembly##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{##GuidContractDataEntityAssembly##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidContractDataEntityAssembly##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##GuidContractDataEntityAssembly##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidContractDataEntityAssembly##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{##GuidContractSerializerAssembly##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidContractSerializerAssembly##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##GuidContractSerializerAssembly##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{##GuidContractSerializerAssembly##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidContractSerializerAssembly##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##GuidContractSerializerAssembly##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidContractSerializerAssembly##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidModelObjectDataEntityAssembly##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Release|.NET.ActiveCfg = Release|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{##GuidModelObjectSerializerAssembly##}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

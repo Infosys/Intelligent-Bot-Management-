@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E636F543-231F-4B70-B7F1-C3654A6922AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infosys.Solutions.ConfigurationManager.Resource.Entity</RootNamespace>
+    <AssemblyName>Infosys.Ainauto.ConfigurationManager.DataEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="action.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="actionstages.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="actiontype.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="action_params.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anomaly_details.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit_Logs.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationStore.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationStore.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationStore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationStore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationStore.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityExtension.cs" />
+    <Compile Include="Environment_Scan_Metric.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Environment_Scan_Metric_Anomaly_Details.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Environment_Scan_Metric_Details.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="errors.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetHierarchyResources_Result.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_details.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_iteration_tracker.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_iteration_tracker_details.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_master.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="healthcheck_tracker.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notification_configuration.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observable.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observable_resource_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="observations.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operator.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="platforms.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="portfolio_project_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recipient_configuration.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remdiation_plan_action_param_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan_action_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan_executions.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="remediation_plan_execution_actions.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_dependency_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_metadata.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_observable_action_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_observable_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_observable_remediation_plan_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resourcetype_service_details.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_attributes.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_dependency_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_observable_action_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="resource_observable_remediation_plan_map.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tenant.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tickets.cs">
+      <DependentUpon>ConfigurationStore.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="ConfigurationStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ConfigurationStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ConfigurationStore.edmx.diagram">
+      <DependentUpon>ConfigurationStore.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigurationStore.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ConfigurationStore.edmx</DependentUpon>
+      <LastGenOutput>ConfigurationStore.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ConfigurationStore.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ConfigurationStore.edmx</DependentUpon>
+      <LastGenOutput>ConfigurationStore.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>

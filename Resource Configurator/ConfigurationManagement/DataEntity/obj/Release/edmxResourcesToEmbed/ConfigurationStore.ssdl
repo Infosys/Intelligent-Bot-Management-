@@ -1,0 +1,1313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="superbotModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="action">
+    <Key>
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ActionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ActionTypeId" Type="int" Nullable="false" />
+    <Property Name="EndpointUri" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="ScriptId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="1000" />
+    <Property Name="AutomationEngineId" Type="int" />
+    <Property Name="AutomationEngineName" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="action_params">
+    <Key>
+      <PropertyRef Name="ParamId" />
+    </Key>
+    <Property Name="ParamId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="FieldToMap" Type="varchar" MaxLength="500" />
+    <Property Name="IsMandatory" Type="bit" />
+    <Property Name="DefaultValue" Type="varchar" MaxLength="200" />
+    <Property Name="ParamType" Type="varchar" MaxLength="50" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="AutomationEngineParamId" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="actionstages">
+    <Key>
+      <PropertyRef Name="ActionStageId" />
+    </Key>
+    <Property Name="ActionStageId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActionStageName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Category" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="actiontype">
+    <Key>
+      <PropertyRef Name="ActionTypeId" />
+    </Key>
+    <Property Name="ActionTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionType" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="255" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+  </EntityType>
+  <EntityType Name="anomaly_details">
+    <Key>
+      <PropertyRef Name="AnomalyId" />
+    </Key>
+    <Property Name="AnomalyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlatformId" Type="int" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ObservableName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ObservationStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObservationTime" Type="datetime2" Precision="6" />
+    <Property Name="SourceIp" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="RemediationPlanExecId" Type="int" />
+    <Property Name="RemediationStatus" Type="varchar" MaxLength="50" />
+    <Property Name="EventType" Type="varchar" MaxLength="50" />
+    <Property Name="Source" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="IsNotified" Type="varchar" MaxLength="10" />
+    <Property Name="NotifiedTime" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+  </EntityType>
+  <EntityType Name="Audit_Logs">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AnomalyId" Type="int" />
+    <Property Name="ResourceID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObservableID" Type="int" Nullable="false" />
+    <Property Name="ActionID" Type="int" Nullable="false" />
+    <Property Name="ActionParameters" Type="nvarchar(max)" />
+    <Property Name="LogDate" Type="datetime2" Precision="7" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Output" Type="nvarchar(max)" />
+    <Property Name="PlatformID" Type="int" Nullable="false" />
+    <Property Name="TenantID" Type="int" Nullable="false" />
+    <Property Name="TransactionId" Type="varchar" MaxLength="500" />
+    <Property Name="PortfolioId" Type="varchar" MaxLength="250" />
+    <Property Name="IncidentId" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Environment_Scan_Metric">
+    <Key>
+      <PropertyRef Name="EnvironmentScanMetricID" />
+    </Key>
+    <Property Name="EnvironmentScanMetricID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Version" Type="int" />
+    <Property Name="ResourceID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObservableID" Type="int" Nullable="false" />
+    <Property Name="TenantID" Type="int" Nullable="false" />
+    <Property Name="PlatformID" Type="int" Nullable="false" />
+    <Property Name="GeneratedDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="7" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Environment_Scan_Metric_Anomaly_Details">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ObservationId" Type="int" Nullable="false" />
+    <Property Name="OldVersion" Type="int" Nullable="false" />
+    <Property Name="NewVersion" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="EndDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="MetricName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MetricKey" Type="varchar" MaxLength="100" />
+    <Property Name="MetricId" Type="int" Nullable="false" />
+    <Property Name="AttributeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AttributeValue" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AttributeStatus" Type="varchar" MaxLength="10" />
+    <Property Name="OldValue" Type="varchar" MaxLength="500" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="PlatformId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Environment_Scan_Metric_Details">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EnvironmentScanMetricID" Type="int" Nullable="false" />
+    <Property Name="MetricName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MetricID" Type="int" Nullable="false" />
+    <Property Name="MetricKey" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AttributeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AttributeValue" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="TenantID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="7" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="errors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="systemname" Type="varchar" MaxLength="50" />
+    <Property Name="parametername" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="errorcode" Type="varchar" MaxLength="20" />
+    <Property Name="errordesc" Type="varchar" MaxLength="1000" />
+    <Property Name="createdate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="healthcheck_details">
+    <Key>
+      <PropertyRef Name="ConfigId" />
+      <PropertyRef Name="ResourceId" />
+    </Key>
+    <Property Name="ConfigId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="validitystart" Type="datetime2" Precision="6" />
+    <Property Name="validityend" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="healthcheck_iteration_tracker">
+    <Key>
+      <PropertyRef Name="TrackingId" />
+    </Key>
+    <Property Name="TrackingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlatformId" Type="int" Nullable="false" />
+    <Property Name="PlatformModelVersion" Type="int" />
+    <Property Name="HealthcheckSource" Type="varchar" MaxLength="500" />
+    <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="StartTime" Type="datetime2" Precision="6" />
+    <Property Name="EndTime" Type="datetime2" Precision="6" />
+    <Property Name="Error" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="6" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="healthcheck_iteration_tracker_details">
+    <Key>
+      <PropertyRef Name="TrackingDetailsId" />
+    </Key>
+    <Property Name="TrackingDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HealthcheckTrackingId" Type="varchar" MaxLength="10" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HealthcheckSource" Type="varchar" MaxLength="500" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="SeeTransactionId" Type="uniqueidentifier" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Error" Type="varchar(max)" />
+    <Property Name="StartTime" Type="datetime2" Precision="6" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="6" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="healthcheck_master">
+    <Key>
+      <PropertyRef Name="ConfigId" />
+    </Key>
+    <Property Name="ConfigId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ConfigurationName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="validitystart" Type="datetime2" Precision="6" />
+    <Property Name="validityend" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="healthcheck_tracker">
+    <Key>
+      <PropertyRef Name="HealthCheckId" />
+    </Key>
+    <Property Name="HealthCheckId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConfigId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IncidentId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="StartTime" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="EndTime" Type="datetime2" Precision="6" />
+    <Property Name="Source" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notification_configuration">
+    <Key>
+      <PropertyRef Name="NotifcationConfigId" />
+    </Key>
+    <Property Name="NotifcationConfigId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlatformId" Type="int" Nullable="false" />
+    <Property Name="ReferenceType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReferenceKey" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReferenceValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="observable">
+    <Key>
+      <PropertyRef Name="ObservableId" />
+    </Key>
+    <Property Name="ObservableId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObservableName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UnitOfMeasure" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="DataType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="observable_resource_map">
+    <Key>
+      <PropertyRef Name="ObservableId" />
+      <PropertyRef Name="ResourceId" />
+    </Key>
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="OperatorId" Type="varchar" MaxLength="10" />
+    <Property Name="LowerThreshold" Type="varchar" MaxLength="50" />
+    <Property Name="UpperThreshold" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="observations">
+    <Key>
+      <PropertyRef Name="ObservationId" />
+    </Key>
+    <Property Name="ObservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlatformId" Type="int" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ObservableName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ObservationStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObservationTime" Type="datetime2" Precision="6" />
+    <Property Name="SourceIp" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="RemediationPlanExecId" Type="int" />
+    <Property Name="RemediationStatus" Type="varchar" MaxLength="50" />
+    <Property Name="EventType" Type="varchar" MaxLength="50" />
+    <Property Name="Source" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="IsNotified" Type="varchar" MaxLength="10" />
+    <Property Name="NotifiedTime" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="PortfolioId" Type="varchar" MaxLength="250" />
+    <Property Name="ConfigId" Type="varchar" MaxLength="100" />
+    <Property Name="ObservationSequence" Type="int" />
+    <Property Name="IncidentId" Type="varchar" MaxLength="100" />
+    <Property Name="Application" Type="varchar" MaxLength="100" />
+    <Property Name="TransactionId" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="operator">
+    <Key>
+      <PropertyRef Name="OperatorId" />
+    </Key>
+    <Property Name="OperatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Operator" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="Rule" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="platforms">
+    <Key>
+      <PropertyRef Name="PlatformId" />
+    </Key>
+    <Property Name="PlatformId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlatformName" Type="varchar" MaxLength="50" />
+    <Property Name="PlatformType" Type="varchar" MaxLength="50" />
+    <Property Name="ExecutionMode" Type="varchar" MaxLength="20" />
+    <Property Name="RuntimeDetails" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="portfolio_project_map">
+    <Key>
+      <PropertyRef Name="portfolioprjmapid" />
+    </Key>
+    <Property Name="portfolioprjmapid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="portfolioid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="projectid" Type="int" />
+    <Property Name="createdby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="createdate" Type="datetime" Nullable="false" />
+    <Property Name="modifiedby" Type="varchar" MaxLength="50" />
+    <Property Name="modifieddate" Type="datetime" />
+    <Property Name="isdeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="recipient_configuration">
+    <Key>
+      <PropertyRef Name="RecipientConfigId" />
+    </Key>
+    <Property Name="RecipientConfigId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReferenceType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecipientName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReferenceKey" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReferenceValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'superbot.dbo.remdiation_plan_action_param_map' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="remdiation_plan_action_param_map">
+    <Key>
+      <PropertyRef Name="RemediationPlanActionId" />
+      <PropertyRef Name="ParamId" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="TenantId" />
+    </Key>
+    <Property Name="RemediationPlanActionId" Type="int" Nullable="false" />
+    <Property Name="ParamId" Type="int" Nullable="false" />
+    <Property Name="ProvidedValue" Type="varchar" MaxLength="200" />
+    <Property Name="ProvidedValueType" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="remediation_plan">
+    <Key>
+      <PropertyRef Name="RemediationPlanId" />
+    </Key>
+    <Property Name="RemediationPlanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RemediationPlanName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RemediationPlanDescription" Type="varchar" MaxLength="250" />
+    <Property Name="IsUserDefined" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="remediation_plan_action_map">
+    <Key>
+      <PropertyRef Name="RemediationPlanActionId" />
+    </Key>
+    <Property Name="RemediationPlanActionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RemediationPlanId" Type="int" Nullable="false" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="ActionStageId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActionSequence" Type="smallint" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="remediation_plan_execution_actions">
+    <Key>
+      <PropertyRef Name="RemediationPlanExecActionId" />
+    </Key>
+    <Property Name="RemediationPlanExecActionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RemediationPlanExecId" Type="int" Nullable="false" />
+    <Property Name="RemediationPlanActionId" Type="int" Nullable="false" />
+    <Property Name="CorrelationId" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Output" Type="varchar" MaxLength="2000" />
+    <Property Name="Logdata" Type="varchar" MaxLength="2000" />
+    <Property Name="OrchestratorDetails" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="remediation_plan_executions">
+    <Key>
+      <PropertyRef Name="RemediationPlanExecId" />
+    </Key>
+    <Property Name="RemediationPlanExecId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RemediationPlanId" Type="int" Nullable="false" />
+    <Property Name="ResourceId" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ObservationId" Type="int" Nullable="false" />
+    <Property Name="NodeDetails" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ExecutedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ExecutionStartDateTime" Type="datetime2" Precision="6" />
+    <Property Name="ExecutionEndDateTime" Type="datetime2" Precision="6" />
+    <Property Name="ExecutionPercentage" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsNotified" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="IsPicked" Type="bit" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="resource">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+    </Key>
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ResourceName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="Source" Type="varchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="ResourceRef" Type="varchar" MaxLength="50" />
+    <Property Name="PlatformId" Type="int" />
+    <Property Name="VersionNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="resource_attributes">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+      <PropertyRef Name="AttributeName" />
+    </Key>
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AttributeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AttributeValue" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="AttributeCategory" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+    <Property Name="VersionNumber" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsSecret" Type="bit" />
+    <Property Name="isHiddenInUi" Type="bit" />
+  </EntityType>
+  <EntityType Name="resource_dependency_map">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+      <PropertyRef Name="DependencyResourceId" />
+      <PropertyRef Name="PortfolioId" />
+    </Key>
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DependencyResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DependencyType" Type="varchar" MaxLength="50" />
+    <Property Name="Priority" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="PortfolioId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="resource_observable_action_map">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+      <PropertyRef Name="ObservableId" />
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="resource_observable_remediation_plan_map">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+      <PropertyRef Name="ObservableId" />
+      <PropertyRef Name="RemediationPlanId" />
+    </Key>
+    <Property Name="ResourceId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="RemediationPlanId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" />
+  </EntityType>
+  <EntityType Name="resourcetype">
+    <Key>
+      <PropertyRef Name="ResourceTypeId" />
+    </Key>
+    <Property Name="ResourceTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceTypeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="IsMainEntiry" Type="bit" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="PlatfromType" Type="varchar" MaxLength="150" />
+    <Property Name="ResourceTypeDisplayName" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="resourcetype_dependency_map">
+    <Key>
+      <PropertyRef Name="ResourcetypeId" />
+      <PropertyRef Name="DependencyResourceTypeId" />
+    </Key>
+    <Property Name="ResourcetypeId" Type="int" Nullable="false" />
+    <Property Name="DependencyResourceTypeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DependencyType" Type="char" MaxLength="50" />
+    <Property Name="Priority" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="PortfolioId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="resourcetype_metadata">
+    <Key>
+      <PropertyRef Name="ResourceTypeId" />
+      <PropertyRef Name="AttributeName" />
+    </Key>
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="AttributeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DefaultValue" Type="varchar" MaxLength="500" />
+    <Property Name="AttributeType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsMandatory" Type="bit" Nullable="false" />
+    <Property Name="Sequence" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+    <Property Name="issecret" Type="bit" />
+  </EntityType>
+  <EntityType Name="resourcetype_observable_action_map">
+    <Key>
+      <PropertyRef Name="ResourceTypeId" />
+      <PropertyRef Name="ObservableId" />
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="resourcetype_observable_map">
+    <Key>
+      <PropertyRef Name="ObservableId" />
+      <PropertyRef Name="ResourceTypeId" />
+    </Key>
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="OperatorId" Type="varchar" MaxLength="10" />
+    <Property Name="LowerThreshold" Type="varchar" MaxLength="50" />
+    <Property Name="UpperThreshold" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="resourcetype_observable_remediation_plan_map">
+    <Key>
+      <PropertyRef Name="ResourceTypeId" />
+      <PropertyRef Name="ObservableId" />
+    </Key>
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="ObservableId" Type="int" Nullable="false" />
+    <Property Name="RemediationPlanId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+    <Property Name="TenantId" Type="int" Nullable="false" />
+    <Property Name="ValidityStart" Type="datetime2" Precision="6" />
+    <Property Name="ValidityEnd" Type="datetime2" Precision="6" />
+  </EntityType>
+  <EntityType Name="resourcetype_service_details">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceTypeId" Type="int" Nullable="false" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="6" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime2" Precision="6" />
+  </EntityType>
+  <EntityType Name="tenant">
+    <Key>
+      <PropertyRef Name="TenantId" />
+    </Key>
+    <Property Name="TenantId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="BaseUrl" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime2" Precision="6" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime2" Precision="6" />
+    <Property Name="TenantConfig" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tickets">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="ticketingsystemname" Type="varchar" MaxLength="50" />
+    <Property Name="ticketid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="shortdesc" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="createdate" Type="date" Nullable="false" />
+    <Property Name="resolvingparty" Type="varchar" MaxLength="10" />
+    <Property Name="autoresolutionattempted" Type="smallint" />
+    <Property Name="status" Type="varchar" MaxLength="20" />
+    <Property Name="comments" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="resolutiondate" Type="date" />
+  </EntityType>
+  <Association Name="FK__baseline___Basel__469FD34E1">
+    <End Role="Environment_Scan_Metric" Type="Self.Environment_Scan_Metric" Multiplicity="1" />
+    <End Role="Environment_Scan_Metric_Details" Type="Self.Environment_Scan_Metric_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Environment_Scan_Metric">
+        <PropertyRef Name="EnvironmentScanMetricID" />
+      </Principal>
+      <Dependent Role="Environment_Scan_Metric_Details">
+        <PropertyRef Name="EnvironmentScanMetricID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__healthche__Confi__055C1FD6">
+    <End Role="healthcheck_master" Type="Self.healthcheck_master" Multiplicity="1" />
+    <End Role="healthcheck_details" Type="Self.healthcheck_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="healthcheck_master">
+        <PropertyRef Name="ConfigId" />
+      </Principal>
+      <Dependent Role="healthcheck_details">
+        <PropertyRef Name="ConfigId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__healthche__Confi__08388C81">
+    <End Role="healthcheck_master" Type="Self.healthcheck_master" Multiplicity="1" />
+    <End Role="healthcheck_tracker" Type="Self.healthcheck_tracker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="healthcheck_master">
+        <PropertyRef Name="ConfigId" />
+      </Principal>
+      <Dependent Role="healthcheck_tracker">
+        <PropertyRef Name="ConfigId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__healthche__Resou__0467FB9D">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="healthcheck_details" Type="Self.healthcheck_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="healthcheck_details">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActionId">
+    <End Role="action" Type="Self.action" Multiplicity="1" />
+    <End Role="resourcetype_observable_action_map" Type="Self.resourcetype_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_action_map">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActionId_1">
+    <End Role="action" Type="Self.action" Multiplicity="1" />
+    <End Role="remediation_plan_action_map" Type="Self.remediation_plan_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="remediation_plan_action_map">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActionId_2">
+    <End Role="action" Type="Self.action" Multiplicity="1" />
+    <End Role="resource_observable_action_map" Type="Self.resource_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="resource_observable_action_map">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_Logs_action">
+    <End Role="action" Type="Self.action" Multiplicity="1" />
+    <End Role="Audit_Logs" Type="Self.Audit_Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="Audit_Logs">
+        <PropertyRef Name="ActionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Observable_ID">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="Audit_Logs" Type="Self.Audit_Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="Audit_Logs">
+        <PropertyRef Name="ObservableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableID">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="observable_resource_map" Type="Self.observable_resource_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="observable_resource_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableId_1">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="resourcetype_observable_action_map" Type="Self.resourcetype_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_action_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableId_2">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="resourcetype_observable_remediation_plan_map" Type="Self.resourcetype_observable_remediation_plan_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_remediation_plan_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableId_3">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="resource_observable_remediation_plan_map" Type="Self.resource_observable_remediation_plan_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="resource_observable_remediation_plan_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableId_4">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="resourcetype_observable_action_map" Type="Self.resourcetype_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_action_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableId_5">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="resource_observable_action_map" Type="Self.resource_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="resource_observable_action_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservableID3">
+    <End Role="observable" Type="Self.observable" Multiplicity="1" />
+    <End Role="resourcetype_observable_map" Type="Self.resourcetype_observable_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="observable">
+        <PropertyRef Name="ObservableId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_map">
+        <PropertyRef Name="ObservableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParamID">
+    <End Role="action_params" Type="Self.action_params" Multiplicity="1" />
+    <End Role="remdiation_plan_action_param_map" Type="Self.remdiation_plan_action_param_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action_params">
+        <PropertyRef Name="ParamId" />
+      </Principal>
+      <Dependent Role="remdiation_plan_action_param_map">
+        <PropertyRef Name="ParamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RemediationPlanExecId">
+    <End Role="remediation_plan_executions" Type="Self.remediation_plan_executions" Multiplicity="1" />
+    <End Role="remediation_plan_execution_actions" Type="Self.remediation_plan_execution_actions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remediation_plan_executions">
+        <PropertyRef Name="RemediationPlanExecId" />
+      </Principal>
+      <Dependent Role="remediation_plan_execution_actions">
+        <PropertyRef Name="RemediationPlanExecId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RemediationPlanId">
+    <End Role="remediation_plan" Type="Self.remediation_plan" Multiplicity="1" />
+    <End Role="remediation_plan_action_map" Type="Self.remediation_plan_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remediation_plan">
+        <PropertyRef Name="RemediationPlanId" />
+      </Principal>
+      <Dependent Role="remediation_plan_action_map">
+        <PropertyRef Name="RemediationPlanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RemediationPlanId_1">
+    <End Role="remediation_plan" Type="Self.remediation_plan" Multiplicity="1" />
+    <End Role="resourcetype_observable_remediation_plan_map" Type="Self.resourcetype_observable_remediation_plan_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remediation_plan">
+        <PropertyRef Name="RemediationPlanId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_remediation_plan_map">
+        <PropertyRef Name="RemediationPlanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RemediationPlanId_2">
+    <End Role="remediation_plan" Type="Self.remediation_plan" Multiplicity="1" />
+    <End Role="resource_observable_remediation_plan_map" Type="Self.resource_observable_remediation_plan_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remediation_plan">
+        <PropertyRef Name="RemediationPlanId" />
+      </Principal>
+      <Dependent Role="resource_observable_remediation_plan_map">
+        <PropertyRef Name="RemediationPlanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resource_ID">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="Audit_Logs" Type="Self.Audit_Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="Audit_Logs">
+        <PropertyRef Name="ResourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceID">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="observable_resource_map" Type="Self.observable_resource_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="observable_resource_map">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceId_1">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="resource_dependency_map" Type="Self.resource_dependency_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="resource_dependency_map">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceID_2">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="resource_attributes" Type="Self.resource_attributes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="resource_attributes">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceId_3">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="resource_observable_remediation_plan_map" Type="Self.resource_observable_remediation_plan_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="resource_observable_remediation_plan_map">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceId_4">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="resource_observable_action_map" Type="Self.resource_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="resource_observable_action_map">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceTId_1">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="resource_observable_action_map" Type="Self.resource_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="resource_observable_action_map">
+        <PropertyRef Name="ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceTypeId">
+    <End Role="resourcetype" Type="Self.resourcetype" Multiplicity="1" />
+    <End Role="resourcetype_observable_action_map" Type="Self.resourcetype_observable_action_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resourcetype">
+        <PropertyRef Name="ResourceTypeId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_action_map">
+        <PropertyRef Name="ResourceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceTypeId_1">
+    <End Role="resourcetype" Type="Self.resourcetype" Multiplicity="1" />
+    <End Role="resourcetype_observable_remediation_plan_map" Type="Self.resourcetype_observable_remediation_plan_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resourcetype">
+        <PropertyRef Name="ResourceTypeId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_remediation_plan_map">
+        <PropertyRef Name="ResourceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceTypeId_4">
+    <End Role="resourcetype" Type="Self.resourcetype" Multiplicity="1" />
+    <End Role="resourcetype_metadata" Type="Self.resourcetype_metadata" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resourcetype">
+        <PropertyRef Name="ResourceTypeId" />
+      </Principal>
+      <Dependent Role="resourcetype_metadata">
+        <PropertyRef Name="ResourceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceTypeID4">
+    <End Role="resourcetype" Type="Self.resourcetype" Multiplicity="1" />
+    <End Role="resourcetype_observable_map" Type="Self.resourcetype_observable_map" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resourcetype">
+        <PropertyRef Name="ResourceTypeId" />
+      </Principal>
+      <Dependent Role="resourcetype_observable_map">
+        <PropertyRef Name="ResourceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetHierarchyResources" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="resourceID" Type="nvarchar" Mode="In" />
+    <Parameter Name="tenantID" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="superbotModelStoreContainer">
+    <EntitySet Name="action" EntityType="Self.action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="action_params" EntityType="Self.action_params" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="actionstages" EntityType="Self.actionstages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="actiontype" EntityType="Self.actiontype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="anomaly_details" EntityType="Self.anomaly_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audit_Logs" EntityType="Self.Audit_Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Environment_Scan_Metric" EntityType="Self.Environment_Scan_Metric" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Environment_Scan_Metric_Anomaly_Details" EntityType="Self.Environment_Scan_Metric_Anomaly_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Environment_Scan_Metric_Details" EntityType="Self.Environment_Scan_Metric_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="errors" EntityType="Self.errors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="healthcheck_details" EntityType="Self.healthcheck_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="healthcheck_iteration_tracker" EntityType="Self.healthcheck_iteration_tracker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="healthcheck_iteration_tracker_details" EntityType="Self.healthcheck_iteration_tracker_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="healthcheck_master" EntityType="Self.healthcheck_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="healthcheck_tracker" EntityType="Self.healthcheck_tracker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="notification_configuration" EntityType="Self.notification_configuration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="observable" EntityType="Self.observable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="observable_resource_map" EntityType="Self.observable_resource_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="observations" EntityType="Self.observations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="operator" EntityType="Self.operator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="platforms" EntityType="Self.platforms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="portfolio_project_map" EntityType="Self.portfolio_project_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="recipient_configuration" EntityType="Self.recipient_configuration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="remediation_plan" EntityType="Self.remediation_plan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="remediation_plan_action_map" EntityType="Self.remediation_plan_action_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="remediation_plan_execution_actions" EntityType="Self.remediation_plan_execution_actions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="remediation_plan_executions" EntityType="Self.remediation_plan_executions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resource" EntityType="Self.resource" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resource_attributes" EntityType="Self.resource_attributes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resource_dependency_map" EntityType="Self.resource_dependency_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resource_observable_action_map" EntityType="Self.resource_observable_action_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resource_observable_remediation_plan_map" EntityType="Self.resource_observable_remediation_plan_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype" EntityType="Self.resourcetype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype_dependency_map" EntityType="Self.resourcetype_dependency_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype_metadata" EntityType="Self.resourcetype_metadata" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype_observable_action_map" EntityType="Self.resourcetype_observable_action_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype_observable_map" EntityType="Self.resourcetype_observable_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype_observable_remediation_plan_map" EntityType="Self.resourcetype_observable_remediation_plan_map" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resourcetype_service_details" EntityType="Self.resourcetype_service_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tenant" EntityType="Self.tenant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tickets" EntityType="Self.tickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="remdiation_plan_action_param_map" EntityType="Self.remdiation_plan_action_param_map" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [remdiation_plan_action_param_map].[RemediationPlanActionId] AS [RemediationPlanActionId], 
+    [remdiation_plan_action_param_map].[ParamId] AS [ParamId], 
+    [remdiation_plan_action_param_map].[ProvidedValue] AS [ProvidedValue], 
+    [remdiation_plan_action_param_map].[ProvidedValueType] AS [ProvidedValueType], 
+    [remdiation_plan_action_param_map].[CreatedBy] AS [CreatedBy], 
+    [remdiation_plan_action_param_map].[CreateDate] AS [CreateDate], 
+    [remdiation_plan_action_param_map].[ModifiedBy] AS [ModifiedBy], 
+    [remdiation_plan_action_param_map].[ModifiedDate] AS [ModifiedDate], 
+    [remdiation_plan_action_param_map].[TenantId] AS [TenantId]
+    FROM [dbo].[remdiation_plan_action_param_map] AS [remdiation_plan_action_param_map]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__baseline___Basel__469FD34E1" Association="Self.FK__baseline___Basel__469FD34E1">
+      <End Role="Environment_Scan_Metric" EntitySet="Environment_Scan_Metric" />
+      <End Role="Environment_Scan_Metric_Details" EntitySet="Environment_Scan_Metric_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__healthche__Confi__055C1FD6" Association="Self.FK__healthche__Confi__055C1FD6">
+      <End Role="healthcheck_master" EntitySet="healthcheck_master" />
+      <End Role="healthcheck_details" EntitySet="healthcheck_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__healthche__Confi__08388C81" Association="Self.FK__healthche__Confi__08388C81">
+      <End Role="healthcheck_master" EntitySet="healthcheck_master" />
+      <End Role="healthcheck_tracker" EntitySet="healthcheck_tracker" />
+    </AssociationSet>
+    <AssociationSet Name="FK__healthche__Resou__0467FB9D" Association="Self.FK__healthche__Resou__0467FB9D">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="healthcheck_details" EntitySet="healthcheck_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActionId" Association="Self.FK_ActionId">
+      <End Role="action" EntitySet="action" />
+      <End Role="resourcetype_observable_action_map" EntitySet="resourcetype_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActionId_1" Association="Self.FK_ActionId_1">
+      <End Role="action" EntitySet="action" />
+      <End Role="remediation_plan_action_map" EntitySet="remediation_plan_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActionId_2" Association="Self.FK_ActionId_2">
+      <End Role="action" EntitySet="action" />
+      <End Role="resource_observable_action_map" EntitySet="resource_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_Logs_action" Association="Self.FK_Audit_Logs_action">
+      <End Role="action" EntitySet="action" />
+      <End Role="Audit_Logs" EntitySet="Audit_Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Observable_ID" Association="Self.FK_Observable_ID">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="Audit_Logs" EntitySet="Audit_Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableID" Association="Self.FK_ObservableID">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="observable_resource_map" EntitySet="observable_resource_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableId_1" Association="Self.FK_ObservableId_1">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="resourcetype_observable_action_map" EntitySet="resourcetype_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableId_2" Association="Self.FK_ObservableId_2">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="resourcetype_observable_remediation_plan_map" EntitySet="resourcetype_observable_remediation_plan_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableId_3" Association="Self.FK_ObservableId_3">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="resource_observable_remediation_plan_map" EntitySet="resource_observable_remediation_plan_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableId_4" Association="Self.FK_ObservableId_4">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="resourcetype_observable_action_map" EntitySet="resourcetype_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableId_5" Association="Self.FK_ObservableId_5">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="resource_observable_action_map" EntitySet="resource_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservableID3" Association="Self.FK_ObservableID3">
+      <End Role="observable" EntitySet="observable" />
+      <End Role="resourcetype_observable_map" EntitySet="resourcetype_observable_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParamID" Association="Self.FK_ParamID">
+      <End Role="action_params" EntitySet="action_params" />
+      <End Role="remdiation_plan_action_param_map" EntitySet="remdiation_plan_action_param_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RemediationPlanExecId" Association="Self.FK_RemediationPlanExecId">
+      <End Role="remediation_plan_executions" EntitySet="remediation_plan_executions" />
+      <End Role="remediation_plan_execution_actions" EntitySet="remediation_plan_execution_actions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RemediationPlanId" Association="Self.FK_RemediationPlanId">
+      <End Role="remediation_plan" EntitySet="remediation_plan" />
+      <End Role="remediation_plan_action_map" EntitySet="remediation_plan_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RemediationPlanId_1" Association="Self.FK_RemediationPlanId_1">
+      <End Role="remediation_plan" EntitySet="remediation_plan" />
+      <End Role="resourcetype_observable_remediation_plan_map" EntitySet="resourcetype_observable_remediation_plan_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RemediationPlanId_2" Association="Self.FK_RemediationPlanId_2">
+      <End Role="remediation_plan" EntitySet="remediation_plan" />
+      <End Role="resource_observable_remediation_plan_map" EntitySet="resource_observable_remediation_plan_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resource_ID" Association="Self.FK_Resource_ID">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="Audit_Logs" EntitySet="Audit_Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceID" Association="Self.FK_ResourceID">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="observable_resource_map" EntitySet="observable_resource_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceId_1" Association="Self.FK_ResourceId_1">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="resource_dependency_map" EntitySet="resource_dependency_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceID_2" Association="Self.FK_ResourceID_2">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="resource_attributes" EntitySet="resource_attributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceId_3" Association="Self.FK_ResourceId_3">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="resource_observable_remediation_plan_map" EntitySet="resource_observable_remediation_plan_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceId_4" Association="Self.FK_ResourceId_4">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="resource_observable_action_map" EntitySet="resource_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceTId_1" Association="Self.FK_ResourceTId_1">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="resource_observable_action_map" EntitySet="resource_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceTypeId" Association="Self.FK_ResourceTypeId">
+      <End Role="resourcetype" EntitySet="resourcetype" />
+      <End Role="resourcetype_observable_action_map" EntitySet="resourcetype_observable_action_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceTypeId_1" Association="Self.FK_ResourceTypeId_1">
+      <End Role="resourcetype" EntitySet="resourcetype" />
+      <End Role="resourcetype_observable_remediation_plan_map" EntitySet="resourcetype_observable_remediation_plan_map" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceTypeId_4" Association="Self.FK_ResourceTypeId_4">
+      <End Role="resourcetype" EntitySet="resourcetype" />
+      <End Role="resourcetype_metadata" EntitySet="resourcetype_metadata" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceTypeID4" Association="Self.FK_ResourceTypeID4">
+      <End Role="resourcetype" EntitySet="resourcetype" />
+      <End Role="resourcetype_observable_map" EntitySet="resourcetype_observable_map" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

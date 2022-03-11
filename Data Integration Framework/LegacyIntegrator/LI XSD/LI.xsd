@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by avinash (MTC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="LISettings">
+		<xs:annotation>
+			<xs:documentation>Root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DefaultTLSTransport" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Name" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="HostRegion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Region" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Name" type="xs:string"/>
+										<xs:element name="TransportMedium" type="xs:string"/>
+										<xs:element name="TransportName" type="xs:string"/>
+										<xs:element name="CommunicationType" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="IBMMQ">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Connection" minOccurs="0"/>
+							<xs:element name="DllPath" type="xs:string"/>
+							<xs:element name="TypeName" type="xs:string"/>
+							<xs:element name="IBMMQDetails" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Connection" minOccurs="0"/>
+										<xs:element name="TransportName" type="xs:string"/>
+										<xs:element name="ChannelName" type="xs:string"/>
+										<xs:element name="ConnectionName" type="xs:string"/>
+										<xs:element name="Port" type="xs:int"/>
+										<xs:element name="QueueManager" type="xs:string"/>
+										<xs:element name="RequestQueue" type="xs:string"/>
+										<xs:element name="ResponseQueue" type="xs:string"/>
+										<xs:element name="QueueType" type="xs:string"/>
+										<xs:element name="ModelQueueName" type="xs:string"/>
+										<xs:element name="ExpiryTime" type="xs:int"/>
+										<xs:element name="Persistence" type="xs:string"/>
+										<xs:element name="TimeOut" type="xs:int"/>
+										<xs:element name="EnableTrace" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ActiveTimeForConnection" type="xs:int"/>
+							<xs:element name="PoolScanFrequency" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="HIS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DllPath" type="xs:string"/>
+							<xs:element name="TypeName" type="xs:string"/>
+							<xs:element name="EnableTrace" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Connection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ConnectionModel" type="xs:string"/>
+				<xs:element name="Pooling" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MinSize" type="xs:int"/>
+							<xs:element name="MaxSize" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ConnectionTimeOut" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.MemoryDoc.dll.config
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.MemoryDoc.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.MemoryDoc.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.LegacyCommon.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.LegacyIntegratorService.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.LegacyCommon.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.LegacyCommon.xml
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.LegacyIntegratorService.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\bin\Debug\Infosys.Lif.LegacyIntegratorService.xml
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\obj\Debug\MemoryDocAdapter.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\obj\Debug\MemoryDocAdapter.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\obj\Debug\MemoryDocAdapter.csproj.CopyComplete
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\obj\Debug\Infosys.Lif.MemoryDoc.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MemoryDocAdapter\obj\Debug\Infosys.Lif.MemoryDoc.pdb

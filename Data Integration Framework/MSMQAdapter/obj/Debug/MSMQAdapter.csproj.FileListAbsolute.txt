@@ -1,0 +1,7 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\MSMQAdapter\Infosys.Lif.MSMQ.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\MSMQAdapter\Infosys.Lif.MSMQ.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MSMQAdapter\obj\Debug\MSMQAdapter.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MSMQAdapter\obj\Debug\MSMQAdapter.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MSMQAdapter\obj\Debug\MSMQAdapter.csproj.CopyComplete
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MSMQAdapter\obj\Debug\Infosys.Lif.MSMQ.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\MSMQAdapter\obj\Debug\Infosys.Lif.MSMQ.pdb

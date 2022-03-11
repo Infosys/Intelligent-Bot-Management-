@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Migrated rules for CustomLoader.ruleset" Description="This rule set was created from the CodeAnalysisRules property for the &quot;Debug (Any CPU)&quot; configuration in project &quot;D:\TFS\LegacyIntegration\LIF\Code\Framework\DataLoader\CustomLoader\CustomLoader.csproj&quot;." ToolsVersion="10.0">
+  <IncludeAll Action="Warning" />
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CA1400" Action="None" />
+    <Rule Id="CA1401" Action="None" />
+    <Rule Id="CA1402" Action="None" />
+    <Rule Id="CA1403" Action="None" />
+    <Rule Id="CA1404" Action="None" />
+    <Rule Id="CA1405" Action="None" />
+    <Rule Id="CA1406" Action="None" />
+    <Rule Id="CA1407" Action="None" />
+    <Rule Id="CA1408" Action="None" />
+    <Rule Id="CA1409" Action="None" />
+    <Rule Id="CA1410" Action="None" />
+    <Rule Id="CA1411" Action="None" />
+    <Rule Id="CA1412" Action="None" />
+    <Rule Id="CA1413" Action="None" />
+    <Rule Id="CA1414" Action="None" />
+    <Rule Id="CA1415" Action="None" />
+    <Rule Id="CA1600" Action="None" />
+    <Rule Id="CA1601" Action="None" />
+    <Rule Id="CA1900" Action="None" />
+    <Rule Id="CA1901" Action="None" />
+  </Rules>
+</RuleSet>

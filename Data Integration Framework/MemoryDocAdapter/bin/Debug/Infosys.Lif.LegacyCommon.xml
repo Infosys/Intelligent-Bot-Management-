@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infosys.Lif.LegacyCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Infosys.Lif.LegacyCommon.LegacyException">
+            <summary>
+            Represent application exception thrown from legacy integration 
+            framework.
+            </summary>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.LegacyException.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.LegacyException.#ctor(System.String)">
+            <summary>
+            Initializes with a specified error message. 
+            </summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.LegacyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes with a specified error 
+            message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.
+            </param>
+            <param name="exception">The exception that is the cause of the current exception. 
+            If the innerException parameter is not a null reference, the current exception 
+            is raised in a catch block that handles the inner exception.
+            </param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.LegacyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes with serialized data.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.
+            </param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.QueueNotRespondedException.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.QueueNotRespondedException.#ctor(System.String)">
+            <summary>
+            Initializes with a specified error message. 
+            </summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.QueueNotRespondedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes with a specified error 
+            message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.
+            </param>
+            <param name="exception">The exception that is the cause of the current exception. 
+            If the innerException parameter is not a null reference, the current exception 
+            is raised in a catch block that handles the inner exception.
+            </param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.QueueNotRespondedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes with serialized data.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.
+            </param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.LifLogHandler.LogDebug(System.String,Infosys.Lif.LegacyCommon.LifLogHandler.Layer,System.Object[])">
+            <summary>
+            Log debug statements in the application
+            </summary>
+            <param name="message">Message to be logged</param>
+            <param name="applicationLayer">Is the architecture layer of the application in which the debug statements have to be placed</param>
+            <param name="messageArguments">Optional. Arguments to assign dynamic values for the placeholders in the message</param>
+        </member>
+        <member name="M:Infosys.Lif.LegacyCommon.LifLogHandler.LogError(System.String,Infosys.Lif.LegacyCommon.LifLogHandler.Layer,System.Object[])">
+            <summary>
+            Log errors in the application
+            </summary>
+            <param name="message">Message to be logged</param>
+            <param name="applicationLayer">Is the architecture layer of the application in which the debug statements have to be placed</param>
+            <param name="messageArguments">Optional. Arguments to assign dynamic values for the placeholders in the message</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,53 @@
+.update-btn{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: center;
+    border-color: #007cc3;
+    border: 1px solid #007cc3;
+    color:#007cc3;
+    width:auto;
+    height:30px;
+    background-color: white;
+    border-radius: 2px; 
+    cursor: pointer;
+  }
+
+  :host /deep/ input:disabled {
+    color: #007cc3;
+    cursor: default;
+    border-color:black;
+}
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 400px;
+
+
+}
+select {
+  color: #333333;
+  font-size: 13px;
+  font-weight: 400px;
+  min-width: 280px;
+  min-height:35px;
+  border: 1px solid #ced4da;
+  /* border: #83838E */
+}
+.add-btn{
+  margin-top: 30px;
+  margin-left: 66px;
+  background-color:#007cc3;
+  color:white;
+  width:auto;
+  height:30px;
+  border:none;
+  border-radius: 2px; 
+  cursor: pointer;
+  font-size: 13px;
+}
+button:focus , select:focus{
+  outline: none;
+}

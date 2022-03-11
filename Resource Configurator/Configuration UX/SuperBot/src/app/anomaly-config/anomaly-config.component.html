@@ -1,0 +1,218 @@
+<app-loader *ngIf="isLoader"></app-loader>
+<div class="container-fluid box-size" style="background-color: white;   ">
+    <div style="background-color: white;">
+        <div>
+            <label style="margin-top: 10px;font-size: 14px;
+            font-weight: 600;" class="semi-bold">Anomaly Configuration</label>
+            <button class="add-btn" style="float: right;margin-top:10px;
+        margin-right: 10px; " *ngIf="isUpdateType"
+                (click)="togglePageType(false)">Create New</button>
+
+        </div>
+    </div>
+    <form #resourceForm="ngForm">
+
+
+        <div class="row" style="margin-top:5px">
+
+                
+                <div class="col-4">
+                        <div class="form-group">
+                            <label for="name">Platform Instance Name</label>
+                            <input  *ngIf="isUpdateType" class="form-control" name="remediationPlanName" 
+                                type="text">
+                                <select  (change)="onChangePlatform($event.target.value)" class="form-control"
+                                name="platformname">
+                                <option value=""></option>
+                                <option value="{{platform.id}}" *ngFor="let platform of platfromArray">{{platform.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="name">Metric Name</label>
+                    <input  *ngIf="isUpdateType" class="form-control" name="remediationPlanName" 
+                        type="text">
+                        <select  (change)="onChangeObs($event.target.value)" class="form-control"
+                        name="observablename">
+                        <option value=""></option>
+                        <option value="{{obs | json}}" *ngFor="let obs of obsarray">{{obs.observablename}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="name">Resource Type</label>
+                    <!-- <input  *ngIf="isUpdateType" class="form-control" name="resourcetype" 
+                        type="text"> -->
+                    <select  *ngIf="!isUpdateType" (change)="onChangeType($event.target.value)" class="form-control"
+                        name="resourcetype" id="resourcetype">
+                        <option value="0"></option>
+                        <option value="{{res | json}}" *ngFor="let res of restypearr">{{res.resourcetypename}}</option>
+                       
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row" style="margin-top:5px">
+            <div class="col-4">
+               
+            </div>
+            <div class="col-4">
+                
+            </div>
+        </div> -->
+        <div class="row" style="margin-top:10px">
+            <div class="col-12">
+                <!-- <div class="semi-bold"> Action Details</div> -->
+            </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+            <div class="col-4">
+                <label for="name">Resource Name</label>
+
+                <ng-multiselect-dropdown
+                name="dropdownList"
+                [placeholder]="''"
+                [data]="dropdownList"
+                [(ngModel)]="selectedItems"
+                [settings]="dropdownSettings"
+                (onSelect)="onItemSelect($event)"
+                (onSelectAll)="onSelectAll($event)"
+              >
+              </ng-multiselect-dropdown>
+                <!-- <select  (change)="onChangeAction($event.target.value)"  class="form-control"
+                            name="actionname">
+                            <option value="">All</option>
+                           <option value="{{res.id}}" *ngFor="let res of resourceList">{{res.name}}</option>
+                        </select> -->
+              
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="name">Operand</label>
+                    <select class="form-control" name="operand" [(ngModel)]="addConfig.Operator">
+                        <option value="=">=</option>
+                        <option value=">">></option>
+                        <option value="!=">!=</option>
+
+                        <option value="&lt;">&lt;</option>
+                        <option value="Between" >Between</option>
+                    </select>
+                 
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="name">Lower Threshold</label>
+                    <input   class="form-control" [(ngModel)]="addConfig.LowerThreshold" name="LowerThreshold" 
+                        type="text">
+                 
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="name">Upper Threshold</label>
+                    <input   class="form-control" name="upperthreshold" [(ngModel)]="addConfig.UpperThreshold"
+                        type="text">
+                 
+                </div>
+            </div>
+           
+           
+            <div class="col-2">
+                <div style="    margin-top: 31px;margin-left:56px">
+                    <i style="cursor: pointer;" (click)="addConfiguration()" class="img-add "></i>
+                </div>
+            </div>
+        </div>
+       
+               
+
+        <div style="height:474px;width:1000px;margin-left: 5px; overflow-y: auto">
+            <ng2-smart-table [settings]="settings" (custom)="onEditRowSelect($event)"  [source]="source"  (selectionChanged)="onSelectionChanged($event)" 
+           ></ng2-smart-table> 
+        
+          </div>
+        <!-- <div class="row" style="margin-top:0px;margin-bottom: 0px">
+            <div class="col-12">
+                <button (click)="saveRemediationPlan()" class="float-right btn-border">Save</button>
+                <button (click)="togglePageType(false)" class="float-right update-btn">Cancel</button>
+                <button (click)="reset()" *ngIf="!isUpdateType" class="float-right update-btn">Reset</button>
+                <button (click)="onDelete()" *ngIf="isUpdateType" class="float-right update-btn">Delete</button>
+            </div>
+        </div> -->
+        </form>
+
+      
+        </div>
+        <div class="modal fade" id="resouceModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="    width: 600px;">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="font-size: 14px; font-weight: 600;" id="exampleModalLabel">Update Configuration</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div style="margin-left:10px">
+
+                    
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-12">
+                                <div class="form-group float-left">
+                            <label for="name">Resource Name</label>
+                           <input   style="width: 261px;" type="text" [(ngModel)]="configuration.ResourceName" class="form-control" disabled>
+                          </div>
+                           <div class="form-group float-left" style="margin-left:20px">
+                            <label for="name">Metric Name </label>
+                           <input style="width: 261px;" type="text" [(ngModel)]="configuration.ObservableName" class="form-control" disabled>
+                          
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                                <div class="form-group float-left">
+                                        <label for="name">Operand</label>
+                                        <select class="form-control" [(ngModel)]="configuration.Operator">
+                                            <option [selected]="configuration.Operator =='='" value="=">=</option>
+                                            <option [selected]="configuration.Operator =='>'" value=">">></option>
+                                            <option [selected]="configuration.Operator =='!='" value="!=">!=</option>
+                                            <option [selected]="configuration.Operator =='&lt;'" value="&lt;">&lt;</option>
+                                            <option [selected]="configuration.Operator =='Between'" value="Between">Between</option>
+                                        </select>
+                                     
+                                    </div>
+                                <div class="form-group float-left" style="margin-left:10px">
+                                        <label for="name">Lower Threshold</label>
+                                        <input   class="form-control" [(ngModel)]="configuration.LowerThreshold" name="LowerThreshold_p" 
+                                            type="text">
+                                     
+                                    </div>
+                            <div class="form-group float-left" style="margin-left:10px" >
+                                <label for="name">Upper Threshold</label>
+                                <input  class="form-control" [(ngModel)]="configuration.UpperThreshold" name="UpperThreshold_p" 
+                                    type="text">
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="row">
+                        <div class="col-12">
+                            
+                        </div>
+                    </div> -->
+                </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class=" update-btn" data-dismiss="modal">Close</button>
+                  <button type="button" (click)="deleteAnomalyRulesConfiguration()" class="btn-border">Delete</button>
+                  <button type="button" (click)="updateAnomalyRulesConfiguration()" class=" btn-border">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>

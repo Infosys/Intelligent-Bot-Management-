@@ -1,0 +1,28 @@
+$ServiceTemplate
+	<!-- Service config details for "##ServiceName##" Service -->
+	<Service>
+      <ServiceName>##ServiceName##</ServiceName>
+      <!-- Caching Details for the service -->
+      <CacheEnabled>ON</CacheEnabled>
+	  <CacheIdentifier>Id</CacheIdentifier>
+	  <!-- Provide the full type and path of the serializer class to be used -->
+      <SerializerClass>##RelativePath##\Release\##SerializerRootNameSpace##.dll</SerializerClass>
+      <SerializerType>##SerializerNameSpace##.##SerializerName##Serializer</SerializerType>
+      <!-- Host region name -->
+      <RegionName>TEST</RegionName>
+    </Service>  
+$end<?xml version="1.0" encoding="UTF-8"?>
+<LegacySettings>
+  <Services>
+	##ServiceTemplatesFilled##
+  </Services>
+  
+  <!-- provide the full type and path of the wrapper class to be used -->
+  <Wrapper>	
+    <WrapperType>Infosys.Lif.MessageWrapper.ProtocolHandler</WrapperType>
+    <WrapperClass>##RelativePath##\References\LegacyFacade\Infosys.Lif.MessageWrapper.dll</WrapperClass>
+  </Wrapper>  
+  
+  <!-- Set "OFF" / "ON" to enable Performance Counter -->
+  <EnablePerformanceCounters>OFF</EnablePerformanceCounters>
+</LegacySettings>

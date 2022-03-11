@@ -1,0 +1,196 @@
+$MethodTemplate
+		/// <summary>
+        /// Dependancy preoperty to contain User ID
+        /// </summary>
+		public static DependencyProperty UserIDProperty = 
+			System.Workflow.ComponentModel.DependencyProperty.Register("UserID", typeof(string), 
+			typeof(##ContractName##));
+
+        [Description("User ID")]
+        [Category("##ContractName##")]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string UserID
+        {
+            get
+            {
+                return ((string)(base.GetValue(##ContractName##.UserIDProperty)));
+            }
+            set
+            {
+                base.SetValue(##ContractName##.UserIDProperty, value);
+            }
+        }      
+        
+        /// <summary>
+        /// Dependancy preoperty to contain Application ID
+        /// </summary>
+        public static DependencyProperty ApplicationIDProperty = 
+			System.Workflow.ComponentModel.DependencyProperty.Register("ApplicationID", typeof(string), 
+			typeof(##ContractName##));
+
+        [Description("Application ID")]
+        [Category("##ContractName##")]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string ApplicationID
+        {
+            get
+            {
+                return ((string)(base.GetValue(##ContractName##.ApplicationIDProperty)));
+            }
+            set
+            {
+                base.SetValue(##ContractName##.ApplicationIDProperty, value);
+            }
+        }        
+        
+        /// <summary>
+        /// Dependancy preoperty to contain contract details
+        /// </summary>
+        public static DependencyProperty Default1Property = 
+			System.Workflow.ComponentModel.DependencyProperty.Register("Default1", typeof(string), 
+			typeof(##ContractName##));
+
+        [Description("Default1")]
+        [Category("##ContractName##")]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string Default1
+        {
+            get
+            {
+                return ((string)(base.GetValue(##ContractName##.Default1Property)));
+            }
+            set
+            {
+                base.SetValue(##ContractName##.Default1Property, value);
+            }
+        }
+        
+         /// <summary>
+        /// Dependancy preoperty to contain contract details
+        /// </summary>
+        public static DependencyProperty Default2Property = 
+        System.Workflow.ComponentModel.DependencyProperty.Register("Default2", typeof(string), 
+			typeof(##ContractName##));
+
+        [Description("Default2")]
+        [Category("##ContractName##")]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string Default2
+        {
+            get
+            {
+                return ((string)(base.GetValue(##ContractName##.Default2Property)));
+            }
+            set
+            {
+                base.SetValue(##ContractName##.Default2Property, value);
+            }
+        }  
+        
+        private ContractEntity.##ContractEntityName## objContractEntity = new ContractEntity.##ContractEntityName##();
+        ContractEntity.##ContractEntityName## obj##ContractEntityName## = new ContractEntity.##ContractEntityName##();
+        
+        /// <summary>
+        /// contract entity to send request to host
+        /// </summary>
+        public ContractEntity.##ContractEntityName## contractEntity
+        {
+            get { return objContractEntity; }
+            set { objContractEntity = value; }
+        }
+        
+        /// <summary>
+        /// contract entity to receive response from the host
+        /// </summary>
+        public ContractEntity.##ContractEntityName## receivedResponse##ContractEntityName##
+        {
+            get { return objContractEntity; }
+            set { objContractEntity = value; }
+        }
+        
+        /// <summary>
+        /// Execute the Activity
+        /// </summary>
+        /// <param name="executionContext"></param>
+        /// <returns> execution status as closed </returns>
+        protected override ActivityExecutionStatus Execute(ActivityExecutionContext executionContext)
+        {
+			LegacyEvent legacyEvent##ContractEntityName## = new LegacyEvent();
+			legacyEvent##ContractEntityName##.ResponseReceived += 
+				new RequestDelegate(legacyEvent##ContractEntityName##_ResponseReceivedSync);
+
+			//create request parameter and add it to request collection
+			RequestParameters requestParameters = new RequestParameters();
+			requestParameters.RequestCollection.Add("ServiceName", "##ServiceName##");
+            
+			try
+			{
+				//call method to execute the specified transaction on the host
+				ServiceManager.Execute(legacyEvent##ContractEntityName##, ServiceManager.ProcessMode.WaitForAll,
+					"##ServiceName##", contractEntity, requestParameters);
+			}
+			catch(Exception exc)
+			{
+				// Handle the exception
+				throw exc;
+			}
+
+			//get the response from host.
+			obj##ContractEntityName## = receivedResponse##ContractEntityName##;
+            return ActivityExecutionStatus.Closed;
+        }
+        
+        /// <summary>
+        /// call the "##ServiceName##" service synchronously
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="responses"></param>
+		private void legacyEvent##ContractEntityName##_ResponseReceivedSync(object sender, 
+			Infosys.Lif.LegacyFacade.RequestDelegateArgs responses)
+		{
+			receivedResponse##ContractEntityName## = 
+				(ContractEntity.##ContractEntityName##)responses.Response["##ServiceName##"];
+		}
+$NameSpacesImport
+//import contract data entity namespace
+using ContractEntity = ##ContractEntityNamespace##;
+$end
+/******************************************************************************
+This class was code generated by Legacy Workbench.
+
+This class defines the WorkFlow Activity which will invoke the transaction 
+from the host with input parameters and will return response.
+
+Copyright (c) 2003 - 2005 Infosys Technologies Ltd. All Rights Reserved.
+******************************************************************************/
+
+using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+
+using Infosys.Lif.LegacyFacade;
+using Infosys.Lif.LegacyParameters;
+##ImportsFilled##
+
+namespace ##HostAccessNameSpace##
+{	
+	/// <summary>
+    /// This class contains work flow activity to perform the transaction on the host
+    /// </summary>
+    public partial class ##ContractName## : System.Workflow.ComponentModel.Activity
+    {
+        ##MethodBodies##
+    }
+}

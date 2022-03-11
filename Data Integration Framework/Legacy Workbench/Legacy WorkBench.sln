@@ -1,0 +1,70 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyWorkBench", "LegacyWorkBench\LegacyWorkBench.csproj", "{3540248C-0421-43C2-9D20-9759FB94E2DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyParserComponents", "LegacyParserComponents\LegacyParserComponents.csproj", "{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F} = {6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyParserFramework", "LegacyParserFramework\LegacyParserFramework.csproj", "{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Legacy WorkBench", "Legacy WorkBench Install\Legacy WorkBench Install.vdproj", "{2A829ECC-56BC-4DBF-AEEF-298FE87075CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497} = {AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}
+		{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F} = {6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyWorkBenchReportHandler", "LegacyWorkbenchReportHandler\LegacyWorkBenchReportHandler.csproj", "{179C3203-ED67-44E9-97DC-862D1587FDE2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://catit01:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LegacyWorkBench\\LegacyWorkBench.csproj
+		SccProjectName1 = LegacyWorkBench
+		SccLocalPath1 = LegacyWorkBench
+		SccProjectUniqueName2 = LegacyParserComponents\\LegacyParserComponents.csproj
+		SccProjectName2 = LegacyParserComponents
+		SccLocalPath2 = LegacyParserComponents
+		SccProjectUniqueName3 = LegacyParserFramework\\LegacyParserFramework.csproj
+		SccProjectName3 = LegacyParserFramework
+		SccLocalPath3 = LegacyParserFramework
+		SccProjectUniqueName4 = Legacy\u0020WorkBench\u0020Install\\Legacy\u0020WorkBench\u0020Install.vdproj
+		SccProjectName4 = Legacy\u0020WorkBench\u0020Install
+		SccLocalPath4 = Legacy\u0020WorkBench\u0020Install
+		SccProjectUniqueName5 = LegacyWorkbenchReportHandler\\LegacyWorkBenchReportHandler.csproj
+		SccProjectName5 = LegacyWorkbenchReportHandler
+		SccLocalPath5 = LegacyWorkbenchReportHandler
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3540248C-0421-43C2-9D20-9759FB94E2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3540248C-0421-43C2-9D20-9759FB94E2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3540248C-0421-43C2-9D20-9759FB94E2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3540248C-0421-43C2-9D20-9759FB94E2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE38FBDC-D0FC-448E-AC7C-71EEA7DED497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6AC2FA-FF80-4881-89F9-7918F7DA1B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A829ECC-56BC-4DBF-AEEF-298FE87075CB}.Debug|Any CPU.ActiveCfg = Debug
+		{2A829ECC-56BC-4DBF-AEEF-298FE87075CB}.Debug|Any CPU.Build.0 = Debug
+		{2A829ECC-56BC-4DBF-AEEF-298FE87075CB}.Release|Any CPU.ActiveCfg = Release
+		{179C3203-ED67-44E9-97DC-862D1587FDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179C3203-ED67-44E9-97DC-862D1587FDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179C3203-ED67-44E9-97DC-862D1587FDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179C3203-ED67-44E9-97DC-862D1587FDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

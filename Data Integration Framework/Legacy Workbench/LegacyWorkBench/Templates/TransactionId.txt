@@ -1,0 +1,6 @@
+$ServiceElement
+	<!-- Provide mapping of the service to a transaction ID on host.
+    <Services ServiceName="##ServiceName##" TransactionId="##TransactionId##" xmlns="##ContractXml##ServiceTransactionMap" />$end<?xml version="1.0"?>
+<TransactionIdConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+##ServicesFilled##
+</TransactionIdConfiguration>

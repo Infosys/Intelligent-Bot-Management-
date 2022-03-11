@@ -1,0 +1,10 @@
+namespace ##SerializerNameSpace##.TestCases
+{
+	public class ##SerializerClassName##
+	{
+		public bool Test()
+		{
+			##ItemFilled##
+		}
+	}
+}

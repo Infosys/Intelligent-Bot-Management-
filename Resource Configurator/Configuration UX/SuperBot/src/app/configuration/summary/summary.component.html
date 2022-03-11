@@ -1,0 +1,146 @@
+<div style="width:100%;height:50px">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h5 class="modal-title bold" style="margin-bottom: 2px;" id="summaryModelLabel">Summary</h5>
+  <div style="float:left;width:400px;height:20px">
+    <label>Platform: {{summary[0].platformname}}</label>
+  </div>
+  <div class="form-group float-left" style="height:60px;    margin-top: -3px;" >
+    <div class="float-left " style="    margin-right: 20px;margin-top: 6px;">
+      <!-- <p>{{summary[0].resourcemodeldetails[0].resourcetypename}}</p> -->
+    </div>
+    <div class="float-right">
+      <select class="form-control" style="width: 335px;margin-right: 20px;" *ngIf="summary[0].resourcemodeldetails != undefined" (change)="onChangeParent($event.target.value)">
+        <option value="{{model.resourcename}}" *ngFor="let model of  summary[0].resourcemodeldetails">{{model.resourcename}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+
+  <!-- <div style="float:right;width:200px">
+
+  </div> -->
+</div>
+<div style="width:900px">
+
+
+  <div style="width:450px;float:left;margin-left:-2px">
+
+    <div class="border-box" *ngIf="childdetails[0] != undefined">
+      <label style="margin-left: 10px" class="bold"  data-toggle="tooltip" data-placement="top" title="{{childdetails[0].resourcetypename}} ({{childdetails[0].resourcetypedetails.length}})" >{{childdetails[0].resourcetypename}} ({{childdetails[0].resourcetypedetails.length}})
+      </label>
+
+      <div class="inner-box" style="margin-left: 50px" *ngIf="childdetails[0].resourcetypedetails != undefined">
+        <p  *ngFor="let ele of childdetails[0].resourcetypedetails" (click)="sendMessage(summary[0].resourcemodeldetails[0].resourcetypeid,summary[0].resourcemodeldetails[0].resourceid,summary[0].resourcemodeldetails[0].resourcetypename,ele.resourceid)"><a href="#top"    data-toggle="tooltip" data-placement="top" title="{{ele.resourcename}}" >{{ele.resourcename}}</a> </p>
+      </div>
+
+
+
+    </div>
+
+    <div  *ngFor="let obj of resourcedetails">
+      <div class="border-box" *ngIf="obj.resourcetypename != 'Bot Runner'">
+          <div style="margin-left:10px" >
+              <span class="bold"  data-toggle="tooltip" data-placement="top" title="{{obj.resourcetypename}} ({{obj.details.length}})" >{{obj.resourcetypename}} ({{obj.details.length}})</span>
+      
+            <div class="border-div">
+      
+              <ul class="nav nav-list " *ngFor="let det of obj.details">
+                <div>
+                  <li class="nav-header" data-toggle="collapse" attr.data-target="#{{det.resourcename}}_{{obj.resourcetypename}}">
+                    <span [style.margin-left.px]="(det.childdetails != undefined && det.childdetails.length > 0)?'0':'18'" > <i class="plus-list" id="{{det.resourcename}}_{{obj.resourcetypename}}i" (click)="toggledetails(det.resourcename,obj.resourcetypename)"
+                        *ngIf="det.childdetails != undefined && det.childdetails.length > 0"> </i>&nbsp;  <a href="#top"> <span (click)="sendMessage(obj.resourcetypeid,det.resourceid,obj.resourcetypename,0)" data-toggle="tooltip" data-placement="top" title="{{det.resourcename}}" >{{det.resourcename}}</span> </a></span>
+      
+                    <div id="{{det.resourcename}}_{{obj.resourcetypename}}" style="display: none">
+      
+                      <div style="width:200px;float:left" *ngFor="let child  of det.childdetails">
+                        <!-- <span class="bold" > &nbsp;{{child.resourcetypename}} ({{child.resourcetypedetails.length}})</span>
+                        <br />
+                        <ul class="nav nav-list ">
+      
+      
+                          <li style="margin-left:20px" *ngFor="let ele of child.resourcetypedetails">{{ele.resourcename}}</li>
+      
+                        </ul> -->
+
+                        <table style="width:200px;float:left">
+                          <tr>
+                            <td data-toggle="tooltip"   data-placement="top" title="{{child.resourcetypename}} ({{child.resourcetypedetails.length}})">{{child.resourcetypename}} ({{child.resourcetypedetails.length}})</td>
+                          </tr>
+                            <tr *ngFor="let ele of child.resourcetypedetails">
+                              <td *ngIf="!child.ismainentiy" (click)="sendMessage(obj.resourcetypeid,det.resourceid,obj.resourcetypename,ele.resourceid)" data-toggle="tooltip" data-placement="top" title="{{ele.resourcename}}" ><a href="#top"> {{(ele.resourcename.length >18)?(ele.resourcename | slice:0:15)+'..':ele.resourcename }}</a>  </td>
+                              <td *ngIf="child.ismainentiy" (click)="sendMessage(child.resourcetypeid,ele.resourceid,child.resourcetypename,ele.resourceid)"  data-toggle="tooltip" data-placement="top" title="{{ele.resourcename}}" ><a href="#top"> {{(ele.resourcename.length >18)?(ele.resourcename | slice:0:15)+'..':ele.resourcename }}</a>  </td>
+                            
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    </div>
+      
+      
+                  </li>
+                </div>
+      
+              </ul>
+            </div>
+      
+           </div>
+      </div>
+     
+    </div>
+
+  </div>
+  <div style="width:450px;float:right;">
+      <div  *ngFor="let obj of resourcedetails">
+        <div class="run-box" *ngIf="obj.resourcetypename == 'Bot Runner'">
+            <div style="margin-left:10px" >
+                <span class="bold"  data-toggle="tooltip" data-placement="top" title="{{obj.resourcetypename}} ({{obj.details.length}})"  >{{obj.resourcetypename}} ({{obj.details.length}})</span>
+        
+              <div class="run-inner">
+        
+                <ul class="nav nav-list " *ngFor="let det of obj.details">
+                  <div>
+                    <li class="nav-header" data-toggle="collapse" attr.data-target="#{{det.resourcename}}_{{obj.resourcetypename}}">
+                      <span  [style.margin-left.px]="(det.childdetails != undefined && det.childdetails.length > 0)?'0':'18'" > <i class="plus-list" id="{{det.resourcename}}_{{obj.resourcetypename}}i" (click)="toggledetails(det.resourcename,obj.resourcetypename)"
+                          *ngIf="det.childdetails != undefined && det.childdetails.length > 0"> </i>&nbsp; <a href="#top"> <span (click)="sendMessage(obj.resourcetypeid,det.resourceid,obj.resourcetypename,'0')" data-toggle="tooltip" data-placement="top" title="{{det.resourcename}}">{{det.resourcename}}</span> </a>  </span>
+        
+                      <div id="{{det.resourcename}}_{{obj.resourcetypename}}" style="display: none">
+        
+                        <div style="width:200px;float:left" *ngFor="let child  of det.childdetails">
+                          <!-- <span class="bold" > &nbsp;{{child.resourcetypename}} ({{child.resourcetypedetails.length}})</span>
+                          <br />
+                          <ul class="nav nav-list ">
+        
+        
+                            <li style="margin-left:20px" *ngFor="let ele of child.resourcetypedetails">{{ele.resourcename}}</li>
+        
+                          </ul> -->
+                          <table style="width:200px;float:left">
+                            <tr>
+                              <td data-toggle="tooltip" data-placement="top" title="{{child.resourcetypename}} ({{child.resourcetypedetails.length}})">{{child.resourcetypename}} ({{child.resourcetypedetails.length}})</td>
+                            </tr>
+                              <tr *ngFor="let ele of child.resourcetypedetails">
+                                <td *ngIf="!child.ismainentiy" (click)="sendMessage(obj.resourcetypeid,det.resourceid,obj.resourcetypename,ele.resourceid)" data-toggle="tooltip" data-placement="top" title="{{ele.resourcename}}"><a href="#top"> {{(ele.resourcename.length >18)?(ele.resourcename | slice:0:15)+'..':ele.resourcename }}</a>  </td>
+                                <td *ngIf="child.ismainentiy" (click)="sendMessage(child.resourcetypeid,ele.resourceid,child.resourcetypename,ele.resourceid)"  data-toggle="tooltip" data-placement="top" title="{{ele.resourcename}}" ><a href="#top"> {{(ele.resourcename.length >18)?(ele.resourcename | slice:0:15)+'..':ele.resourcename }}</a>  </td>
+                              </tr>
+                            
+                          </table>
+                        </div>
+                      </div>
+        
+        
+                    </li>
+                  </div>
+        
+                </ul>
+              </div>
+        
+             </div>
+        </div>
+          
+         </div>
+  </div>
+</div>
+

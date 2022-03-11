@@ -1,0 +1,17 @@
+$DataItem
+							<xs:element name="##Name##" type="xs:##Type##">
+								<xs:annotation>
+									<xs:documentation>Documentation for ##Name## which is of item type ##Type##</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+$end
+<xs:schema elementFormDefault="qualified" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="##XsdNameSpace##" 
+targetNamespace="##XsdNameSpace##" 
+id="##DataEntityName##" >
+	<xs:complexType name="##DataEntityName##">
+		<xs:sequence>
+		##DataItems##
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

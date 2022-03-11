@@ -1,0 +1,132 @@
+﻿<!--
+   - © 2012-2013 Infosys Limited, Bangalore, India. All Rights Reserved.
+   - Version: 1.0 b
+   - Except for any open source software components embedded in this Infosys proprietary software program ("Program"),
+   - this Program is protected by copyright laws, international treaties and other pending or existing intellectual
+   - property rights in India, the United States and other countries. Except as expressly permitted, any unauthorized
+   - reproduction, storage, transmission in any form or by any means (including without limitation electronic, mechanical,
+   - printing, photocopying, recording or otherwise), or any distribution of this Program, or any portion of it, may
+   - results in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<style>
+		.underLine
+		{
+			background-color:#077DBB;
+			height:10px;
+			width:100%;
+			margin-top:40px;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+		.mailContainer
+		{			
+			font-family: 'Open Sans';
+            font-size: 14px;
+            color: #333333;
+			margin-left:50px;
+			margin-right:50px;
+			margin-top:40px;
+			margin-bottom:40px;
+			line-height: 20px;			
+			
+		}		
+		.highlightedText
+		{ 
+			font-size: 14px;
+			font-weight:bold;
+            color: #FF1B41;
+			
+		}
+		.anomalyReason
+		{
+			background-color:#FF5252;
+			width:100%;
+			height:45px;
+			font-weight:bold;
+			color:#F4F4F4;
+			margin-bottom:25px;
+			border-radius:4px;
+			
+		}
+		table {            
+            font-size: 14px;
+            color: #333333;            
+            width: 100%;
+			border-collapse: collapse;            
+			border-radius:2px;
+        }
+		table td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 15px;
+            }
+		.signature {
+            margin-top: 40px;
+			margin-bottom: 40px;
+        }
+	</style>
+</head>
+<body>
+	<div class="rootContainer" style="position:relative;">
+		<div class="mailContainer">
+			<div  style="margin-bottom:30px;">
+                    Dear <span id="recipientDisplayName">##recipient##</span>,
+            </div>
+            <div style="margin-bottom:30px;">
+                An Anomaly has been detected in <span id="resourceDetails" class="highlightedText">##Bot - Bot name##</span> while monitoring the <span id="ObservableName" class="highlightedText">##observable name##</span>. No remediation plan has been configured for the anomaly detected, hence you are requested to <span class="highlightedText">##take manual action##</span> to fix the issue observed by Superbot.<br /> In order for Superbot to effectively fix anomalies, configure the remediation plans for any new anomalies detected.
+            </div>
+			<div class="anomalyReason">
+				<div class="anomalyReason">
+                    <img src="D:\faceAPI\Superbot\components\Superbot\Processes\Templates\error-icon.png" alt="errSymbol" align="middle" style="padding:7px;" /> &#160;&#160;&#160; Anomaly detected reason: <span id="reason">##Bot execution failed##</span>
+				</div>
+            </div>
+			<div style="margin-bottom:8px">
+				Please find below the details of the anomaly for reference.
+			</div>
+			<table>
+                <tr>
+                    <td>Tenant name</td>
+                    <td id="TenantName">Infosys</td>
+                </tr>
+                <tr>
+                    <td>Platform name</td>
+                    <td id="PlatformName">Automation Anywhere Enterprise</td>
+
+                </tr>
+                <tr>
+                    <td>Observable name</td>
+                    <td id="ObservableName">Bot</td>
+
+                </tr>
+                <tr>
+                    <td>Observation status</td>
+                    <td id="ObservationStatus" class="highlightedText">FAILED</td>
+
+                </tr>
+                <tr>
+                    <td>Anomaly reference number</td>
+                    <td id="ObservationId" class="highlightedText">1141</td>
+
+                </tr>
+                <tr>
+                    <td id="notificationDescription" colspan="2">###Description###</td>
+
+                </tr>
+            </table>
+			<div class="signature">
+				Thanks and Regards,<br />
+				Infosys SuperBot<br />
+				<img style="margin-top:20px" src="D:\faceAPI\Superbot\components\Superbot\Processes\Templates\logo.png" alt="InfosysLogo"/>
+            </div>			
+		</div>
+		<div class="underLine"></div>
+	</div>
+</body>
+</html>
+
+

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Infosys.Lif.LegacyFacade.RegionHandler">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>RegionHandler.cs</FileName>
+      <HashCode>AAAEAEAAAAAIAAAAAAAAAAAACAAAAACAAAEBAAAAAAE=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="regions" Hidden="true" />
+      <Field Name="requestCounter" Hidden="true" />
+      <Field Name="response" Hidden="true" />
+      <Field Name="responseEvent" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="Infosys.Lif.LegacyFacade.RegionHandler.RegionDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>RegionHandler.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyFacade.RequestHandler">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RequestHandler.cs</FileName>
+      <HashCode>ADCkAEAAIAAAEIQAAAAEIAAAACgAIAAAkkCAAIAAAGA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="parserCount" Hidden="true" />
+      <Field Name="position" Hidden="true" />
+      <Field Name="region" Hidden="true" />
+      <Field Name="requestArray" Hidden="true" />
+      <Field Name="requestParameters" Hidden="true" />
+      <Field Name="requests" Hidden="true" />
+      <Field Name="requestString" Hidden="true" />
+      <Field Name="response" Hidden="true" />
+      <Field Name="responseArray" Hidden="true" />
+      <Field Name="responseObjects" Hidden="true" />
+      <Field Name="responseString" Hidden="true" />
+      <Field Name="service" Hidden="true" />
+      <Field Name="wrap" Hidden="true" />
+      <Field Name="wrapper" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyFacade.ServiceManager">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ServiceManager.cs</FileName>
+      <HashCode>AAIQgACAoAAAAAQABAAAKCBAEABAAAAAACEAAAAAAAk=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="count" Hidden="true" />
+      <Field Name="inputCounter" Hidden="true" />
+      <Field Name="legacySettings" Hidden="true" />
+      <Field Name="outputCounter" Hidden="true" />
+      <Field Name="position" Hidden="true" />
+      <Field Name="regions" Hidden="true" />
+      <Field Name="requestCounter" Hidden="true" />
+      <Field Name="responseList" Hidden="true" />
+      <Field Name="serviceCollection" Hidden="true" />
+      <Field Name="totalExecuteList" Hidden="true" />
+      <Field Name="waitForAllEvent" Hidden="true" />
+      <Field Name="waitForNoneEvent" Hidden="true" />
+      <Field Name="wrap" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Infosys.Lif.LegacyFacade.ServiceManager.ProcessMode">
+        <TypeIdentifier>
+          <NewMemberFileName>ServiceManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyFacade.RequestDelegateArgs">
+    <Position X="2.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ServiceManager.cs</FileName>
+      <HashCode>AAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="response" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Infosys.Lif.LegacyFacade.LegacyEvent">
+    <Position X="0.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ServiceManager.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infosys.Lif.MessageWrapper.ProtocolHandler">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Infosys.Lif.LegacyFacade.ResponseCollection">
+    <Position X="4.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ServiceManager.cs</FileName>
+      <HashCode>QAIAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAgAABABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Infosys.Lif.WrapperInterface.IWrapper">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Delegate Name="Infosys.Lif.LegacyFacade.RequestDelegate" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ServiceManager.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAE=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+</ClassDiagram>

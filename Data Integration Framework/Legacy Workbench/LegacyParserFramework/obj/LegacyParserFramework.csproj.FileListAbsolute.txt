@@ -1,0 +1,14 @@
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\LegacyParserFramework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\LegacyParserFramework.pdb
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\obj\Debug\ResolveAssemblyReference.cache
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\obj\Debug\LegacyParserFramework.dll
+D:\Divya\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\obj\Debug\LegacyParserFramework.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\LegacyParserFramework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\LegacyParserFramework.pdb
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\obj\Debug\LegacyParserFramework.dll
+C:\Documents and Settings\Firdause_Wadia\Desktop\SI Training July 09\Legacy Integration\LIF\Code\Framework\Legacy Workbench\LegacyParserFramework\obj\Debug\LegacyParserFramework.pdb

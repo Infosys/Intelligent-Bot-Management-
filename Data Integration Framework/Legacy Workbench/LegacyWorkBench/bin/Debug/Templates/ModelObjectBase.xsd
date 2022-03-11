@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClauseBase" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://sse.com/entities/host/ModelObjects/common" 
+          xmlns="http://sse.com/entities/host/ModelObjects/common">
+  <xs:complexType name="ModelObjectBase">
+    <xs:sequence>
+      <xs:element name="UniqueId" type="xs:string" />
+      <xs:element name="Timestamp" type="xs:string" />
+      <xs:element name="UserId" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="RelationshipType" type="xs:string" />
+    <xs:attribute name="ObjectId" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

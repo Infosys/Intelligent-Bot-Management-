@@ -1,0 +1,104 @@
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\XML\AutomationTypes.json
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManagement.API.dll.config
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManagement.API.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManagement.API.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Castle.Core.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\EntityFramework.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\EntityFramework.SqlServer.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\FluentValidation.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessComponent.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.Common.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.Framework.Facade.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Newtonsoft.Json.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.ComponentModel.Annotations.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Net.Http.Formatting.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Web.Cors.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Web.Http.Cors.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Web.Http.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Web.Http.WebHost.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataEntity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.ServiceLocation.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.Unity.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Microsoft.Practices.Unity.Interception.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessComponent.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessEntity.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.Common.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Castle.Core.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\EntityFramework.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\EntityFramework.SqlServer.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\FluentValidation.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Newtonsoft.Json.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Net.Http.Formatting.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\System.Web.Http.xml
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataAccess.dll.config
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataEntity.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataEntity.dll.config
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\obj\Release\ConfigurationManagement.API.csproj.AssemblyReference.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\obj\Release\ConfigurationManagement.API.csproj.CoreCompileInputs.cache
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\obj\Release\ConfigurationManagement.API.csproj.CopyComplete
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\obj\Release\Infosys.Ainauto.ConfigurationManagement.API.dll
+D:\TFS\Superbot\Components_OpenSource_Branch\ConfigurationManagement - External\ConfigurationManagement.API\obj\Release\Infosys.Ainauto.ConfigurationManagement.API.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\XML\AutomationTypes.json
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManagement.API.dll.config
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManagement.API.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManagement.API.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Castle.Core.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\EntityFramework.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\EntityFramework.SqlServer.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\FluentValidation.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessComponent.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.Common.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.Framework.Facade.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Newtonsoft.Json.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.ComponentModel.Annotations.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Net.Http.Formatting.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Web.Cors.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Web.Http.Cors.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Web.Http.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Web.Http.WebHost.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataAccess.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataEntity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.ServiceLocation.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.Unity.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Microsoft.Practices.Unity.Interception.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.IDataAccess.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessComponent.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.BusinessEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.Common.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Castle.Core.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\EntityFramework.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\EntityFramework.SqlServer.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\FluentValidation.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Newtonsoft.Json.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Net.Http.Formatting.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\System.Web.Http.xml
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataAccess.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataAccess.dll.config
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataEntity.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.DataEntity.dll.config
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\bin\Infosys.Ainauto.ConfigurationManager.IDataAccess.pdb
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\obj\Release\ConfigurationManagement.API.csproj.AssemblyReference.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\obj\Release\ConfigurationManagement.API.csproj.CoreCompileInputs.cache
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\obj\Release\ConfigurationManagement.API.csproj.CopyComplete
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\obj\Release\Infosys.Ainauto.ConfigurationManagement.API.dll
+D:\OSS\Baselined\Intelligent-Bot-Management-\Resource Configurator\ConfigurationManagement\ConfigurationManagement.API\obj\Release\Infosys.Ainauto.ConfigurationManagement.API.pdb

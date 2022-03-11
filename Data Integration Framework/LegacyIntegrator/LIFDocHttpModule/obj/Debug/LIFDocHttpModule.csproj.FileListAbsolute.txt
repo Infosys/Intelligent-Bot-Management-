@@ -1,0 +1,5 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\LIFDocHttpModule\Infosys.Lif.DocHttpModule.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Release\LegacyIntegrator\LIFDocHttpModule\Infosys.Lif.DocHttpModule.pdb
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LIFDocHttpModule\obj\Debug\LIFDocHttpModule.csproj.CoreCompileInputs.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LIFDocHttpModule\obj\Debug\Infosys.Lif.DocHttpModule.dll
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\LegacyIntegrator\LIFDocHttpModule\obj\Debug\Infosys.Lif.DocHttpModule.pdb

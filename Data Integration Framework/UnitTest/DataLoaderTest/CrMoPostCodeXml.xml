@@ -1,0 +1,6 @@
+
+<CrMoPostCode xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <deliveryOfficeCode >222</deliveryOfficeCode>
+  <mailingCategory >Mail_Cat</mailingCategory>
+  <postCode >999</postCode>
+</CrMoPostCode>

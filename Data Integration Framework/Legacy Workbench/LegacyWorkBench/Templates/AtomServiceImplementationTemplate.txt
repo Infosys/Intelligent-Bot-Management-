@@ -1,0 +1,225 @@
+$MethodTemplate
+	/// <summary>
+	/// This class implements the service interface class "I##ServiceName##"
+	/// </summary>
+	[ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
+    public class ##ServiceName## : I##ServiceName##
+    {
+		#region I##ServiceName## Members
+        public RequestParameters requestParameters = new RequestParameters();
+
+		/// <summary>
+		/// This class holds the response coming from the host system.
+		/// </summary>
+        public class ##ContractEntityName##ResponseEventArgs : EventArgs
+        {
+            public ContractEntity.##ContractEntityName## receivedResponse { get; set; }
+        }
+
+        public delegate void ##ContractEntityName##Response(object sender, ##ContractEntityName##ResponseEventArgs e);
+
+        public event ##ContractEntityName##Response ##ContractEntityName##ResponseReceived;
+
+        private ContractEntity.##ContractEntityName## receivedResponse##ContractEntityName##;
+
+		/// <summary>
+        /// Call the service ##ServiceName## synchronously
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="responses"></param>
+        private void legacyEvent##ContractEntityName##_ResponseReceivedSync(object sender, 
+			Infosys.Lif.LegacyFacade.RequestDelegateArgs responses)
+        {
+            receivedResponse##ContractEntityName## = 
+				(ContractEntity.##ContractEntityName##)responses.Response["##ServiceName##"];
+        }
+
+		/// <summary>
+        /// This is the definition of the service interface method of "I##ServiceName##" interface.
+		/// the method calls the transaction on host using the request and returns response.
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <param name="Pass"></param>
+        /// <param name="InputParameters">These parameters are the data items of 
+        /// model object ##CollectionName##</param>
+        /// <returns>response in Atom 1.0 format</returns>
+        public Atom10FeedFormatter ##MethodName##(string userID, string Pass, ##InputParameters##)
+        {
+            //initializing input parameters
+            ##InitializingInputParameters##
+            ContractEntity.##ContractEntityName## objContracts = new ContractEntity.##ContractEntityName##();
+
+            System.Collections.Generic.List<ContractEntity.##ContractEntityName##> objCOntractGeneric = 
+				new System.Collections.Generic.List<ContractEntity.##ContractEntityName##>();           
+
+            ContractEntity.##CollectionName## obj##CollectionName## = new ContractEntity.##CollectionName##();
+
+			##ParametersValueFilling##           
+
+            objContracts.##CollectionName##Collection.Add(obj##CollectionName##);
+
+            LegacyEvent legacyEvent##ContractEntityName## = new LegacyEvent();
+            legacyEvent##ContractEntityName##.ResponseReceived += 
+				new RequestDelegate(legacyEvent##ContractEntityName##_ResponseReceivedSync);
+            
+			//initialize request parameters with proper format
+            string transactionID = CheckFormat("##TransacID##", 4);
+            string userId = CheckFormat(userID, 10);
+            string password = CheckFormat(Pass, 8);
+            string operationType = "##OperType##";
+
+			//add request parameters to the request collection
+			requestParameters.RequestCollection.Add("ServiceName", "##ServiceName##");
+            requestParameters.RequestCollection.Add("TransactionID", transactionID);
+            requestParameters.RequestCollection.Add("UserID", userId);
+            requestParameters.RequestCollection.Add("Password", password);
+            requestParameters.RequestCollection.Add("OperationType", operationType);
+
+            try
+            {
+				//call method to execute the specified transaction on the host
+                ServiceManager.Execute(legacyEvent##ContractEntityName##, ServiceManager.ProcessMode.WaitForAll,
+					"##ServiceName##", objContracts, requestParameters);
+            }
+            catch (Exception exc)
+            {
+                //Handle the exception
+                throw exc;
+            }
+
+            SyndicationFeed response = new SyndicationFeed();
+
+			//call the Populate method to get the response in Atom 1.0 format 
+            response = Populate(receivedResponse##ContractEntityName##);
+           
+			//return the response data in Atom 1.0 format           
+            return response.GetAtom10Formatter();
+        }
+
+		/// <summary>
+		/// This method initailizes the string values in the input object as empty string.
+		/// </summary>
+		/// <param name="objectToBeInitialized">the object whose value is to be initialized if it is null</param>
+		/// <returns>The initialized object is then returned</returns>	
+		private object Initialize(object objectToBeInitialized)
+        {
+            if (objectToBeInitialized == null)
+            {
+                objectToBeInitialized = "";
+            }
+            return objectToBeInitialized;
+        }
+
+		/// <summary>
+        /// This method populates the output from the host in the form of syndication item, 
+        /// which contains syndication Feed.
+        /// </summary>
+        /// <param name="objContracts">the contract data entity obtained as output from the host</param>
+        /// <returns>the syndication Feed which can be viwed in syndication feed Reader</returns>
+        private SyndicationFeed Populate(ContractEntity.##ContractEntityName## objContracts)
+        {
+            List<SyndicationItem> list = new List<SyndicationItem>();
+            int loop=0;
+            
+            //create a collection of syndication item depending on the output obtained from the host
+            //The syndication item will contain title and corresponding contents
+            ##CheckOutOrNot##for (loop = 0; 
+				loop < objContracts.##CollectionName##Collection[0].##CollectionParameter##Collection.Count; loop++)
+            {
+				int counter=loop+1;
+                SyndicationItem syndItem = new SyndicationItem();
+                syndItem.Title = new TextSyndicationContent(##TitleValue##);
+                syndItem.Content = new TextSyndicationContent(
+					##MethodName##PrepareHTMLContent(objContracts, loop), TextSyndicationContentKind.Html);
+                list.Add(syndItem);
+            }
+            
+            //create an object of syndication feed which will bind the above created syndication items
+            //syndication Feed contains its own Tilte, language and RSS Items.
+            SyndicationFeed feed = new SyndicationFeed
+                {
+                    Title = new TextSyndicationContent("##ContractName##"),
+                    Language = "en-us",
+                    Items = list                    
+                }; 
+            return feed;
+        }
+
+        /// <summary>
+        /// check if the length of input string is as per specified length and correct it if not.
+        /// </summary>
+        /// <param name="strInput">input string</param>
+        /// <param name="strLength">required length</param>
+        /// <returns>correct formatted string</returns> 
+		private string CheckFormat(string strInput, int strLength)
+        {
+			//if string length is more than the specified, truncate the string for required length
+            if (strInput.Length > strLength)
+            {
+                strInput = strInput.Substring(0, strLength);
+            }
+			
+			//if string length is less than the specified, append spaces to make it required length
+            if (strInput.Length < strLength)
+            {
+                strInput = strInput.PadRight(strLength, ' ');
+            }
+            return strInput;
+        }
+
+		/// <summary>
+		/// call the "##ServiceName##" service asynchronously
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="responses"></param>
+        private void legacyEvent##ContractEntityName##_ResponseReceivedASync(object sender, Infosys.Lif.LegacyFacade.RequestDelegateArgs responses)
+        {
+            receivedResponse##ContractEntityName## = (ContractEntity.##ContractEntityName##)responses.Response["##ServiceName##"];
+        }
+        
+        private string ##MethodName##PrepareHTMLContent(ContractEntity.##ContractEntityName## objContracts,int loop)
+        {
+            StringBuilder html = new StringBuilder(); 
+            ##ContentsBeforeTable##
+            ##HTMLFilledNameValueRows##
+			##ContentsAfterTable##
+			return html.ToString();
+        }
+
+		#endregion
+    }
+$NameSpacesImport
+//import contract data entity namespace
+using ContractEntity = ##ContractEntityNamespace##;
+$end
+/******************************************************************************
+This class was code generated by Legacy Workbench.
+
+This class represents the implementation of the Atom interface for service.
+
+Copyright (c) 2003 - 2008 Infosys Technologies Ltd. All Rights Reserved.
+******************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.ServiceModel.Syndication;
+using System.ServiceModel;
+
+//import data contract namespace
+using ##DataContractNamespace##;
+
+//import service contract namespace
+using ##ServiceContractNamespace##;
+
+//import LIF framework namespaces
+using Infosys.Lif.LegacyFacade;
+using Infosys.Lif.LegacyParameters;
+##ImportsFilled##
+
+
+namespace ##ServiceImplementationNamespace##
+{
+     ##MethodBodies##
+}
+

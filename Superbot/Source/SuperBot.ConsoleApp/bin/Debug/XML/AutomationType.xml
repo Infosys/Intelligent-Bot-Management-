@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AutomationType>
+  <Type key="aa">ControlTower</Type>
+  <Type key="aa">BOT</Type>
+  <Type key="aa">BotRunner</Type>
+  <Type key="aa">DBServer</Type>
+  <Type key="aa">Services</Type>
+  <Type key="aa">DBService</Type>
+  <Type key="aa">BotCreator</Type>
+  <!--<AA>
+    <Type>ControlTower</Type>
+    <Type>BOT</Type>
+    <Type>BotRunner</Type>
+    <Type>DBServer</Type>
+    <Type>Services</Type>
+    <Type>DBService</Type>
+    <Type>BotCreator</Type>
+  </AA>
+  <BP>
+    <Type>Control Tower</Type>
+    <Type>Bot Runner</Type>
+    <Type>DB Server</Type>
+    <Type>DB Service</Type>
+    <Type>Bot Creator</Type>
+  </BP>-->
+</AutomationType>

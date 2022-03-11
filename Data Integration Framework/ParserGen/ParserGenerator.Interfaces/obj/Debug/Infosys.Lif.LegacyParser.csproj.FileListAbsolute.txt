@@ -1,0 +1,2 @@
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator.Interfaces\obj\Debug\Infosys.Lif.LegacyParser.csproj.AssemblyReference.cache
+D:\TFS\ManaExpertServices\Framework\LegacyIntegration\LIF\Code\Framework_OpenSource_branch\ParserGen\ParserGenerator.Interfaces\obj\Debug\Infosys.Lif.LegacyParser.csproj.CoreCompileInputs.cache

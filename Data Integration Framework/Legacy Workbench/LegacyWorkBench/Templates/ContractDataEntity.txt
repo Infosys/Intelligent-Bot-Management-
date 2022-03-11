@@ -1,0 +1,40 @@
+$ChildEntitiesTemplate
+	##DataItemsFilledUp##
+$ImportTemplate
+<xs:import id="##ProgramId##" schemaLocation="../../../ModelObjects/xsd/##ModuleName##/##ModelObjectEntityName##.xsd" namespace="##ModelObjectXmlNameSpace##" />
+$DataItems
+<xs:complexType name="##ParentModelObjectName####Name##" type="##ProgramIdShort##:##ModelObjectName##" >
+	<xs:sequence>
+		##ChildEntitiesFilled##
+	</xs:sequence>
+</xs:complexType>
+$ImportedNamespaces
+xmlns:##ProgramId##="##XsdNameSpace##"
+$ContractDefinition
+  <xs:complexType name="##ContractName##" block="extension">
+    <xs:sequence>
+		##ModelObjectsInstancesFilled##
+    </xs:sequence>
+  </xs:complexType>
+$ChildModelObjectInstancesTemplate
+<xs:element name="##ModelObjectName##" type="##ModelObjectName##" minOccurs="0" maxOccurs="unbounded" />
+$ModelObjectDefinitionTemplate 
+<xs:complexType name="##ModelObjectName##" block="extension">
+    <xs:complexContent>
+      <xs:extension base="##ModelObjectEntityId##:##ModelObjectEntityName##">
+        <xs:sequence>
+			##ChildModelObjectInstancesFilled##
+        </xs:sequence>
+      </xs:extension>
+	</xs:complexContent>
+</xs:complexType> 
+$end
+<xs:schema elementFormDefault="qualified" 
+xmlns="##XsdNameSpace##" 
+targetNamespace="##XsdNameSpace##" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+##NameSpacesFilled##>
+##ImportFilesFilled##
+##ModelObjectDefinitionFilled##
+##ContractDefinitionFilled##
+</xs:schema>

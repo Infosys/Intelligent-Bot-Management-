@@ -1,0 +1,81 @@
+$FileInclude <Compile Include="##ModuleName##\##FileName##.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="##ModuleName##\##FileName##.designer.cs">
+      <DependentUpon>##FileName##.cs</DependentUpon>
+    </Compile>
+    $end
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{##ProjectGuid##}</ProjectGuid>
+    <ProjectTypeGuids>{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>##RootNamespace##</RootNamespace>
+    <AssemblyName>##RootNamespace##</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+<ItemGroup> 
+	<Reference Include="Infosys.Lif.LegacyFacade, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\LegacyFacade\Infosys.Lif.LegacyFacade.dll</HintPath>
+    </Reference>
+    <Reference Include="Infosys.Lif.LegacyParameters, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\LegacyFacade\Infosys.Lif.LegacyParameters.dll</HintPath>
+    </Reference>      
+    <Reference Include="##ContractEntitiesRootNameSpace##, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\##ContractEntitiesRootNameSpace##.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>    
+    <Reference Include="System.Workflow.ComponentModel">
+      <Name>System.Workflow.ComponentModel</Name>
+    </Reference>
+    <Reference Include="System.Workflow.Runtime">
+      <Name>System.Workflow.Runtime</Name>
+    </Reference>
+    <Reference Include="System.Workflow.Activities">
+      <Name>System.Workflow.Activities</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    ##FileIncludes##
+  </ItemGroup>  
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Windows Workflow Foundation\v3.0\Workflow.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
