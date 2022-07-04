@@ -17,3 +17,5 @@ Intelligent Bot Management is an innovative way to automatically monitor the RPA
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSBuild "D:\GIT\Intelligent-Bot-Management--main\Data Integration Framework\Code.sln" <br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR <br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open the solution Code.sln in visual studio and right click on the solution > Build Solution
+	
+https://user-images.githubusercontent.com/107669139/177126151-3d91f253-4212-4e76-b2de-d2e24f54909f.mp4
