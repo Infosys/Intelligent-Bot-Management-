@@ -19,13 +19,12 @@ Intelligent Bot Management is an innovative way to automatically monitor the RPA
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open the solution Code.sln in visual studio and right click on the solution > Build Solution
 
 # Release Instructions
-<br />
-# Healthcheck <br />
+# Healthcheck
 1.After following build instructions for Superbot.sln, go to ..\Superbot\Source\SuperBot.ConsoleApp <br />
 2.Go to ..\Superbot\Source\SuperBot.ConsoleApp\bin\Debug <br />
 3.Copy all the runtime files to Healthcheck directory of the release package <br />
  <br />
-# ProcessLoader <br />
+# ProcessLoader
 1.After following build instructions for Superbot.sln, go to ..\Superbot\Source\ProcessLoader <br />
 2.Go to ..\Superbot\Source\ProcessLoader\bin\Debug <br />
 3.Copy all the runtime files to ProcessLoader directory of the release package <br />
